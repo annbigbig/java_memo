@@ -1,0 +1,36 @@
+====================================
+安裝Eclipse EE
+環境: 聯想Lenovo B590筆電 Linux Mint 17
+====================================
+
+請先到Eclipse官網下載頁面
+http://eclipse.org/downloads/
+
+我下載的是Linux 64 Bit版本，檔名是
+eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz
+
+我把它放在我的用戶資料夾下的子目錄
+/home/anntony/eclipseEE
+
+解壓縮
+我得到一個
+/home/anntony/eclipseEE/eclipse
+的子目錄
+
+執行檔的完整路徑是
+/home/anntony/eclipseEE/eclipse/eclipse
+在檔案總管裡，對著它，按右鍵選「開啟」
+
+第一次開啟EclipseEE
+它會問你workspace目錄要設定在那裡？
+就用預設的
+/home/anntony/workspace
+然後
+勾選Use this as the default and do not ask again
+按下OK鈕即可
+
+然後你就看到Eclipse的操作介面了
+就這麼簡單
+如果覺得要在桌面上放捷徑連結到執行檔/home/anntony/eclipseEE/eclipse/eclipse也可以
+請您自已設定一下
+我就不解釋了
