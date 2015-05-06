@@ -1,0 +1,148 @@
+=========================================
+在Linux Mint 17系統上安裝Oracle JDK 8
+=========================================
+
+參考資料
+https://www.digitalocean.com/community/tutorials/how-to-manually-install-oracle-java-on-a-debian-or-ubuntu-vps
+
+打開終端機，執行
+$ uname -m
+
+終端機回應了
+x86_64
+
+這告訴我們這台電腦是64位元的核心
+所以你在下載JDK 8的時候，要下載64位元的版本
+
+現在來到Oracle下載JDK 8的頁面
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+記得按下
+Accept License Agreement 
+
+因為我的筆記型電腦是64位元的
+所以我該下載的是
+jdk-8u45-linux-x64.tar.gz
+
+如果你是32位元的電腦
+你應該下載
+jdk-8u45-linux-i586.tar.gz
+
+下載後，我將它複製到了路徑
+/usr/local/jdk-8u45-linux-x64.tar.gz
+
+解壓縮
+# tar zxvf ./jdk-8u45-linux-x64.tar.gz 
+
+解壓縮之後
+你的java和javac執行檔的完整路徑
+會在
+/usr/local/jdk1.8.0_45/bin/java
+和
+/usr/local/jdk1.8.0_45/bin/javac
+
+現在請看一下你目前系統上的java和javac
+完整路徑在那裡？
+然後是什麼版本？
+anntony-Lenovo-B590 bin # which java
+/usr/bin/java
+anntony-Lenovo-B590 bin # java -version
+java version "1.7.0_65"
+OpenJDK Runtime Environment (IcedTea 2.5.3) (7u71-2.5.3-0ubuntu0.14.04.1)
+OpenJDK 64-Bit Server VM (build 24.65-b04, mixed mode)
+anntony-Lenovo-B590 bin # which javac
+anntony-Lenovo-B590 bin # 
+
+上面的終端機訊息告訴我們
+我們的java執行檔在/usr/bin/java
+然後他是OpenJDK 1.7.0_65版本
+這不是我們要的
+我們要的是Oracle的JDK1.8.0_45 (也就是剛才下載的版本)
+所以請安裝jdk1.8.0_45版的java和javac為優先權100
+
+anntony-Lenovo-B590 ~ # update-alternatives --install /usr/bin/java java /usr/local/jdk1.8.0_45/bin/java 100
+anntony-Lenovo-B590 ~ # update-alternatives --install /usr/bin/javac javac /usr/local/jdk1.8.0_45/bin/javac 100
+update-alternatives: 以 /usr/local/jdk1.8.0_45/bin/javac 提供 自動模式 中的 /usr/bin/javac (javac)
+anntony-Lenovo-B590 ~ # 
+anntony-Lenovo-B590 ~ # update-alternatives --config java
+替代項目 java（提供 /usr/bin/java）有 2 個選擇。
+
+  選項       路徑                                          優先權  狀態
+------------------------------------------------------------
+* 0            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java   1071      自動模式
+  1            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java   1071      手動模式
+  2            /usr/local/jdk1.8.0_45/bin/java                  100       手動模式
+
+按 [enter] 保留目前選項 [*]，或輸入選項編號：2
+update-alternatives: 以 /usr/local/jdk1.8.0_45/bin/java 提供 手動模式 中的 /usr/bin/java (java)
+
+現在驗證一下你的java和javac執行檔的版本
+anntony-Lenovo-B590 ~ # which java
+/usr/bin/java
+anntony-Lenovo-B590 ~ # java -version
+java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+anntony-Lenovo-B590 ~ # which javac
+/usr/bin/javac
+anntony-Lenovo-B590 ~ # javac -version
+javac 1.8.0_45
+anntony-Lenovo-B590 ~ # 
+
+也可以這樣驗證
+anntony-Lenovo-B590 ~ # update-alternatives --display java
+java - 手動模式
+  目前連結指向 /usr/local/jdk1.8.0_45/bin/java
+/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java - 優先權 1071
+  次要項目 java.1.gz：/usr/lib/jvm/java-7-openjdk-amd64/jre/man/man1/java.1.gz
+/usr/local/jdk1.8.0_45/bin/java - 優先權 100
+目前 '最佳' 的版本為 '/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java'。
+anntony-Lenovo-B590 ~ # update-alternatives --display javac
+javac - 自動模式
+  目前連結指向 /usr/local/jdk1.8.0_45/bin/javac
+/usr/local/jdk1.8.0_45/bin/javac - 優先權 100
+目前 '最佳' 的版本為 '/usr/local/jdk1.8.0_45/bin/javac'。
+anntony-Lenovo-B590 ~ # 
+
+這樣就確認你真的安裝好JDK8了
+不過這樣還不夠
+你還必須設定
+PATH
+CLASSPATH
+JAVA_HOME
+環境變數
+日後我們還會安裝Tomcat
+所以還會多一個
+CATALINA_HOME
+我覺得有夠麻煩還要分兩次設定
+乾脆在這裡一次設定好算了
+
+請執行
+# cd /etc/profile.d
+# touch ./jdk8_environments
+# chmod 644 ./jdk8_environments
+# chown root:root ./jdk8_environments
+
+請把以下內容貼到你剛才產生的空白的./jdk8_environments
+export JAVA_HOME=/usr/local/jdk
+export JRE_HOME=$JAVA_HOME/jre
+export CATALINA_HOME=/usr/local/tomcat
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CATALINA_HOME/lib
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$CATALINA_HOME/bin:$PATH
+
+這樣就設定好你的JDK8的環境變數
+重啟電腦的時候會生效
+好吧不是Windows
+其實用source /etc/profile.d/jdk8_environments這個指令就可以立刻載入剛才的環境變數
+而以後每一次電腦重開機的時候，都會設定好這些環境變數
+anntony-Lenovo-B590 ~ # echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+anntony-Lenovo-B590 ~ # echo $CLASSPATH
+
+anntony-Lenovo-B590 ~ # source /etc/profile.d/jdk8_environments 
+anntony-Lenovo-B590 ~ # echo $PATH
+/usr/local/jdk1.8.0_45/bin:/usr/local/jdk1.8.0_45/jre/bin:/usr/local/tomcat/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+anntony-Lenovo-B590 ~ # echo $CLASSPATH
+.:/usr/local/jdk1.8.0_45/lib:/usr/local/jdk1.8.0_45/jre/lib:/usr/local/tomcat/lib
+
+這樣就完成JDK8環境變數的設定
