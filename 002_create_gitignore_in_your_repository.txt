@@ -1,0 +1,311 @@
+=========================================================================================================
+為你的git repository設定.gitignore檔案
+=========================================================================================================
+
+理由：
+在提交Java代碼到git repository之前
+請先設定好你的.gitignore
+不要把編譯過的.class檔push到遠端倉庫裡
+github的硬碟空間算公共財，不要浪費它們
+永遠記得，你應該只提交純文字的source code
+
+=========================================================================================================
+參考資料
+https://help.github.com/articles/ignoring-files/
+
+=========================================================================================================
+任務大綱：
+1.在Eclipse開發環境裡產生一個測試專案TestProject03
+2.關掉Eclipse，這是為了讓它不要每隔一段時間就針對每個.java的原始碼檔案，編譯出.class
+3.刪除專案目錄下bin子目錄的所有東西
+4.在專案根目錄呼叫一次git init，將此專案開始列入版本控制
+5.產生空白的.gitignore
+6.從github官方提供的.gitignore樣版檔案複製Java程式語言需忽略的檔案的樣式
+7.第一次init commit的時候，一起把.gitignore提交到專案git repository
+8.打開Eclipse，把剛才的KashuDemo1.java修改一下，然後存檔，讓它把.class的檔案編譯出來
+9.確定專案目錄的bin子目錄下有被編譯出來.class檔案之後，進行第二次git commit
+10.在github開遠端倉庫，將我們的本地倉庫git push過去
+11.看看遠端倉庫裡有沒有任何的.class檔案存在？
+
+=========================================================================================================
+任務1.在Eclipse開發環境裡產生一個測試專案TestProject03
+=========================================================================================================
+打開EclipseEE之後
+File > New > Java Project
+在最上方的Project name輸入TestProject03
+其他都維持預設值，按下Finish鈕
+展開TestProject03
+找到src包的地方，按下右鍵選New > Package
+我們現在正在增加一個包名，在Name的地方設定此包名為com.kashu.demo，按下Finish
+我們多了一個包(Package)，其名稱就叫作com.kashu.demo，在上面按右鍵，選New > Class
+我們現在要產生一個新的Java類別，Name的地方請輸入KashuDemo1
+下方public static void main如果你堅持要主函式的話可以勾選，接著按下Finish
+現在我們就產生了一個類別叫KashuDemo
+它的全名，也就是加上包名之後是com.kashu.demo.KashuDemo1
+
+我們現在到終端機底下看專案目錄
+這裡直接給出終端機操作輸出
+anntony@anntony-Lenovo-B590 ~ $ cd /home/anntony/workspace/TestProject03/bin/com/kashu/demo/
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin/com/kashu/demo $ ls -al
+總計 12
+drwxr-xr-x 2 anntony anntony 4096  5月 12 10:02 .
+drwxr-xr-x 3 anntony anntony 4096  5月 12 09:59 ..
+-rw-r--r-- 1 anntony anntony  403  5月 12 10:02 KashuDemo1.class
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin/com/kashu/demo $ 
+
+你可以看到
+雖然我們沒有手動去執行javac叫系統編譯我們的Java source code(副檔名.java的那些純文字檔案)
+可是我們在專案目錄下的bin目錄，再加上包名的目錄之後，
+可以找到編譯過後的KashuDemo1.class
+記得我們的目的
+我們稍後的操作
+都是為了不要讓這個類型的.class檔案，被提交到本地的git repository，甚至是遠端的github倉庫
+
+
+=========================================================================================================
+任務2.關掉Eclipse，這是為了讓它不要每隔一段時間就針對每個.java的原始碼檔案，編譯出.class
+=========================================================================================================
+就關掉它，沒啥好講
+
+
+=========================================================================================================
+任務3.刪除專案目錄下bin子目錄的所有東西
+=========================================================================================================
+開終端機手動刪掉
+這裡直接給出終端機的輸出
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin/com/kashu/demo $ cd /home/anntony/workspace/TestProject03/bin/
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin $ ls -al
+總計 12
+drwxr-xr-x 3 anntony anntony 4096  5月 12 09:59 .
+drwxr-xr-x 5 anntony anntony 4096  5月 12 09:57 ..
+drwxr-xr-x 3 anntony anntony 4096  5月 12 09:59 com
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin $ rm -rf ./com/
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin $ ls -al
+總計 8
+drwxr-xr-x 2 anntony anntony 4096  5月 12 10:12 .
+drwxr-xr-x 5 anntony anntony 4096  5月 12 09:57 ..
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin $ 
+
+
+=========================================================================================================
+任務4.在專案根目錄呼叫一次git init，將此專案開始列入版本控制
+一樣直接給出終端機輸出
+
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin $ cd /home/anntony/workspace/TestProject03/
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git init
+Initialized empty Git repository in /home/anntony/workspace/TestProject03/.git/
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.classpath
+	.project
+	.settings/
+	src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ 
+
+=========================================================================================================
+任務5.產生空白的.gitignore
+
+終端機操作如下
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ pwd
+/home/anntony/workspace/TestProject03
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ touch .gitignore
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ ls -al|grep gitignore
+-rw-r--r-- 1 anntony anntony    0  5月 12 10:36 .gitignore
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $
+
+=========================================================================================================
+任務6.從github官方提供的.gitignore樣版檔案複製Java程式語言需忽略的檔案的樣式
+
+repo的連結在這裡
+https://github.com/github/gitignore
+
+找到我們Java語言使用的樣板檔Java.gitignore
+按下網頁裡的Raw按鈕，取得原生文字格式，全選，複製
+https://github.com/github/gitignore/blob/master/Java.gitignore
+
+這裡我也列出github官方給出的Java.gitignore
+讓你看看到底是長得什麼樣子
+
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+把這些文字內容，貼上到我們專案目錄git repository下的.gitignore
+記得完整路徑嗎？在
+/home/anntony/workspace/TestProject03/.gitignore
+打開vi文字編輯器貼上文字的細節我就不寫了
+
+=========================================================================================================
+任務7.第一次init commit的時候，一起把.gitignore提交到專案git repository
+
+終端機操作如下
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.classpath
+	.gitignore
+	.project
+	.settings/
+	src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git add -A
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git commit -m "init commit"
+[master (root-commit) 444f9a9] init commit
+ 5 files changed, 56 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .gitignore
+ create mode 100644 .project
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 src/com/kashu/demo/KashuDemo1.java
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git status
+On branch master
+nothing to commit, working directory clean
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $
+
+=========================================================================================================
+任務8.打開Eclipse，把剛才的KashuDemo1.java修改一下，然後存檔，讓它把.class的檔案編譯出來
+
+打開Eclipse
+在KashuDemo1類別的main函式裡
+我加上了一行
+System.out.println("Tony Stark is here!");
+然後存檔
+因為我們修改了KashuDemo1.java
+所以EclipseEE會自動為我們編譯新的KashuDemo1.class
+想要確定的話
+
+可以在終端機這樣操作
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ pwd
+/home/anntony/workspace/TestProject03
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ cd /home/anntony/workspace/TestProject03/bin/com/kashu/demo/
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin/com/kashu/demo $ ls
+KashuDemo1.class
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin/com/kashu/demo $ ls -al
+總計 12
+drwxr-xr-x 2 anntony anntony 4096  5月 12 10:52 .
+drwxr-xr-x 3 anntony anntony 4096  5月 12 10:52 ..
+-rw-r--r-- 1 anntony anntony  571  5月 12 10:52 KashuDemo1.class
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin/com/kashu/demo $ 
+
+剛才明明刪掉了
+可是又長出來一個新的/home/anntony/workspace/TestProject03/bin/com/kashu/demo/KashuDemo1.class
+
+=========================================================================================================
+任務9.確定專案目錄的bin子目錄下有被編譯出來.class檔案之後，進行第二次git commit
+=========================================================================================================
+終端機操作如下
+
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin/com/kashu/demo $ pwd
+/home/anntony/workspace/TestProject03/bin/com/kashu/demo
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03/bin/com/kashu/demo $ cd /home/anntony/workspace/TestProject03/
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   src/com/kashu/demo/KashuDemo1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git add -A
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git commit -m "KashuDemo1.java modified [1]"
+[master 495fb80] KashuDemo1.java modified [1]
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git status
+On branch master
+nothing to commit, working directory clean
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ 
+
+=========================================================================================================
+任務10.在github開遠端倉庫，將我們的本地倉庫git push過去
+=========================================================================================================
+到你的github首頁
+按下右上角的加號+
+Create new...
+選擇New Repository
+在Repository name輸入TestRepo3
+description輸入This repo is only for testing purpose
+倉庫類型維持預設的Public
+按下下方綠色的Create repository按鈕
+
+回到專案目錄的repo
+終端機操作如下
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ pwd
+/home/anntony/workspace/TestProject03
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git remote -v
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git remote add origin git@github.com:annbigbig/TestRepo3.git
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git remote -v
+origin	git@github.com:annbigbig/TestRepo3.git (fetch)
+origin	git@github.com:annbigbig/TestRepo3.git (push)
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git log --oneline --graph --decorate --all
+* 495fb80 (HEAD, master) KashuDemo1.java modified [1]
+* 444f9a9 init commit
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git status
+On branch master
+nothing to commit, working directory clean
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ git push -u origin master
+Counting objects: 19, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (19/19), 1.92 KiB | 0 bytes/s, done.
+Total 19 (delta 1), reused 0 (delta 0)
+To git@github.com:annbigbig/TestRepo3.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+anntony@anntony-Lenovo-B590 ~/workspace/TestProject03 $ 
+
+=========================================================================================================
+11.看看遠端倉庫裡有沒有任何的.class檔案存在？
+
+剛才開的遠端倉庫，也就是我們git push的目的地倉庫，連結在這裡
+
+https://github.com/annbigbig/TestRepo3
+
+你可以連過去看看，可不可以在這個倉庫裡找到任何一個副檔名是.class的檔案？
+即使剛才的本地倉庫
+也就是筆記型電腦上的/home/anntony/workspace/TestProject03/bin/com/kashu/demo子目錄裡
+確實有一個KashuDemo1.class檔案存在
+
+這說明我們剛才在專案目錄repo裡設定的.gitignore規則檔生效了
+它禁止了.class以及一些其他的像是.jar或.war或.ear為副檔名的檔案被git commit進倉庫
+
+=========================================================================================================
+後話
+
+以後這個倉庫就正常使用就好
+也就是每天工作工作工作
+重複下列步驟
+$ git add -A
+$ git commit -m "some messages"
+$ git push origin master
+
+這樣就行了
+.gitigore的設定是一次性的工作
+寫的爆長超長只是為了日後防呆
+忘了自已到底在幹麻
+所以解釋了一下
+
+=========================================================================================================
