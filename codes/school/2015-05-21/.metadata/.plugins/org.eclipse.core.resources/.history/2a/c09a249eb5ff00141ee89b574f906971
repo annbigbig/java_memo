@@ -1,0 +1,11 @@
+package com.kashu.demo;
+
+public class CompoundAmount {
+
+	public static void main(String[] args) {
+		// A = P(1+rt)
+		
+
+	}
+
+}

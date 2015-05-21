@@ -1,0 +1,14 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class HomeWork9 {
+
+	public static void main(String[] args) {
+	 Scanner sc = new Scanner(System.in);
+   System.out.println("請輸入小孩姓名");
+     String name = sc.nextLine();
+     System.out.println("Hi "+ name + "請輸入你的銅板的個數:");
+	}
+
+}

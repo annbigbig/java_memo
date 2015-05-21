@@ -1,0 +1,24 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class HomeWork9 {
+
+	public static void main(String[] args) {
+	 Scanner sc = new Scanner(System.in);
+	 int a1=0,a5=0,a10=0,a50=0;
+   System.out.println("請輸入小孩姓名");
+     String name = sc.nextLine();
+     System.out.println("Hi "+ name + "請輸入你的銅板的個數:");
+     System.out.println("請輸入1元的數量:");
+     a1=sc.nextInt();
+     System.out.println("請輸入5元的數量:");
+     a5=sc.nextInt();
+     System.out.println("請輸入10元的數量:");
+     a10=sc.nextInt();
+     System.out.println("請輸入50元的數量:");
+     a50=sc.nextInt();
+	}
+	
+
+}

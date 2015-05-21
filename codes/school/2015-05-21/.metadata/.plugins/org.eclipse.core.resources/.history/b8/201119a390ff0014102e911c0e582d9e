@@ -1,0 +1,14 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class BMI {
+
+	public static void main(String[] args) {
+	    //the value of BMI = (weight in KG) / (height in meter)^2
+		
+		//declaration
+		Scanner sc = new Scanner(System.in);
+		
+	}
+}

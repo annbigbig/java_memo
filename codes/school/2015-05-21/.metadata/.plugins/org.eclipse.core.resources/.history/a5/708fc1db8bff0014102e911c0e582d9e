@@ -1,0 +1,12 @@
+package com.kashu.demo;
+
+public class TestDemo01 {
+
+	public static void main(String[] args) {
+		//int a=10000,b=5000,c=300;
+		//double d=3.141592,e=8.8213636;
+		//System.out.printf("%9d %9d %2d %f %f",a,b,c,d,e);
+		
+	}
+
+}
