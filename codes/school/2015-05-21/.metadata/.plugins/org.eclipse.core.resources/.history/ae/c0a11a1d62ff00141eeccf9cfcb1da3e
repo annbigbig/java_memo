@@ -1,0 +1,15 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+
+public class HomeWork2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n1=0,n2=0,n3=0;
+		System.out.println("Please input a number for number1:");
+		
+	}
+
+}

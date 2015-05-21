@@ -1,0 +1,14 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class HomeWork1 {
+
+	public static void main(String[] args) {
+		System.out.println("Please input a weight value in KG:");
+		Scanner n1 = new Scanner(System.in);
+		
+
+	}
+
+}

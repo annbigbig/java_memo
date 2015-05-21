@@ -1,0 +1,11 @@
+package com.kashu.demo;
+
+public class TestDemo01 {
+
+	public static void main(String[] args) {
+		int a=0,b=1,c=3;
+		double d=3.141592,e=8.8213636;
+		System.out.printf("",a,b,c,d,e)
+	}
+
+}
