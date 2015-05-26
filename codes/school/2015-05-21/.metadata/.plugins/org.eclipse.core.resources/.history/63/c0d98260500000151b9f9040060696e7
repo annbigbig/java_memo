@@ -22,7 +22,7 @@ public class BMI {
 		bmi = w / (Math.pow(h,2));
 		
 		//display results
-		System.out.println("Your BMI value is " + bmi);
-		//System.out.printf("Your BMI value is %.2f",bmi);
+		//System.out.println("Your BMI value is " + bmi);
+		System.out.printf("Your BMI value is %.2f",bmi);
 	}
 }

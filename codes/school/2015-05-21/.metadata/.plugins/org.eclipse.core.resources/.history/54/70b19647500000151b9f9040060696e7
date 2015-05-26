@@ -23,6 +23,5 @@ public class BMI {
 		
 		//display results
 		System.out.println("Your BMI value is " + bmi);
-		//System.out.printf("Your BMI value is %.2f",bmi);
 	}
 }
