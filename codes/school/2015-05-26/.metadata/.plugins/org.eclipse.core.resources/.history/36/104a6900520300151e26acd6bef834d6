@@ -1,0 +1,24 @@
+package com.kashu.demo;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class OneDemensionalArray {
+
+	public static void main(String[] args) {
+		//variables declaration
+		BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+		String str[] = new String[2];
+		int[] num = new int[2];
+		
+		//collect data
+		System.out.println("請輸入兩個整數，並以空白鍵隔開，例:     8 39");
+		
+		
+		//calculating
+		
+		//display results
+
+	}
+
+}

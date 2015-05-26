@@ -1,0 +1,12 @@
+package com.kashu.demo;
+
+import javax.swing.JOptionPane;
+
+public class Square {
+
+	public static void main(String[] args) {
+		String s = JOptionPane.showInputDialog("請輸入一個整數");
+
+	}
+
+}
