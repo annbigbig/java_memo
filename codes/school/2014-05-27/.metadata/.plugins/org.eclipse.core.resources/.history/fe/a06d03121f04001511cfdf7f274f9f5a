@@ -1,0 +1,18 @@
+package com.kashu.demo;
+
+public class Sqrt {
+
+	public static void main(String[] args) {
+		   //variables declaration
+		
+		   //collect data
+		
+		
+		   //calculating
+		
+		
+		    //display results
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Bissextile_01 {
+
+	public static void main(String[] args) {
+		// variables declaration
+		Scanner sc = new Scanner(System.in);
+		int month = 1;
+		String result = "";
+		
+		//collect data
+		System.out.println("請輸入整數1到12裡任一個數字");
+		month = sc.nextInt();
+		
+		//calculating
+		if ((month==1)||(month==3)||(month==5)||(month==7)||(month==8)||(month==10)||(month==12)){
+			 result = month + "月有31天";
+		}else if ((month==4)||(month==6)||(month==9)||(month==11)){
+			 result = month + "月有31天";
+		}else if (month==2){
+			 result = "2月有28或29天";
+		}else{
+			 result = "不要亂輸入，只能1到12";
+		}
+		
+		//display results
+     System.out.println(result);
+	}
+
+}

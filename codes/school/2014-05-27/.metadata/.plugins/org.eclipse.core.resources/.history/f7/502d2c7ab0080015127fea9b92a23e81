@@ -1,0 +1,25 @@
+package com.kashu.demo;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class TimeConvert {
+
+	public static void main(String[] args) {
+		 
+		
+		//variables declaration
+		BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+		int hour = 0;
+		
+		//collect data
+		System.out.println("請輸入時間，範圍是0到24的整數:");
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		
+		//variables declaration
+				Scanner sc = new Scanner(System.in);
+				int hour = 0;
+				String result = "";
+				
+	 //collect data
+				
+				
+	}
+
+}

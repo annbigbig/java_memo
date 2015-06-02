@@ -1,0 +1,19 @@
+package com.kashu.demo;
+
+public class Sqrt {
+
+	public static void main(String[] args) {
+		   //variables declaration
+		  int x=0,a=0,b=0,c=0;
+		
+		   //collect data
+		
+		
+		   //calculating
+		
+		
+		    //display results
+		
+	}
+
+}

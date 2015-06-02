@@ -1,0 +1,26 @@
+package com.kashu.demo;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class Sqrt {
+
+	public static void main(String[] args) {
+		   //variables declaration
+		  int x=0,a=0,b=0,c=0;
+		  Scanner sc = new Scanner(System.in);
+		
+		   //collect data
+		  System.out.println("");
+		  
+		//BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+		
+		   //calculating
+		
+		
+		    //display results
+		
+	}
+
+}

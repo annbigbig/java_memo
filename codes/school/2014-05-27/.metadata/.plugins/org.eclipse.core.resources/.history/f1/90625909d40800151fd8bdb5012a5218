@@ -1,0 +1,20 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class CompareABC {
+
+	public static void main(String[] args) {
+		
+		//variables declaration
+		Scanner sc = new Scanner(System.in);
+		int a=0,b=0,c=0;
+		
+   //collect data
+		
+		
+		//
+		
+	}
+
+}

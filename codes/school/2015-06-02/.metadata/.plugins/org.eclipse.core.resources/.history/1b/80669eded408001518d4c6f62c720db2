@@ -1,0 +1,22 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Bissextile_01 {
+
+	public static void main(String[] args) {
+		// variables declaration
+		Scanner sc = new Scanner(System.in);
+		int month = 1;
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

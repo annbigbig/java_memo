@@ -1,0 +1,29 @@
+package com.kashu.demo;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class TimeConvert {
+
+	public static void main(String[] args) {
+		 
+		
+		//variables declaration
+		BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+		int hour = 0;
+		String result = "";
+		
+		//collect data
+		System.out.println("請輸入時間，範圍是0到24的整數:");
+		
+		//calculating
+		          
+		if ((hour<0)||(hour>24)) hour = 0;
+		result = (hour<12) ? hour + " AM" : hour + " PM";
+		
+		
+		//display results
+    System.out.println("轉換後的時間為 : " + result);
+	}
+
+}

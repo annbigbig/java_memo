@@ -1,0 +1,21 @@
+package com.kashu.demo;
+
+public class PlusIt {
+
+	public static void main(String[] args) {
+		//variables declaration
+		
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+		
+		
+
+	}
+
+}
