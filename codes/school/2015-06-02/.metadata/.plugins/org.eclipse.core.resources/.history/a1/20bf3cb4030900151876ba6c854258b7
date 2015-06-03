@@ -1,0 +1,20 @@
+package com.kashu.demo;
+
+public class GcdAndLcm {
+
+	public static void main(String[] args) {
+		//求最大公因數與最小公倍數
+		//variables declaration
+		int a=1,b=1,gcd=1,lcm=1;
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

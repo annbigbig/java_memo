@@ -1,0 +1,39 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class GcdAndLcm {
+
+	public static void main(String[] args) {
+		//求最大公因數與最小公倍數
+		//variables declaration
+		int a=1,b=1,gcd=1,lcm=1,bigger=1;
+		Scanner sc = new Scanner(System.in);
+		
+		//collect data
+		System.out.println("請輸入正整數a");
+		a = sc.nextInt();
+		System.out.println("請輸入正整數b");
+		b = sc.nextInt();
+		
+		//calculating
+		if(a<1) a=1;
+		if(b<1) b=1;
+		if(a>b){
+			bigger=a;
+		}else{
+			bigger=b;
+		}
+		     //this is for gcd
+		for(int i=bigger;i>=1;i--){
+		  if((bigger%a==0)&&(bigger%b==0)){
+			    gcd = i;
+			    break;
+		     }
+		}
+		
+		//display results
+
+	}
+
+}

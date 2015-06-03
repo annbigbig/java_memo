@@ -1,0 +1,26 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Fibonaci {
+
+	public static void main(String[] args) {
+		// 費氏數列第n項之值  1,1,2,3,5,8,13
+		//到第n項的總和
+		
+		//variables declaration
+		int n = 1 , fn = 1, sn = 1;
+		Scanner sc = new Scanner(System.in);
+		
+		//collect data
+		System.out.println("請輸入一個正整數n");
+		n = sc.nextInt();
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

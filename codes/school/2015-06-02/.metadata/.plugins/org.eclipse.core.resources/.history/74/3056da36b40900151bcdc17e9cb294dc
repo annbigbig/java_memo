@@ -1,0 +1,41 @@
+package com.kashu.demo;
+
+public class Multiple9to9 {
+
+	public static void main(String[] args) {
+		//you can refer here
+		//http://stackoverflow.com/questions/699878/is-there-an-easy-way-to-output-two-columns-to-the-console-in-java
+		
+		//variables declaration
+		String str = "";
+		
+		//collect data
+		
+		
+		//calculating
+		for(int i=1;i<=9;i++){
+			for(int j=1;j<=9;j++){
+				if(j%3!=0){
+					str = i + " * " + j + " = " + (i*j) + " ";
+				  //System.out.print(i + " * " + j + " = " + (i*j) + " ");
+					System.out.printf("%d * %d = %2d ", i,j,(i*j));
+				}else{
+					str = i + " * " + j + " = " + (i*j) + " \n";
+					//System.out.println(i + " * " + j + " = " + (i*j) + " ");
+					System.out.printf("%d * %d = %2d \n", i,j,(i*j));
+		    	}
+				//System.out.printf("%-18s",str);
+				//System.out.println("");
+		    }
+		     if(i%3==0){
+		    	    str="";
+		    	     System.out.printf("%-18s\n",str);
+		              }
+		}
+		
+		
+		//display results
+
+	}
+
+}

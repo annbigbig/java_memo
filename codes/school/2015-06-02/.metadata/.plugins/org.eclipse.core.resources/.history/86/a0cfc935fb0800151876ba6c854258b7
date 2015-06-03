@@ -1,0 +1,10 @@
+package com.kashu.demo;
+
+public class Fibonaci {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

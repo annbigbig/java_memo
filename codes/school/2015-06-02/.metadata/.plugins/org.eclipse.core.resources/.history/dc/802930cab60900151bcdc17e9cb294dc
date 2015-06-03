@@ -1,0 +1,15 @@
+package com.kashu.demo;
+
+public class TestDemo02 {
+
+	public static void main(String[] args) {
+		int a = 1;
+		funcA(a);
+
+	}
+	
+	public static void funcA(int a){
+		System.out.println(a++);
+	}
+
+}
