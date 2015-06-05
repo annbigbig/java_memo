@@ -1,0 +1,36 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Ex3 {
+
+	public static void main(String[] args) {
+		
+		//variable declaration
+		int x = 0, y = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		//collect data
+		System.out.println("請輸入整數x");
+		x = sc.nextInt();
+		System.out.println("請輸入整數x");
+		y = sc.nextInt();
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+	
+	public int compare(int a,int b){
+		int bigger;
+		if(a>b){
+			bigger = a;
+		}else{
+			bigger = b;
+		}
+		return bigger;
+	}
+
+}

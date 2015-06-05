@@ -1,0 +1,19 @@
+package com.kashu.demo;
+
+public class Circle05_sub {
+
+	static void Area(int r){
+		 double a = Math.PI * Math.pow((double)r, 2);
+		 System.out.println("半徑" + r + "的圓形的圓面積 = " + a);
+	}
+	
+	static void Volume(){
+		
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

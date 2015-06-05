@@ -1,0 +1,18 @@
+package com.kashu.demo;
+
+public class Ex8 {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static int add(int i,int j){
+		System.out.println("Adding two integers: " + i +"," + j);
+		return i+j;
+	}
+
+	public int add(double i,double j){
+		System.out.println("Adding two doubles: " + i + "," + j);
+		return i+j;
+	}
+}

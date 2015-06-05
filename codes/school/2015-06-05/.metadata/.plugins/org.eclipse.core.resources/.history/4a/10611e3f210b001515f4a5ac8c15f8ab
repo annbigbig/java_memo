@@ -1,0 +1,29 @@
+package com.kashu.demo;
+
+public class Ex3 {
+
+	public static void main(String[] args) {
+		//variable declaration
+		
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+	
+	public int compare(int a,int b){
+		int bigger;
+		if(a>b){
+			bigger = a;
+		}else{
+			bigger = b;
+		}
+		return bigger;
+	}
+
+}

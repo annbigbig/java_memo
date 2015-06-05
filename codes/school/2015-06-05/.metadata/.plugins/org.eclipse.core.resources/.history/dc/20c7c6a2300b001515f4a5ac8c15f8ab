@@ -1,0 +1,21 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Ex4 {
+
+	public static void main(String[] args) {
+		//variables declaration
+		Scanner sc = new Scanner(System.in);
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

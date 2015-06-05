@@ -1,0 +1,23 @@
+package com.kashu.demo;
+
+public class Ex5 {
+
+	public static void main(String[] args) {
+		//variable declaration
+		
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+	public static int ArithmeticSeries(int n){
+		int result = 0;
+		return result;
+	}
+}

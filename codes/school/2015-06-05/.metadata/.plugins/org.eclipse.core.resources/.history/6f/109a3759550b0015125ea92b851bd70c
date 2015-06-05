@@ -1,0 +1,20 @@
+package com.kashu.demo;
+
+public class Ex7 {
+
+	public static void main(String[] args) {
+		//variables declaration
+		Scanner sc = new Scanner(System.in);
+		int n = 2;
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

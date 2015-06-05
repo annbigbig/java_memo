@@ -1,0 +1,26 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Ex4 {
+
+	public static void main(String[] args) {
+		//variables declaration
+		Scanner sc = new Scanner(System.in);
+		int n = 1 , total = 0;
+		
+		//collect data
+		System.out.println("請輸入正整數n");
+		n = sc.nextInt();
+		
+		//calculating
+		if (n<=0) n=1;
+		for(int i=1;i<=n;i++){
+			total += i;
+		}
+		
+		//display results
+		System.out.printf("%d", total);
+	}
+
+}
