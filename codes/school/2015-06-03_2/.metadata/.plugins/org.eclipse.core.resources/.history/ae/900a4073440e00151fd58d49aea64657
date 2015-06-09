@@ -1,0 +1,31 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Circle_SubFunc02 {
+	
+ int InputData(){
+	 Scanner sc = new Scanner(System.in);
+	 System.out.println("請輸入圓半徑 :");
+	 int r = sc.nextInt();
+	 return r;
+ }
+ 
+//計算圓面積
+ double CalcArea(int r){
+	 double a = Math.PI * Math.pow(r,2);
+	 return a;
+ }
+ 
+ //計算圓柱體體積
+ double CalcVolumn(int r, int h){
+	 double v = Math.PI * Math.pow(r,2) * h;
+	 return v;
+ }
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
