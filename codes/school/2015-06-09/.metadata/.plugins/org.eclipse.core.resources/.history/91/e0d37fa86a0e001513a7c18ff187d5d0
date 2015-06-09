@@ -1,0 +1,19 @@
+package com.kashu.demo;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class SwapMN {
+
+	public static void main(String[] args) {
+		int no[] = new int[2];
+		BufferedReader keyin = new BufferedReader(new InputStreamReader(System.in));
+		
+
+	}
+
+	public static void swap(int no[]){
+		int temp;
+		
+	}
+}

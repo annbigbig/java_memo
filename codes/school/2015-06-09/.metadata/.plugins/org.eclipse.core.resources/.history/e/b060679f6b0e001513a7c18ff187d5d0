@@ -1,0 +1,31 @@
+package com.kashu.demo;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class SwapMN {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		//定義變數
+		int no[] = new int[2];
+		BufferedReader keyin = new BufferedReader(new InputStreamReader(System.in));
+		
+		//收集資料
+		System.out.println("請輸入第一個整數 ");
+		no[0] = Integer.valueOf(keyin.readLine());
+		System.out.println("請輸入第二個整數 ");
+		no[1] = Integer.valueOf(keyin.readLine());
+		
+		//運算
+		
+	}
+
+	public static void swap(int no[]){
+		int temp;
+		if(no[0]>no[1]){
+			
+		}
+		
+	}
+}
