@@ -1,0 +1,19 @@
+package com.kashu.demo;
+
+public class Factorial_Recursive {
+
+	public static void main(String[] args) {
+		//variable declaration
+		
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

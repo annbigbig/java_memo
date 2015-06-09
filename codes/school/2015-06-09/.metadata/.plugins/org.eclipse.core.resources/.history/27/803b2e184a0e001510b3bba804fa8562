@@ -1,0 +1,32 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Factorial_Recursive {
+
+	public static void main(String[] args) {
+		//variable declaration
+		Scanner sc = new Scanner(System.in);
+		int n = 0 , result = 0;
+		
+		//collect data
+		System.out.println("請輸入一個正整數 :");
+		n = sc.nextInt();
+		
+		//calculating
+		if(n<=0) n = 1;
+		result = factorial(n);
+		
+		//display results
+		System.out.println(n + "的階層 = " + factorial(n));
+
+	}
+	
+	public static int factorial(int m){
+		if(m == 1){
+			return 1;
+		}
+		return factorial(m-1);
+	}
+
+}

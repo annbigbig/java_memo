@@ -1,0 +1,23 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Factorial_Recursive {
+
+	public static void main(String[] args) {
+		//variable declaration
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		
+		//collect data
+		System.out.println("請輸入一個正整數 :");
+		n = sc.nextInt();
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

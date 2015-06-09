@@ -1,0 +1,31 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Factorial_Recursive {
+
+	public static void main(String[] args) {
+		//variable declaration
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		
+		//collect data
+		System.out.println("請輸入一個正整數 :");
+		n = sc.nextInt();
+		
+		//calculating
+		if(n<=0) n = 1;
+		
+		
+		//display results
+
+	}
+	
+	public static int factorial(int m){
+		if(m == 1){
+			return 1;
+		}
+		return factorial(m-1);
+	}
+
+}

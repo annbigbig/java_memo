@@ -1,0 +1,16 @@
+package com.kashu.demo;
+
+public class ByValueOrByReference {
+
+	public static void main(String[] args) {
+		int a[] = new int[3];
+		int b[] = {4,5,6};
+
+	}
+
+	public static void changeIt(int[] c){
+		for(int i=1;i<=3;i++){
+			
+		}
+	}
+}

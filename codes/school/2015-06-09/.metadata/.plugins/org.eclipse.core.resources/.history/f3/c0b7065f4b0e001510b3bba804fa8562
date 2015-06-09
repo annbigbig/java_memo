@@ -1,0 +1,22 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Fibonacci_ForLoop {
+
+	public static void main(String[] args) {
+		//variables declaration
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		
+		//collect data
+		System.out.println("請問要求費氏數列第幾項呢？");
+		n = sc.nextInt();
+		
+		//calculating
+		
+		//display results
+		
+	}
+
+}

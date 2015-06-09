@@ -1,0 +1,36 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Fibonacci_ForLoop_Sum {
+	
+	// 費氏數列 1 , 1 , 2 , 3 , 5 , 8 , 13 .....
+	
+	public static void main(String[] args) {
+		//variables declaration
+		Scanner sc = new Scanner(System.in);
+		int n = 0 , fn_2 = 0, fn_1 = 0, fn = 0 , total = 0;
+		
+		//collect data
+		System.out.println("請問要從費氏數列第1項加總到費氏數列第幾項呢？");
+		n = sc.nextInt();
+		
+		//calculating
+		if(n<=0) n=1;
+		for(int i=1;i<=n;i++){
+			if(i==1){
+      fn_2 = 0; fn_1 = 0; fn = 1;
+			}else if(i==2){
+				fn_2 = 0; fn_1 = 1; fn = 1;
+			}else{
+				fn_2 = fn_1; fn_1 = fn; fn = fn_2 + fn_1;
+			}
+			total += fn;
+		}
+		
+		//display results
+		System.out.println("費氏數列第1項加總到第" + n + "項 = " + total);
+
+	}
+
+}

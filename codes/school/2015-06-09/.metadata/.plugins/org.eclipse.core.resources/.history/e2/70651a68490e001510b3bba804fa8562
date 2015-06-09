@@ -1,0 +1,21 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Factorial_Recursive {
+
+	public static void main(String[] args) {
+		//variable declaration
+		Scanner sc = new Scanner(System.in);
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

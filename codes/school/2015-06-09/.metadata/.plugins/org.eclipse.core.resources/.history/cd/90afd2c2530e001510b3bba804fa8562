@@ -1,0 +1,24 @@
+package com.kashu.demo;
+
+public class Fibonacci_Recursive {
+
+	//遞迴呼叫函式(Recursive Function Call)求費氏數列第n項
+	
+	public static void main(String[] args) {
+		//variables declaration
+		
+		//collect data
+		
+		//calculating
+		
+		//display results
+
+	}
+
+	public static int fibonacci(int n){
+		if((n==1)||(n==2)){
+			return 1;
+		}
+		return (fibonacci(n-1) + fibonacci(n-2));
+	}
+}
