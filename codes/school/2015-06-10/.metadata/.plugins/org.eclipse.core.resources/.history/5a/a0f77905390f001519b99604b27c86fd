@@ -1,0 +1,31 @@
+package com.kashu.demo10;
+
+public class Circle {
+	private int r = 0;
+	private int h = 0;
+	
+	public Circle(){
+		
+	}
+	
+	public Circle(int r,int h){
+		
+	}
+	
+	private void setR(int r){
+		
+	}
+	
+	private void setH(int h){
+		
+	}
+	
+	public double getArea(int r){
+		
+	}
+	
+	public double getVolume(int r,int h){
+		
+	}
+	
+}

@@ -1,0 +1,10 @@
+package com.kashu.demo10;
+
+public class Circle10_Constructor {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

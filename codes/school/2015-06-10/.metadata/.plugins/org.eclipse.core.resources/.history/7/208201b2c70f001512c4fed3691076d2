@@ -1,0 +1,16 @@
+package com.kashu.demo10;
+
+public class Circle10_Constructor {
+
+	public static void main(String[] args) {
+		//宣告變數
+		
+		//收集資料
+
+		//運算
+		
+		//顯示結果
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.kashu.demo10;
+
+public class Circle {
+	private int r = 0;
+	private int h = 0;
+	
+	public Circle(){
+		
+	}
+}
