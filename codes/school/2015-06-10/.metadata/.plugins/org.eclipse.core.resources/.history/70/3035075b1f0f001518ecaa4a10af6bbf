@@ -1,0 +1,23 @@
+package com.kashu.demo;
+
+class Circle {
+	int r = 0;
+	int h = 0;
+	
+	public void setR(int r){
+		this.r = r;
+	}
+	
+	public void setH(int h){
+		this.h = h;
+	}
+	
+}
+
+public class Circle09_Advanced {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -2,7 +2,7 @@ package com.kashu.demo;
 
 import java.util.Scanner;
 
-public class Circle08_Basic {
+public class Circle09_Basic {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class Circle08_Basic {
 		//請問cr物件變數的2個attribute都沒用到 (r和h)，這樣是正確的用法嗎？
 		System.out.println("圓的面積 = " + cr.getArea(r));
 		System.out.println("圓的面積 = " + cr.getVolume(r,h));
-		
+
 	}
 
 }
