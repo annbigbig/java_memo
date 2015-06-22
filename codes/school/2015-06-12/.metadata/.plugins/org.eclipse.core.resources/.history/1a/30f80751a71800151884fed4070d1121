@@ -1,0 +1,59 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class ID_Verification {
+
+	/*
+	 * 身分證字號驗證程式
+	 * 
+	 */
+	public static void main(String[] args) {
+		//variables declaration
+		
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display result
+
+	}
+	
+	
+	//從用戶取得一個長度為10的身分證字串
+	public String inputData(){
+		Scanner sc = new Scanner(System.in);
+		String str =  sc.nextLine();
+		if (str.length()==10){
+			return str;
+		}
+		return "";
+	}
+	
+	public boolean verifyID(String id){
+		String[][] alpha = {
+				{"A","10"},{"B","11"},{"C","12"},{"D","13"},{"E","14"},
+				{"F","15"},{"G","16"},{"H","17"},{"I","34"},{"J","18"},
+				{"K","19"},{"M","21"},{"N","22"},{"O","35"},{"P","23"},
+				{"Q","24"},{"T","27"},{"U","28"},{"V","29"},{"W","32"},
+				{"X","30"},{"Z","33"},{"L","20"},{"R","25"},{"S","26"},
+				{"Y","31"}
+		};
+		int[] n = new int[11];
+		
+		//取出身分證字號的第1個字元
+		String first_letter = id.substring(0, 1);
+		int first_letter_mean = 0;
+		for(int i=0;i<26;i++){
+			if(alpha[i][0].equals(first_letter)){
+				first_letter_mean = Integer.valueOf(alpha[i][1]);
+			}
+		}
+		
+		return false;
+	}
+
+}
