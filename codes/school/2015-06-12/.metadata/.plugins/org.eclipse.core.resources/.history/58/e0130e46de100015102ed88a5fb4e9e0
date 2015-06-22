@@ -1,0 +1,29 @@
+package com.kashu.demo;
+
+public class ID_Verification {
+
+	/*
+	 * 身分證字號驗證程式
+	 * 
+	 */
+	public static void main(String[] args) {
+		//variables declaration
+		
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display result
+
+	}
+	
+	public boolean verifyID(String id){
+		
+		
+		return false;
+	}
+
+}

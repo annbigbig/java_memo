@@ -1,0 +1,24 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Homework04 {
+
+	public static void main(String[] args) {
+		
+		//variables declaration
+		Scanner sc = new Scanner(System.in);
+		double hour = 0 , totalFee = 0;
+		
+		//collect data
+		System.out.println("請輸入停車時數 : (可以是浮點數，需為正數");
+		hour = sc.nextDouble();
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

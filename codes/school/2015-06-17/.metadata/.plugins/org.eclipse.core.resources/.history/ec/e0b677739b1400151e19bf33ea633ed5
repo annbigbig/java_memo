@@ -1,0 +1,13 @@
+package com.kashu.demo;
+
+public class Circle11_Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	static int InputData(){
+		return 0;
+	}
+}

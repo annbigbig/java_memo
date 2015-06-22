@@ -1,0 +1,23 @@
+package com.kashu.demo;
+
+import java.util.Scanner;
+
+public class Homework04 {
+
+	public static void main(String[] args) {
+		
+		//variables declaration
+		Scanner sc = new Scanner(System.in);
+		double hour = 0 , totalFee = 0;
+		
+		//collect data
+		
+		
+		//calculating
+		
+		
+		//display results
+
+	}
+
+}

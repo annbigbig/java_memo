@@ -1,0 +1,40 @@
+package com.kashu.demo;
+
+public class Circle11_Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	static int InputData(){
+		return 0;
+	}
+}
+
+
+
+class CalcArea{
+	private int r = 0;
+	private double PI = 3.1416;
+	
+	public CalcArea(int radius){
+		
+	}
+	
+	public double getNum(){
+		return 0;
+	}
+	
+	public void printR(){
+		
+	}
+}
+
+class CalcVolume{
+	private int h = 0;
+	
+	public CalcVolume(){
+		
+	}
+}

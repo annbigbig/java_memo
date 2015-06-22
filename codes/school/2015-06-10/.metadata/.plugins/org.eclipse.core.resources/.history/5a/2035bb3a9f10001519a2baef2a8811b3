@@ -1,0 +1,13 @@
+package com.kashu.test01;
+
+public class Foo {
+
+	public static void main(String[] args) {
+		boolean a = true, b =false;
+		if (b=true){
+			
+		}
+
+	}
+
+}

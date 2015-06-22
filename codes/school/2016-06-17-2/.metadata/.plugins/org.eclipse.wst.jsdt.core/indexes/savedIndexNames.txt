@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/home/anntony/java_memo/codes/school/2016-06-17-2/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1437816669.index
+3748009960.index
+3227947706.index
+887354838.index
+185017753.index
+668036240.index

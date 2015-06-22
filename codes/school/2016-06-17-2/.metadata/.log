@@ -1,0 +1,836 @@
+!SESSION 2015-06-17 15:54:23.028 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data /home/anntony/java_memo/codes/school/2016-06-17-2 -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2015-06-17 15:54:30.598
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-17 15:54:30.598
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18bf1bad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1cb929a9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-17 15:54:30.601
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ecc4be7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3355d9ba,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2015-06-17 15:55:27.557 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2015-06-17 15:55:35.559
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-17 15:55:35.559
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e35a219,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7772ec28,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-17 15:55:35.560
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@14d513ca,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@be9cc86,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.503
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.512
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.513
+!MESSAGE Failed while invoking preset factory "org.eclipse.jpt.jpa.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaSEConfigurationPresetFactory.findProjectFacetVersion(BasicJpaSEConfigurationPresetFactory.java:62)
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaSEConfigurationPresetFactory.createPreset(BasicJpaSEConfigurationPresetFactory.java:51)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.514
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.514
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.515
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.515
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.516
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.516
+!MESSAGE Failed while invoking preset factory "org.eclipse.jpt.jpa.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaEEConfigurationPresetFactory.findProjectFacetVersion(BasicJpaEEConfigurationPresetFactory.java:64)
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaEEConfigurationPresetFactory.createPreset(BasicJpaEEConfigurationPresetFactory.java:53)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.517
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.common.project.facet.core.MinimalConfigurationPresetFactory.findProjectFacetVersion(MinimalConfigurationPresetFactory.java:77)
+	at org.eclipse.wst.common.project.facet.core.MinimalConfigurationPresetFactory.createPreset(MinimalConfigurationPresetFactory.java:66)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.518
+!MESSAGE Failed while invoking preset factory "org.eclipse.jpt.jpa.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaSEConfigurationPresetFactory.findProjectFacetVersion(BasicJpaSEConfigurationPresetFactory.java:62)
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaSEConfigurationPresetFactory.createPreset(BasicJpaSEConfigurationPresetFactory.java:51)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.518
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.519
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.524
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.528
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.528
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.529
+!MESSAGE Failed while invoking preset factory "org.eclipse.jpt.jpa.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaEEConfigurationPresetFactory.findProjectFacetVersion(BasicJpaEEConfigurationPresetFactory.java:64)
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaEEConfigurationPresetFactory.createPreset(BasicJpaEEConfigurationPresetFactory.java:53)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:02:20.529
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.common.project.facet.core.MinimalConfigurationPresetFactory.findProjectFacetVersion(MinimalConfigurationPresetFactory.java:77)
+	at org.eclipse.wst.common.project.facet.core.MinimalConfigurationPresetFactory.createPreset(MinimalConfigurationPresetFactory.java:66)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-06-17 16:11:28.302
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2015-06-17 16:11:28.302
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:11:28.302
+!MESSAGE "JST Server Adapters Extensions" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:11:28.303
+!MESSAGE "JST Server Adapters" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-06-17 16:11:28.310
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2015-06-17 16:11:28.310
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:11:28.310
+!MESSAGE "JST Server Adapters Extensions" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:11:28.311
+!MESSAGE "JST Server Adapters" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-06-17 16:12:28.313
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2015-06-17 16:12:28.313
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:12:28.313
+!MESSAGE "JST Server Adapters Extensions" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:12:28.313
+!MESSAGE "JST Server Adapters" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-06-17 16:12:28.314
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2015-06-17 16:12:28.314
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:12:28.314
+!MESSAGE "JST Server Adapters Extensions" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:12:28.314
+!MESSAGE "JST Server Adapters" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-06-17 16:18:37.874
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2015-06-17 16:18:37.874
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:18:37.874
+!MESSAGE "JST Server Adapters Extensions" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:18:37.874
+!MESSAGE "JST Server Adapters" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-06-17 16:18:37.876
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2015-06-17 16:18:37.876
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:18:37.876
+!MESSAGE "JST Server Adapters Extensions" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:18:37.876
+!MESSAGE "JST Server Adapters" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-06-17 16:20:14.183
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2015-06-17 16:20:14.183
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:20:14.183
+!MESSAGE "JST Server Adapters Extensions" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:20:14.183
+!MESSAGE "JST Server Adapters" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-06-17 16:20:14.185
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2015-06-17 16:20:14.185
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:20:14.185
+!MESSAGE "JST Server Adapters Extensions" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2015-06-17 16:20:14.188
+!MESSAGE "JST Server Adapters" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.930
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.931
+!MESSAGE Failed while invoking preset factory "org.eclipse.jpt.jpa.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaSEConfigurationPresetFactory.findProjectFacetVersion(BasicJpaSEConfigurationPresetFactory.java:62)
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaSEConfigurationPresetFactory.createPreset(BasicJpaSEConfigurationPresetFactory.java:51)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.932
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.932
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.933
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.933
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.933
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.934
+!MESSAGE Failed while invoking preset factory "org.eclipse.jpt.jpa.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaEEConfigurationPresetFactory.findProjectFacetVersion(BasicJpaEEConfigurationPresetFactory.java:64)
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaEEConfigurationPresetFactory.createPreset(BasicJpaEEConfigurationPresetFactory.java:53)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.934
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.common.project.facet.core.MinimalConfigurationPresetFactory.findProjectFacetVersion(MinimalConfigurationPresetFactory.java:77)
+	at org.eclipse.wst.common.project.facet.core.MinimalConfigurationPresetFactory.createPreset(MinimalConfigurationPresetFactory.java:66)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.939
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.940
+!MESSAGE Failed while invoking preset factory "org.eclipse.jpt.jpa.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaSEConfigurationPresetFactory.findProjectFacetVersion(BasicJpaSEConfigurationPresetFactory.java:62)
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaSEConfigurationPresetFactory.createPreset(BasicJpaSEConfigurationPresetFactory.java:51)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.941
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.942
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.942
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.942
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.943
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.common.project.facet.core.PresetDefinition.<init>(PresetDefinition.java:53)
+	at org.eclipse.wst.common.project.facet.core.DefaultConfigurationPresetFactory.createPreset(DefaultConfigurationPresetFactory.java:78)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$StaticExtendingDynamicPreset.resolve(PresetsExtensionPoint.java:505)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.943
+!MESSAGE Failed while invoking preset factory "org.eclipse.jpt.jpa.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaEEConfigurationPresetFactory.findProjectFacetVersion(BasicJpaEEConfigurationPresetFactory.java:64)
+	at org.eclipse.jpt.jpa.core.internal.facet.BasicJpaEEConfigurationPresetFactory.createPreset(BasicJpaEEConfigurationPresetFactory.java:53)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-06-17 16:37:31.944
+!MESSAGE Failed while invoking preset factory "org.eclipse.wst.common.project.facet.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.common.project.facet.core.MinimalConfigurationPresetFactory.findProjectFacetVersion(MinimalConfigurationPresetFactory.java:77)
+	at org.eclipse.wst.common.project.facet.core.MinimalConfigurationPresetFactory.createPreset(MinimalConfigurationPresetFactory.java:66)
+	at org.eclipse.wst.common.project.facet.core.internal.PresetsExtensionPoint$DynamicPreset.resolve(PresetsExtensionPoint.java:580)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailablePresets(FacetedProjectWorkingCopy.java:973)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshAvailableFacets(FacetedProjectWorkingCopy.java:677)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy.refreshTargetableRuntimes(FacetedProjectWorkingCopy.java:1183)
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProjectWorkingCopy$1.run(FacetedProjectWorkingCopy.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2015-06-17 21:07:48.016 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2015-06-17 21:08:13.004
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-17 21:08:13.004
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f8ab988,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46c475ba,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-17 21:08:13.004
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@e47637c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@606f0f70,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2015-06-17 22:11:33.965 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2015-06-17 22:11:41.957
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-17 22:11:41.957
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@799206ad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@60251ddb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-17 22:11:41.958
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2059c3ff,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f8ab988,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2015-06-18 09:09:36.525 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2015-06-18 09:09:51.631
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-18 09:09:51.632
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@16732340,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@38e052b2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-18 09:09:51.632
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7fa68ff4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@515fff35,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2015-06-22 11:03:46.526 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2015-06-22 11:04:03.013
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-22 11:04:03.013
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7fa68ff4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@515fff35,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-22 11:04:03.013
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5eb9bf7d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@64f613da,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)

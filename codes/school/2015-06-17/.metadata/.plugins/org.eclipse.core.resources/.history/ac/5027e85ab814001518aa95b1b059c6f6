@@ -1,0 +1,7 @@
+package com.kashu.demo;
+
+import java.applet.Applet;
+
+public class MyApplet extends Applet {
+
+}

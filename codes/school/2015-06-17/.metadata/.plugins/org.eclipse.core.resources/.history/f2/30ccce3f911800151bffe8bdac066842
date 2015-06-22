@@ -1,0 +1,54 @@
+package com.kashu.demo;
+
+public class Circle11_Inheritance {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	static int InputData(){
+		return 0;
+	}
+}
+
+
+
+class CalcArea{
+	private int r;
+	private double PI = 3.1416;
+	
+	public CalcArea(){
+		
+	}
+	
+	public CalcArea(int radius){
+		this.r = radius;
+	}
+	
+	public double getNum(){
+		return (PI * Math.pow(r,2));
+	}
+	
+	public void printR(){
+		System.out.println("半徑" + r + "，圓面積 = " + getNum());
+	}
+}
+
+class CalcVolume extends CalcArea{
+	private int h = 0;
+	
+	public CalcVolume(int radius , int height){
+		super(radius);
+		this.h = height;
+	}
+	
+	public double getNum(int h){
+		return super.getNum() * h;
+	}
+	
+	public void printH(){
+		System.out.println("高度"  + "，圓柱體體積 = " + getNum(h));
+	}
+	
+}

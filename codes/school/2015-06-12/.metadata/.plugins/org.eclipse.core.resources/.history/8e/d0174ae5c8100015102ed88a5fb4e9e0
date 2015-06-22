@@ -1,0 +1,11 @@
+package com.kashu.demo;
+
+public class Homework03 {
+
+	public static void main(String[] args) {
+		String[] strArray1 = {"A","B","C","D","E","F","G","H","I","J"};
+		String[] strArray2 = new String[strArray1.length];
+
+	}
+
+}
