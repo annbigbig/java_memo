@@ -1,0 +1,22 @@
+package com.kashu.demo;
+
+public class Circle extends Shape implements ShapeInfo{
+	private double r;
+	
+	public Circle(double x,double y,double r){
+		super.x = x;
+		super.y = y;
+		this.r = r;
+	}
+
+	@Override
+	public void show() {
+		
+		
+	}
+	
+	public double area(){
+		return 0;
+	}
+
+}

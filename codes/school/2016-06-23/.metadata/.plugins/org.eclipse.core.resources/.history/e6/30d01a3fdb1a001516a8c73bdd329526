@@ -1,0 +1,11 @@
+package com.kashu.demo;
+
+public class Circle12_interface {
+
+	public static void main(String[] args) {
+		ShapeInfo a;
+		Circle c = new Circle(0,0,10.0);
+		Triangle t = new Triangle(0,0,100.0,100.0,10.0);
+	}
+
+}

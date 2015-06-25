@@ -1,0 +1,23 @@
+package com.kashu.demo;
+
+public class Rectangle extends Shape implements ShapeInfo,ShapeInterface {
+	private double x1;
+	private double y1;
+
+	public Rectangle(double x,double y,double x1,double y1){
+		
+	}
+	
+	@Override
+	public double area() {
+		
+		return 0;
+	}
+
+	@Override
+	public void show() {
+		
+		
+	}
+
+}

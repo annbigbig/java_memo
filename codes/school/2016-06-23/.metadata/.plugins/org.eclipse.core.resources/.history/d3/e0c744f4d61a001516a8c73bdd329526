@@ -1,0 +1,20 @@
+package com.kashu.demo;
+
+public class Triangle extends Shape implements ShapeInfo,ShapeInterface {
+	private double x1;
+	private double y1;
+	private double l;
+
+	@Override
+	public double area() {
+		
+		return 0;
+	}
+
+	@Override
+	public void show() {
+		
+		
+	}
+
+}
