@@ -1,0 +1,19 @@
+package com.kashu.demo;
+
+public class JPA06_1 {
+
+	public static void main(String[] args) {
+		Rice r = new Rice(100);
+		r.setCaloriePerGram(1);
+		System.out.println("米的份量=" + r.getAmount() + "\t 卡路里每公克是=" + r.getCalorie());
+		
+		Egg e = new Egg(30);
+		e.setCaloriePerGram(2);
+		System.out.println("蛋的份量=" + e.getAmount() + "\t 卡路里每公克是=" + e.getCalorie());
+		
+		Cabbage c = new Cabbage(50);
+		c.setCaloriePerGram(1);
+		System.out.println("甘藍菜的份量=" + c.getAmount() + "\t 卡路里每公克是=" + c.getCalorie());
+	}
+
+}

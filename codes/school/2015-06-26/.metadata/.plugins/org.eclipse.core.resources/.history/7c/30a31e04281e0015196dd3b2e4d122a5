@@ -1,0 +1,16 @@
+package com.kashu.demo;
+
+public class Rice extends Food{
+	
+	private int unitCost;
+	
+	public Rice(int amount) {
+		super(amount);
+		setCaloriePerGram(1);
+	}
+	
+	int getCost(){
+		return unitCost * getAmount();
+	}
+
+}

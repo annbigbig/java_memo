@@ -1,0 +1,9 @@
+package com.kashu.demo;
+
+public class Rice extends Food{
+
+	public Rice(int gram) {
+		super(gram);
+	}
+
+}

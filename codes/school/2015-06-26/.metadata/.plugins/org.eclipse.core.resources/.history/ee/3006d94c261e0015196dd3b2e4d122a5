@@ -1,0 +1,13 @@
+package com.kashu.demo;
+
+public class PorkRib extends Food{
+	private int unitCost;
+	public PorkRib(int amount) {
+		super(amount);
+		setCaloriePerGram(10);
+	}
+	
+	int getCost(){
+		return unitCost * getAmount();
+	}
+}

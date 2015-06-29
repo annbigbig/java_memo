@@ -1,0 +1,9 @@
+package com.kashu.demo;
+
+public class ProkRib extends Food {
+
+	public ProkRib(int amount) {
+		super(amount);
+	}
+
+}

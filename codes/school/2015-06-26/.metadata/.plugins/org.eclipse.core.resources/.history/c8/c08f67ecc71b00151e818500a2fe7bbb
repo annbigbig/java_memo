@@ -1,0 +1,10 @@
+package com.kashu.demo;
+
+public abstract class Food {
+	private int amount;
+	private int calorie;
+	
+	public Food(int gram){
+		
+	}
+}

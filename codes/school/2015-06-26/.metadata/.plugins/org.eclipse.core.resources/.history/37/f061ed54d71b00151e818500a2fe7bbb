@@ -1,0 +1,27 @@
+package com.kashu.demo;
+
+import java.util.Vector;
+
+public class LunchBox {
+	private int calorie;
+	private Vector<Food> content;
+	
+	public LunchBox(){
+		content = new Vector<Food>();
+	}
+	
+	void add(Food f){
+		content.add(f);
+	}
+	
+	int getCalorie(){
+		int total = 0;
+		for(Food f : content){
+			total += f.getCalorie();
+		}
+		
+		return total;
+	}
+	
+	
+}

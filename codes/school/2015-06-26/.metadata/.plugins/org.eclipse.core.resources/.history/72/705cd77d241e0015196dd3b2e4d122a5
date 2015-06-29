@@ -1,0 +1,32 @@
+package com.kashu.demo;
+
+import java.util.Vector;
+
+public class LunchBox {
+	private int calorie;
+	private Vector<Food> content;
+	
+	public LunchBox(){
+		content = new Vector<Food>();
+	}
+	
+	void add(Food f){
+		content.add(f);
+	}
+	
+	int getCalorie(){
+		int total = 0;
+		for(Food f : content){
+			total += f.getCalorie()*f.getAmount();
+		}
+		return total;
+	}
+	
+	public static void main(String[] args){
+		LunchBox economy = new LunchBox();
+		economy.add(new Rice(200));
+		economy.add(new Cabbage(100));
+		economy.add(new ProkRib(250));
+		System.out.println("Total calories of an economy lunch box are " + economy.getCalorie() + ".");
+	}
+}

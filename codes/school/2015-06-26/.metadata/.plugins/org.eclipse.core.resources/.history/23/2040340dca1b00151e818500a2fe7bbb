@@ -1,0 +1,11 @@
+package com.kashu.demo;
+
+public class JPA06_1 {
+
+	public static void main(String[] args) {
+		Rice r = new Rice(100);
+		r.setCaloriePerGram(1);
+		System.out.println("米的份量=" + r.getAmount() + "卡路里每公克是=" + r.getCalorie());
+	}
+
+}

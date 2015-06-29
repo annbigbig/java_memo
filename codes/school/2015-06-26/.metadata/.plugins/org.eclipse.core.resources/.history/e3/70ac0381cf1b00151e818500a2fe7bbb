@@ -1,0 +1,10 @@
+package com.kashu.demo;
+
+import java.util.Vector;
+
+public class LunchBox {
+	private int calorie;
+	private Vector<Food> content;
+	
+	
+}

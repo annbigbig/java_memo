@@ -1,0 +1,22 @@
+package com.kashu.demo;
+
+public class JPA06_1 {
+
+	public static void main(String[] args) {
+		Rice r = new Rice(100);
+		System.out.println("米的份量=" + r.getAmount() + "公克\t 卡路里每公克是=" + r.getCalorie());
+		
+		Egg e = new Egg(30);
+		System.out.println("蛋的份量=" + e.getAmount() + "公克\t 卡路里每公克是=" + e.getCalorie());
+		
+		Cabbage c = new Cabbage(50);
+		System.out.println("甘藍菜的份量=" + c.getAmount() + "公克\t 卡路里每公克是=" + c.getCalorie());
+		
+		PorkRib p = new PorkRib(300);
+		System.out.println("ProkRib的份量=" + p.getAmount() + "公克\t 卡路里每公克是=" + p.getCalorie());
+		
+		Carrot cc = new Carrot(100);
+		System.out.println("紅蘿蔔的份量=" + cc.getAmount() + "公克\t 卡路里每公克是=" + cc.getCalorie());
+	}
+
+}
