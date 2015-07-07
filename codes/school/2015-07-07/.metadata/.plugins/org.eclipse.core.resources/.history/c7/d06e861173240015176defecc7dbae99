@@ -76,7 +76,6 @@ public class Calculator extends JPanel implements ActionListener {
     				}else{
     					display.setText("0");
     				}
-    				calculating = false;
     } else {
       if (calculating) {
         if (cmd.equals("-")) {

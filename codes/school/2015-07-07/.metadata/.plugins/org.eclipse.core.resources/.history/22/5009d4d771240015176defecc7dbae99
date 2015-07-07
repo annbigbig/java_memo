@@ -64,8 +64,6 @@ public class Calculator extends JPanel implements ActionListener {
         display.setText(display.getText() + cmd);
       calculating = false;
     }else if(cmd.equals("CE")){
-    					result = 0;
-    					calculating = true;
     				display.setText("0");
     				
     }else if(cmd.equals("<-")){
@@ -73,10 +71,7 @@ public class Calculator extends JPanel implements ActionListener {
     				String afterDelete = beforeDelete.substring(0,beforeDelete.length()-1);
     				if(beforeDelete.length()>1){
     				display.setText(afterDelete);
-    				}else{
-    					display.setText("0");
     				}
-    				calculating = false;
     } else {
       if (calculating) {
         if (cmd.equals("-")) {
