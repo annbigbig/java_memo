@@ -1,0 +1,36 @@
+package com.kashu.demo;
+
+import java.applet.Applet;
+
+public class Exam01 extends Applet {
+
+	@Override
+	public void init() {
+		System.out.println("init()");
+		super.init();
+	}
+
+	@Override
+	public void start() {
+		System.out.println("start()");
+		super.start();
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("stop()");
+		super.stop();
+	}
+
+	@Override
+	public void destroy() {
+		System.out.println("destroy()");
+		super.destroy();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

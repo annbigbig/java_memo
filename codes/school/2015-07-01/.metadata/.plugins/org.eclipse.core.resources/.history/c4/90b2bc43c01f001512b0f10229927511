@@ -1,0 +1,44 @@
+package com.kashu.demo;
+
+import java.applet.Applet;
+
+public class Sample3E extends Applet {
+	Thread timer = new Thread(){
+		@Override
+		public void run() {
+			while(true){
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	};
+
+	@Override
+	public void init() {
+		
+		super.init();
+	}
+
+	@Override
+	public void start() {
+		
+		super.start();
+	}
+
+	@Override
+	public void stop() {
+		
+		super.stop();
+	}
+
+	@Override
+	public void destroy() {
+		
+		super.destroy();
+	}
+
+}

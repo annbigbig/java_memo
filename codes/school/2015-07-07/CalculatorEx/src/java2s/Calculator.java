@@ -1,0 +1,119 @@
+package java2s;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Calculator extends JPanel implements ActionListener {
+  private JTextField display = new JTextField("0");
+
+  private String buttonText = " <C 789/456*123-.0=+";
+
+  private double result = 0;
+
+  private String operator = "=";
+
+  private boolean calculating = true;
+
+  public Calculator() {
+   setLayout(new BorderLayout());
+   
+    display.setEditable(false);
+    add(display, "North");
+
+    JPanel p = new JPanel();
+
+    p.setLayout(new GridLayout(5, 4));
+
+    	String buttonTitle = null;
+    for (int i = 0; i < buttonText.length(); i++) {
+    	  buttonTitle = buttonText.substring(i, i + 1);
+    		JButton b = null;
+    		if(buttonTitle.equals("<")){
+    			b = new JButton("<-");
+    		}else if(buttonTitle.equals("C")){
+    			b = new JButton("CE");
+    		}else{
+    			b = new JButton(buttonTitle);
+    		}
+
+      p.add(b);
+      b.addActionListener(this);
+
+    }
+    
+    add(p, "Center");
+  }
+
+  public void actionPerformed(ActionEvent evt) {
+    String cmd = evt.getActionCommand();
+    if ('0' <= cmd.charAt(0) && cmd.charAt(0) <= '9' || cmd.equals(".")) {
+      if (calculating)
+        display.setText(cmd);
+      else
+        display.setText(display.getText() + cmd);
+      calculating = false;
+    }else if(cmd.equals("CE")){
+    				display.setText("0");
+    				
+    }else if(cmd.equals("<-")){
+    				String beforeDelete = display.getText();
+    				String afterDelete = beforeDelete.substring(0,beforeDelete.length()-1);
+    				if(beforeDelete.length()>1){
+    				display.setText(afterDelete);
+    				}
+    } else {
+      if (calculating) {
+        if (cmd.equals("-")) {
+          display.setText(cmd);
+          calculating = false;
+        } else
+          operator = cmd;
+      } else {
+        double x = Double.parseDouble(display.getText());
+        calculate(x);
+        operator = cmd;
+        calculating = true;
+      }
+    }
+  }
+
+  private void calculate(double n) {
+    if (operator.equals("+"))
+      result += n;
+    else if (operator.equals("-"))
+      result -= n;
+    else if (operator.equals("*"))
+      result *= n;
+    else if (operator.equals("/"))
+      result /= n;
+    else if (operator.equals("="))
+      result = n;
+    display.setText("" + result);
+  }
+
+  public static void main(String[] args) {
+    JFrame frame = new JFrame();
+    frame.setTitle("Calculator");
+    frame.setSize(300, 300);
+    frame.addWindowListener(new WindowAdapter() {
+      public void windowClosing(WindowEvent e) {
+        System.exit(0);
+      }
+    });
+
+    Container contentPane = frame.getContentPane();
+    contentPane.add(new Calculator());
+    frame.show();
+  }
+}

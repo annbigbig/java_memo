@@ -1,0 +1,37 @@
+package com.kashu.demo;
+
+import java.applet.Applet;
+import java.awt.Image;
+
+public class Exam02 extends Applet {
+	Image img,img2;
+	int x=0,y=0;
+	
+	@Override
+	public void init() {
+		System.out.println("init()");
+		System.out.println("getDocumentBase():" + getDocumentBase());
+		img = getImage(getDocumentBase(),"image01.jpg");
+		img2 = getImage(getDocumentBase(),"image02.jpg");
+		super.init();
+	}
+
+	@Override
+	public void start() {
+		System.out.println("start()");
+		super.start();
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("stop()");
+		super.stop();
+	}
+
+	@Override
+	public void destroy() {
+		System.out.println("destroy()");
+		super.destroy();
+	}
+
+}

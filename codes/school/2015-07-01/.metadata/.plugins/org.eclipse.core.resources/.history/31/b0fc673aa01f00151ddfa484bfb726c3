@@ -1,0 +1,43 @@
+package com.kashu.demo;
+
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class Exam01 extends Applet {
+
+	@Override
+	public void init() {
+		System.out.println("init()");
+		//System.out.println("getDocumentBase():" + getDocumentBase());
+		
+		super.init();
+	}
+
+	@Override
+	public void start() {
+		System.out.println("start()");
+		super.start();
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("stop()");
+		super.stop();
+	}
+
+	@Override
+	public void destroy() {
+		System.out.println("destroy()");
+		super.destroy();
+	}
+
+	public void paint(Graphics g){
+	 g.drawString("Welcome in Java Applet.",40,20);
+	   }
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}
