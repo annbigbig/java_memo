@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.EditDependencyDialog">
+		<item value="480" key="width"/>
+		<item value="447" key="x"/>
+		<item value="77" key="y"/>
+		<item value="450" key="height"/>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="394" key="x"/>
+		<item value="104" key="y"/>
+		<item value="563" key="height"/>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/home/anntony/spring_samples/spring-security-remember-me"/>
+			<item value="/home/anntony/spring_samples/logincontrolapp"/>
+			<item value="/home/anntony/spring_samples/SpringMVC-CookieHandling"/>
+			<item value="/home/anntony/spring_samples/spring-security-remember-me-annotation"/>
+			<item value="/home/anntony/spring_samples/SpringSecurity"/>
+			<item value="/home/anntony/spring_samples/spring-mvc-examples/bookstore-example-with-mvc"/>
+			<item value="/home/anntony/spring_samples/spring-petclinic"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="katest"/>
+			<item value="kashuGroup"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="katest"/>
+			<item value="kashuArtifact"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+		<list key="archetypeVersion">
+			<item value="1.0"/>
+			<item value="1.0.2"/>
+		</list>
+		<list key="archetypeGroupId">
+			<item value="org.apache.maven.archetypes"/>
+			<item value="co.ntier"/>
+		</list>
+		<list key="archetypeArtifactId">
+			<item value="maven-archetype-webapp"/>
+			<item value="spring-mvc-archetype"/>
+		</list>
+		<list key="repositoryUrl">
+			<item value=""/>
+			<item value="http://repo.maven.apache.org/maven2/"/>
+			<item value="http://maven-repository.com/artifact/co.ntier/spring-mvc-archetype/1.0.2"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="/home/anntony/java_memo/codes/school/AnnsProject/Simplest"/>
+			<item value="/home/anntony/spring_samples/spring-security-remember-me"/>
+			<item value="/home/anntony/java_memo/codes/school/AnnsProject/Spring4MVCHelloWorld/src"/>
+			<item value="/home/anntony/spring_samples/spring-petclinic"/>
+			<item value="/home/anntony/java_memo/codes/school/AnnsProject/Spring4MVCHelloWorld"/>
+			<item value="/home/anntony/java_memo/codes/school/AnnsProject/MySpringMvc"/>
+			<item value="/home/anntony/java_memo/codes/school/AnnsProject/Servers/Tomcat v8.0 Server at localhost-config"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.kashu.janjan"/>
+		</list>
+		<list key="groupId">
+			<item value="com.kashu"/>
+		</list>
+		<list key="artifactId">
+			<item value="janjan"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

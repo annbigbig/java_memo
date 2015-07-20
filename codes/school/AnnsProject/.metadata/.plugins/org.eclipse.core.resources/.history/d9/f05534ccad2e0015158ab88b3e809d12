@@ -1,0 +1,5 @@
+package com.kashu.base;
+
+public class HomeController {
+
+}
