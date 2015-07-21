@@ -19,16 +19,18 @@
 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">首頁layout從這抄來的</a><br>
 <h1>${message}</h1>
     </article>
-    <nav>nav<br>
-    <c:url var="part" value="/part"></c:url>
-    <h2>${part}</h2>
-    <c:import url="/part"/>
+    
+    <nav>
+    <c:import url="/login"/>
     </nav>
     
     <aside>aside<br>
     <h2></h2>
-    <c:import url="/login"/>
+    <c:url var="part" value="/part"></c:url>
+    <h2>${part}</h2>
+    <c:import url="/part"/>
     </aside>
+    
  </div>
  <footer>footer</footer>
 

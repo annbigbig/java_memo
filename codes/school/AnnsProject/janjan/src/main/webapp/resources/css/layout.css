@@ -35,6 +35,7 @@
            flex: 1 6 20%;
    -webkit-order: 1;
            order: 1;
+   vertical-align: top;
    }
   
   #main > aside {
@@ -78,3 +79,34 @@
     max-height: 50px;
    }
   }
+  
+    /*  this is come from mkyong spring-me tutorial */
+ .error {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.msg {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
+#login-box {
+	width: 200px;
+	padding: 20px;
+	margin: 10px auto;
+	background: #fff;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border: 1px solid #000;
+}

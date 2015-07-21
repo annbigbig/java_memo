@@ -2,12 +2,8 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<body>
-	<h1>Title : ${title}</h1>
-	<h1>Message : ${message}</h1>
 
+  <!-- 已登入的一般會員會看到會員可發動的功能列表 -->
 	<sec:authorize access="hasRole('ROLE_USER')">
 		<!-- For login user -->
 		<c:url value="/j_spring_security_logout" var="logoutUrl" />
@@ -29,14 +25,63 @@
 		</c:if>
 	</sec:authorize>
 	
+	<!-- 未登入的訪客會看到登入表單 -->
 	<sec:authorize access="isAnonymous()">
-	  <h2>幹你是訪客對不對？</h2>
+	<h3>會員登入</h3>
+
+	<div id="login-box">
+
+		<c:if test="${not empty error}">
+			<div class="error">${error}</div>
+		</c:if>
+		<c:if test="${not empty msg}">
+			<div class="msg">${msg}</div>
+		</c:if>
+
+		<form name='loginForm'
+			action="<c:url value='/auth/login_check?targetUrl=${targetUrl}' />"
+			method='POST'>
+
+			<table>
+				<tr>
+					<td>帳號:</td>
+					<td><input type='text' name='username'></td>
+				</tr>
+				<tr>
+					<td>密碼:</td>
+					<td><input type='password' name='password' /></td>
+				</tr>
+
+				<!-- if this is login for update, ignore remember me check -->
+				
+				<c:if test="${empty loginUpdate}">
+					<tr>
+						<td></td>
+						<td>Remember Me: <input type="checkbox" name="remember-me" /></td>
+					</tr>
+				</c:if>
+				
+				<tr>
+					<td colspan='2'><input name="submit" type="submit"
+						value="submit" /></td>
+				</tr>
+
+			</table>
+
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+
+		</form>
+	</div>
 	</sec:authorize>
 	
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
 		<h1>you are ROLE_ADMIN</h1>
 	</sec:authorize>
 	
+	<sec:authorize access="hasRole('ROLE_USER')">
+		<h1>you are ROLE_ADMIN</h1>
+	</sec:authorize>
 	
 	<sec:authorize access="isRememberMe()">
 		<h2># This user is login by "Remember Me Cookies".</h2>
@@ -46,6 +91,3 @@
 	<sec:authorize access="isFullyAuthenticated()">
 		<h2># This user is login by username / password.</h2>
 	</sec:authorize>
-	
-</body>
-</html>
