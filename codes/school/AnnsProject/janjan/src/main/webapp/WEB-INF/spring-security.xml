@@ -17,9 +17,10 @@
 		<!-- redirect to 403 access denied <intercept-url pattern="/update**" access="hasRole('ROLE_ADMIN') 
 			and isFullyAuthenticated()" /> -->
 
+    <!--  authentication-failure-url="/login?error" -->
 		<form-login login-page="/login" 
 		    default-target-url="/welcome"
-			authentication-failure-url="/login?error" 
+			authentication-failure-handler-ref="authenticationFailureHandler" 
 			username-parameter="username"
 			password-parameter="password" 
 			login-processing-url="/auth/login_check"

@@ -8,14 +8,14 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="context"/>
+			<item value="log"/>
 			<item value="security"/>
 			<item value="targetUrl"/>
 			<item value="targetURL"/>
 			<item value="loginupdate"/>
 			<item value="/login_check"/>
 			<item value="/login-check"/>
-			<item value="/auth"/>
-			<item value="servlet"/>
 		</list>
 		<list key="replacehistory">
 		</list>

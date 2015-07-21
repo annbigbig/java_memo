@@ -1,0 +1,5 @@
+package com.kashu.auth.handler;
+
+public class CustomAuthenticationFailureHandler {
+
+}

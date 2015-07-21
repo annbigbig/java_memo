@@ -30,6 +30,8 @@
     <!-- After login, return to the last visited page -->
     <property name="useReferer" value="true" />
  </bean>
+ 
+ <bean id="authenticationFailureHandler" class="com.kashu.auth.handler.CustomAuthenticationFailureHandler"/>
 	
 	<bean id="logoutSuccessHandler" class="org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler">
     <property name="useReferer" value="true"/>

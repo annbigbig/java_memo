@@ -31,6 +31,8 @@ public class LoginController {
 			//login form for update, if login error, get the targetUrl from session again.
 			String targetUrl = getRememberMeTargetUrlFromSession(request);
 			System.out.println("targetUrl=" + targetUrl);
+			String uri = request.getRequestURI();
+			System.out.println("uri=" + uri);
 			if(StringUtils.hasText(targetUrl)){
 				model.addObject("targetUrl", targetUrl);
 				model.addObject("loginUpdate", true);
