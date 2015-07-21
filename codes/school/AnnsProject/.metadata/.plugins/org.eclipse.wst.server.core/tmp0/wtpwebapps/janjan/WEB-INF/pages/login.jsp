@@ -80,7 +80,7 @@
 	</sec:authorize>
 	
 	<sec:authorize access="hasRole('ROLE_USER')">
-		<h1>you are ROLE_ADMIN</h1>
+		<h1>you are ROLE_USER</h1>
 	</sec:authorize>
 	
 	<sec:authorize access="isRememberMe()">

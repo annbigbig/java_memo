@@ -23,10 +23,11 @@
 			username-parameter="username"
 			password-parameter="password" 
 			login-processing-url="/auth/login_check"
-			authentication-success-handler-ref="savedRequestAwareAuthenticationSuccessHandler" />
+			authentication-success-handler-ref="authenticationSuccessHandler"/>
 
 		<!-- <logout logout-success-url="/login?logout" delete-cookies="JSESSIONID" /> -->
-		<logout logout-success-url="/home" delete-cookies="JSESSIONID" />
+		<logout logout-url="/j_spring_security_logout" success-handler-ref="logoutSuccessHandler" delete-cookies="JSESSIONID"/>
+		<!-- <logout logout-success-url="/home" delete-cookies="JSESSIONID" /> -->
 		<!-- enable csrf protection -->
 		<csrf />
 
