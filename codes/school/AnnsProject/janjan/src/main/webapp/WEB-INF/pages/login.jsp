@@ -2,7 +2,6 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
-
 <h2>${title}</h2>
 <h2>${msg}</h2>
   <!-- 已登入的一般會員會看到會員可發動的功能列表 -->
@@ -14,15 +13,22 @@
 				value="${_csrf.token}" />
 		</form>
 		<script>
-			function formSubmit() {
-				document.getElementById("logoutForm").submit();
-			}
+			$(document).ready(function() { 
+			    $('#logout_link').click(function(e) {
+			        e.preventDefault();
+			        $('#logoutForm').submit();
+			    });
+			    
+			    $('#personal_mod_button').click(function(){
+			        window.location='user/mod?username='
+			    });
+			});
 		</script>
 
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
 			<h2>
-				您好，<sec:authentication property="principal.username"/> | <a
-					href="javascript:formSubmit()">登出</a>
+				您好，<sec:authentication property="principal.username"/><br/>
+				<a href="#" id="logout_link">登出</a> | <button type="button" id="personal_mod_button">修改個人資料</button>
 			</h2>
 		</c:if>
 	</sec:authorize>
@@ -41,17 +47,14 @@
 		</c:if>
 		
 		<!-- 從Session裡面拿出error_message_in_session變數 -->
-		<!--<c:set var="loginErr" scope="session" value="${error_message_in_session}"/>-->
-		
-		<!-- 
-		<c:if test="${not empty login_error_message}">
-			<div class="error"><c:out value="${login_error_message}"/></div>
-			<c:remove var="login_error_message" scope="session"/>
+		<c:if test="${not empty login_err_flag_session}">
+			<div class="error">登入失敗：帳號或密碼錯誤</div>
+			<c:remove var="login_err_flag_session" scope="session"/>
 		</c:if>
-		-->
 		
+		<!-- 這是從cookie拿，不過想想算了，好難用 -->
 		<c:if test="${not empty cookie.cookie_login_err_flag.value}">
-		 <div class="error">登入錯誤:帳號或密碼不正確 (from cookie)</div>
+		 <!-- <div class="error">登入錯誤:帳號或密碼不正確 (from cookie)</div> -->
 		</c:if>
   
 		<form name='loginForm'

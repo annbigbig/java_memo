@@ -1,16 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page session="true"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>user_only.jsp</title>
-<spring:url value="/resources/css/layout.css" var="layoutCss"/>
-    <link href="${layoutCss}" rel="stylesheet"/>
-</head>
+<jsp:include page="fragments/staticFiles.jsp"/>
 <body>
 
  <header>header</header>
@@ -23,19 +17,11 @@
 		  currentURL = ${currentURL}
 		</c:if>
 		
-				<c:if test="${not empty cookie.cookie_currentURL.value}">
-	 	   現在所在頁面 (from cookie)= ${cookie.cookie_currentURL.value}
-		  </c:if>
     </article>
     
     <nav>
-    <c:import url="/login"/>
-       <%
-		   Cookie killMyCookie = new Cookie("cookie_login_err_flag", null);
-	     killMyCookie.setMaxAge(0);
-	     //killMyCookie.setPath("/");
-	     response.addCookie(killMyCookie);
-		 %>  
+    <jsp:include page="login.jsp"/>
+       
     </nav>
     
     <aside>aside<br>

@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@SessionAttributes({"login_error_message","currentURL"})
+@SessionAttributes({"login_err_flag_session","currentURL"})
 public class LoginController {
 
 	/**
@@ -65,7 +65,7 @@ public class LoginController {
 	//登入錯誤之後，Spring Security呼叫此函式 (使用session存放)
 	@RequestMapping(value = "/login_err", method = {RequestMethod.GET,RequestMethod.POST})
 	public String login_err(@ModelAttribute("currentURL") String currentURL, Model model, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException{
-		model.addAttribute("login_error_message", "登入錯誤:帳號或密碼不正確 (from session)");
+		model.addAttribute("login_err_flag_session", "1");
 		//response.addCookie(new Cookie("cookie_login_err_messages",URLEncoder.encode("login error : (from cookie)", "UTF-8")));
 		System.out.println("currentURL=" + currentURL);
 		//return "redirect:/user_only";
