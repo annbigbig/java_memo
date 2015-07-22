@@ -35,6 +35,7 @@ public class HomeController {
 		   mv.addObject("title", "林爸是/login.jsp的title");
 		   mv.addObject("message", "I am login.jsp 我噗");
 		   mv.setViewName("login");
+		   System.out.println("HomeController.login() being called");
 		   return mv;
 	}
 	
@@ -47,18 +48,34 @@ public class HomeController {
 		   mv.addObject("targetUrl",targetUrl);
 		   System.out.println("targetUrl=" + targetUrl);
 		   mv.setViewName("user_only");
-		   //記得把targetURL放進來
 		   return mv;
+	}
+	
+	private void setCurrentUrltoSession(HttpServletRequest request, String currentURL){
+		HttpSession session = request.getSession(false);
+		session.setAttribute("currentURL", currentURL);
+	}
+	
+	private String getCurrentUrlFromSession(HttpServletRequest request){
+		String currentURL = "";
+		HttpSession session = request.getSession(false);
+		if(session!=null){
+			currentURL = session.getAttribute("currentURL")==null?"":session.getAttribute("currentURL").toString();
+		}
+		return currentURL;
 	}
 	
 	/**
 	 * save targetURL in session
 	 */
-	private void setRememberMeTargetUrlToSession(HttpServletRequest request){
+	private void setRememberMeTargetUrlToSession(HttpServletRequest request, String currentURL){
 		HttpSession session = request.getSession(false);
+		/*
 		if(session!=null){
 			session.setAttribute("targetUrl", "/home");
 		}
+		*/
+		session.setAttribute("currentURL", currentURL);
 	}
 
 	/**

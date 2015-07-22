@@ -16,7 +16,9 @@ public class CustomAuthenticationFailureHandler implements AuthenticationFailure
 			HttpServletResponse response, AuthenticationException ex)
 			throws IOException, ServletException {
 		
+		request.setAttribute("error", "帳號或是密碼錯誤");
 		response.sendRedirect("/janjan/home");
+		//request.getRequestDispatcher("/home").forward(request, response);
 	}
 
 }

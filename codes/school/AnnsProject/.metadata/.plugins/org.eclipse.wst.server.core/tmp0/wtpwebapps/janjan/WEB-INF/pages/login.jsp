@@ -3,6 +3,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
 
+<h2>${title}</h2>
+<h2>${msg}</h2>
   <!-- 已登入的一般會員會看到會員可發動的功能列表 -->
 	<sec:authorize access="hasRole('ROLE_USER')">
 		<!-- For login user -->
@@ -37,6 +39,13 @@
 		<c:if test="${not empty msg}">
 			<div class="msg">${msg}</div>
 		</c:if>
+		
+		<!-- 從Session裡面拿出error_message_in_session變數 -->
+		<c:set var="loginErr" scope="session" value="${error_message_in_session}"/>
+		<c:if test="${not empty loginErr}">
+			<div class="error"><c:out value="${loginErr}"/></div>
+			<c:remove var="error_message_in_session" scope="session"/>
+		</c:if>
 
 		<form name='loginForm'
 			action="<c:url value='/auth/login_check?targetUrl=${targetUrl}' />"
@@ -44,28 +53,23 @@
 
 			<table>
 				<tr>
-					<td>帳號:</td>
-					<td><input type='text' name='username'></td>
+					<td>帳號:<input type='text' name='username'></td>
 				</tr>
 				<tr>
-					<td>密碼:</td>
-					<td><input type='password' name='password' /></td>
+					<td>密碼:<input type='password' name='password' /></td>
 				</tr>
 
 				<!-- if this is login for update, ignore remember me check -->
 				
 				<c:if test="${empty loginUpdate}">
 					<tr>
-						<td></td>
 						<td>Remember Me: <input type="checkbox" name="remember-me" /></td>
 					</tr>
 				</c:if>
 				
 				<tr>
-					<td colspan='2'><input name="submit" type="submit"
-						value="submit" /></td>
+					<td><input name="submit" type="submit" value="submit"/></td>
 				</tr>
-
 			</table>
 
 			<input type="hidden" name="${_csrf.parameterName}"

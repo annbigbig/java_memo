@@ -50,12 +50,14 @@
 	  		<groupId>org.springframework</groupId>
 	 		 <artifactId>spring-core</artifactId>
 			 <version>${spring.version}</version>
+			 <!-- 
 			 <exclusions>
 				 <exclusion>
 					 <groupId>commons-logging</groupId>
 					 <artifactId>commons-logging</artifactId>
 				 </exclusion>
 			 </exclusions>
+			 -->
 		 </dependency>
 		 
 		 <dependency>
@@ -116,11 +118,13 @@
     </dependency>
 
 		<!-- logging, slf4j -->
+		<!-- 
 		 <dependency>
 			 <groupId>org.slf4j</groupId>
 			 <artifactId>jcl-over-slf4j</artifactId>
 			 <version>${jcl-over-slf4j.version}</version>
 		 </dependency>
+     -->
 
 		 <dependency>
 			 <groupId>ch.qos.logback</groupId>
