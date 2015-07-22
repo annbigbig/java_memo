@@ -17,7 +17,12 @@
     <article><h2>article</h2><br>
     偶才是首頁<br>
 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">首頁layout從這抄來的</a><br>
-<h1>${message}</h1>
+<h1>${message}</h1><br>
+   <c:if test="${not empty currentURL}">
+		  currentURL = ${currentURL}
+		</c:if>
+		<br>
+		<br>
     </article>
     
     <nav>

@@ -41,12 +41,13 @@
 		</c:if>
 		
 		<!-- 從Session裡面拿出error_message_in_session變數 -->
-		<c:set var="loginErr" scope="session" value="${error_message_in_session}"/>
-		<c:if test="${not empty loginErr}">
-			<div class="error"><c:out value="${loginErr}"/></div>
-			<c:remove var="error_message_in_session" scope="session"/>
+		<!--<c:set var="loginErr" scope="session" value="${error_message_in_session}"/>-->
+		
+		<c:if test="${not empty login_error_message}">
+			<div class="error"><c:out value="${login_error_message}"/></div>
+			<c:remove var="login_error_message" scope="session"/>
 		</c:if>
-
+  
 		<form name='loginForm'
 			action="<c:url value='/auth/login_check?targetUrl=${targetUrl}' />"
 			method='POST'>

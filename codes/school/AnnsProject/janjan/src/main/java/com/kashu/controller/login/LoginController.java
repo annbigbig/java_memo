@@ -1,6 +1,11 @@
 package com.kashu.controller.login;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.security.authentication.RememberMeAuthenticationToken;
@@ -9,12 +14,15 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@SessionAttributes({"login_error_message","currentURL"})
 public class LoginController {
 
 	/**
@@ -46,6 +54,7 @@ public class LoginController {
 			model.addObject("msg", "You've been logged out successfully.");
 		}
 		//model.addObject("title", "林爸是/login.jsp的title");
+		//model.addObject("currentURL", "/login");
 		model.setViewName("login");
 		System.out.println("LoginController.login() being called");
 		return model;
@@ -54,10 +63,14 @@ public class LoginController {
 	
 	//登入錯誤之後，Spring Security呼叫此函式
 	@RequestMapping(value = "/login_err", method = {RequestMethod.GET,RequestMethod.POST})
-	public String login_err(Model model,HttpServletRequest request){
-		setLoginErrorMessageToSession(request);
+	public String login_err(@ModelAttribute("currentURL") String currentURL, Model model, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException{
+		//setLoginErrorMessageToSession(request);
 		//return "home";
-		return "redirect:/user_only";
+		model.addAttribute("login_error_message", "登入錯誤:帳號或密碼不正確 (from session)");
+		//response.addCookie(new Cookie("cookie_login_err_messages",URLEncoder.encode("login error : (from cookie)", "UTF-8")));
+		System.out.println("currentURL=" + currentURL);
+		//return "redirect:/user_only";
+		return "redirect:"+currentURL;
 	}
 	
 	@RequestMapping(value = "/login_erro", method = {RequestMethod.GET,RequestMethod.POST})

@@ -5,9 +5,11 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@SessionAttributes({"currentURL"})
 public class HomeController {
 
 	@RequestMapping(value = "/home")
@@ -16,6 +18,7 @@ public class HomeController {
 		   String targetUrl = getRememberMeTargetUrlFromSession(request);
       mv.addObject("message", "Hello Reader!");
       mv.addObject("targetUrl",targetUrl);
+      mv.addObject("currentURL", "/home");
       System.out.println("targetUrl=" + targetUrl);
       mv.setViewName("home");
       return mv;
@@ -43,9 +46,10 @@ public class HomeController {
 	public ModelAndView user_only(HttpServletRequest request){
 		   ModelAndView mv = new ModelAndView();
 		   String targetUrl = getRememberMeTargetUrlFromSession(request);
-		   mv.addObject("title", "林爸是/user_only.jsp的title");
+		   //mv.addObject("title", "林爸是/user_only.jsp的title");
 		   mv.addObject("message", "I am user_only.jsp 我噗我噗");
 		   mv.addObject("targetUrl",targetUrl);
+		   mv.addObject("currentURL", "/user_only");
 		   System.out.println("targetUrl=" + targetUrl);
 		   mv.setViewName("user_only");
 		   return mv;
