@@ -21,8 +21,8 @@
 
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
 			<h2>
-				User : ${pageContext.request.userPrincipal.name} | <a
-					href="javascript:formSubmit()"> Logout</a>
+				您好，<sec:authentication property="principal.username"/> | <a
+					href="javascript:formSubmit()">登出</a>
 			</h2>
 		</c:if>
 	</sec:authorize>
@@ -43,13 +43,19 @@
 		<!-- 從Session裡面拿出error_message_in_session變數 -->
 		<!--<c:set var="loginErr" scope="session" value="${error_message_in_session}"/>-->
 		
+		<!-- 
 		<c:if test="${not empty login_error_message}">
 			<div class="error"><c:out value="${login_error_message}"/></div>
 			<c:remove var="login_error_message" scope="session"/>
 		</c:if>
+		-->
+		
+		<c:if test="${not empty cookie.cookie_login_err_flag.value}">
+		 <div class="error">登入錯誤:帳號或密碼不正確 (from cookie)</div>
+		</c:if>
   
 		<form name='loginForm'
-			action="<c:url value='/auth/login_check?targetUrl=${targetUrl}' />"
+			action="<c:url value='/auth/login_check'/>"
 			method='POST'>
 
 			<table>

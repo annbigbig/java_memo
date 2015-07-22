@@ -14,6 +14,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -61,7 +62,7 @@ public class LoginController {
 
 	}
 	
-	//登入錯誤之後，Spring Security呼叫此函式
+	//登入錯誤之後，Spring Security呼叫此函式 (使用session存放)
 	@RequestMapping(value = "/login_err", method = {RequestMethod.GET,RequestMethod.POST})
 	public String login_err(@ModelAttribute("currentURL") String currentURL, Model model, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException{
 		model.addAttribute("login_error_message", "登入錯誤:帳號或密碼不正確 (from session)");
@@ -69,6 +70,17 @@ public class LoginController {
 		System.out.println("currentURL=" + currentURL);
 		//return "redirect:/user_only";
 		return "redirect:"+currentURL;
+	}
+	
+	//登入錯誤之後，Spring Security呼叫此函式 (使用cookie存放)
+	@RequestMapping(value = "/login_err_cookie", method = {RequestMethod.GET,RequestMethod.POST})
+	public String login_error_cookie(
+			@CookieValue(value = "cookie_currentURL", defaultValue = "/home") String cookie_currentURL,
+			HttpServletResponse response)
+	{
+		response.addCookie(new Cookie("cookie_login_err_flag","1"));
+		System.out.println("cookie_currentURL=" + cookie_currentURL);
+		return "redirect:"+cookie_currentURL;
 	}
 	
 	/**

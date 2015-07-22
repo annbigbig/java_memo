@@ -22,7 +22,7 @@
     <!-- authentication-failure-url="/login?error" -->
 		<form-login login-page="/login" 
 		    default-target-url="/welcome"
-			authentication-failure-url="/login_err"
+			authentication-failure-url="/login_err_cookie"
 			username-parameter="username"
 			password-parameter="password" 
 			login-processing-url="/auth/login_check"

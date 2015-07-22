@@ -22,10 +22,20 @@
    <c:if test="${not empty currentURL}">
 		  currentURL = ${currentURL}
 		</c:if>
+		
+				<c:if test="${not empty cookie.cookie_currentURL.value}">
+	 	   現在所在頁面 (from cookie)= ${cookie.cookie_currentURL.value}
+		  </c:if>
     </article>
     
     <nav>
     <c:import url="/login"/>
+       <%
+		   Cookie killMyCookie = new Cookie("cookie_login_err_flag", null);
+	     killMyCookie.setMaxAge(0);
+	     //killMyCookie.setPath("/");
+	     response.addCookie(killMyCookie);
+		 %>  
     </nav>
     
     <aside>aside<br>
