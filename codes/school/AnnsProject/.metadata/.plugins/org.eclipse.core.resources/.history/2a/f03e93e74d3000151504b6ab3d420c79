@@ -64,11 +64,28 @@ public class LoginController {
 	//登入錯誤之後，Spring Security呼叫此函式
 	@RequestMapping(value = "/login_err", method = {RequestMethod.GET,RequestMethod.POST})
 	public String login_err(@ModelAttribute("currentURL") String currentURL, Model model, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException{
+		//setLoginErrorMessageToSession(request);
+		//return "home";
 		model.addAttribute("login_error_message", "登入錯誤:帳號或密碼不正確 (from session)");
 		//response.addCookie(new Cookie("cookie_login_err_messages",URLEncoder.encode("login error : (from cookie)", "UTF-8")));
 		System.out.println("currentURL=" + currentURL);
 		//return "redirect:/user_only";
 		return "redirect:"+currentURL;
+	}
+	
+	@RequestMapping(value = "/login_erro", method = {RequestMethod.GET,RequestMethod.POST})
+	public ModelAndView login_erro(){
+		ModelAndView model = new ModelAndView();
+		model.addObject("error", "帳號或密碼錯誤");
+		model.setViewName("home");
+		return model;
+	}
+	
+	private void setLoginErrorMessageToSession(HttpServletRequest request){
+		HttpSession session = request.getSession(false);
+		if(session!=null){
+			session.setAttribute("error_message_in_session", "帳號或密碼錯誤(此錯誤訊息放在session)");
+		}		
 	}
 	
 	/**
@@ -83,6 +100,28 @@ public class LoginController {
 		}
 
 		return RememberMeAuthenticationToken.class.isAssignableFrom(authentication.getClass());
+	}
+	
+	/**
+	 * save targetURL in session
+	 */
+	private void setRememberMeTargetUrlToSession(HttpServletRequest request){
+		HttpSession session = request.getSession(false);
+		if(session!=null){
+			session.setAttribute("targetUrl", "/admin/update");
+		}
+	}
+
+	/**
+	 * get targetURL from session
+	 */
+	private String getRememberMeTargetUrlFromSession(HttpServletRequest request){
+		String targetUrl = "";
+		HttpSession session = request.getSession(false);
+		if(session!=null){
+			targetUrl = session.getAttribute("targetUrl")==null?"":session.getAttribute("targetUrl").toString();
+		}
+		return targetUrl;
 	}
 	
 }
