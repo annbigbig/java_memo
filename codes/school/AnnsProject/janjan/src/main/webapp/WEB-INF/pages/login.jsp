@@ -27,7 +27,6 @@
 				value="${_csrf.token}" />
 		</form>
 
-
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
 			<h2>
 				您好，<sec:authentication property="principal.username"/><br/>

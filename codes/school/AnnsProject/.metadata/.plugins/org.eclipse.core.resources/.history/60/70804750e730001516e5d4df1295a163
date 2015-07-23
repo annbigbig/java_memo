@@ -7,28 +7,47 @@
 <h2>${msg}</h2>
   <!-- 已登入的一般會員會看到會員可發動的功能列表 -->
 	<sec:authorize access="hasRole('ROLE_USER')">
+  	<script>
+			$(document).ready(function() { 
+			    $('#logout_link').click(function(e) {
+			        e.preventDefault();
+			        $('#logoutForm').submit();
+			    });
+			    
+			    $('#personal_mod_button').click(function(){
+			        window.location='user/mod?username=<sec:authentication property="principal.username"/>';
+			    });
+			    
+			});
+  </script>
 		<!-- For login user -->
 		<c:url value="/j_spring_security_logout" var="logoutUrl" />
 		<form action="${logoutUrl}" method="post" id="logoutForm">
 			<input type="hidden" name="${_csrf.parameterName}"
 				value="${_csrf.token}" />
 		</form>
-		<script>
-			function formSubmit() {
-				document.getElementById("logoutForm").submit();
-			}
-		</script>
+
 
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
 			<h2>
-				User : ${pageContext.request.userPrincipal.name} | <a
-					href="javascript:formSubmit()"> Logout</a>
+				您好，<sec:authentication property="principal.username"/><br/>
+				<a href="#" id="logout_link">登出</a> | <button type="button" id="personal_mod_button">修改個人資料</button>
 			</h2>
 		</c:if>
 	</sec:authorize>
 	
 	<!-- 未登入的訪客會看到登入表單 -->
 	<sec:authorize access="isAnonymous()">
+	<script>
+	$(document).ready(function() { 
+   	$('#password_send_link').click(function(e){
+ 	     e.preventDefault();
+ 	     var username = $('#username').val();
+      window.location='password_send?username='+username;
+   		//alert("test");
+       });
+    });
+	</script>
 	<h3>會員登入</h3>
 
 	<div id="login-box">
@@ -41,23 +60,14 @@
 		</c:if>
 		
 		<!-- 從Session裡面拿出error_message_in_session變數 -->
-		<!--<c:set var="loginErr" scope="session" value="${error_message_in_session}"/>-->
-		
-		<!-- 
-		<c:if test="${not empty login_error_message}">
-			<div class="error"><c:out value="${login_error_message}"/></div>
-			<c:remove var="login_error_message" scope="session"/>
+		<c:if test="${not empty login_err_flag_session}">
+			<div class="error">登入失敗：帳號或密碼錯誤</div>
+			<c:remove var="login_err_flag_session" scope="session"/>
 		</c:if>
-		-->
 		
+		<!-- 這是從cookie拿，不過想想算了，好難用 -->
 		<c:if test="${not empty cookie.cookie_login_err_flag.value}">
-		 <div class="error">登入錯誤 from cookie</div>
-		 <%
-		   Cookie killMyCookie = new Cookie("cookie_login_err_flag", null);
-	     killMyCookie.setMaxAge(0);
-	     //killMyCookie.setPath("/");
-	     response.addCookie(killMyCookie);
-		 %>
+		 <!-- <div class="error">登入錯誤:帳號或密碼不正確 (from cookie)</div> -->
 		</c:if>
   
 		<form name='loginForm'
@@ -66,7 +76,7 @@
 
 			<table>
 				<tr>
-					<td>帳號:<input type='text' name='username'></td>
+					<td>帳號:<input type='text' name='username' id='username'></td>
 				</tr>
 				<tr>
 					<td>密碼:<input type='password' name='password' /></td>
@@ -81,7 +91,9 @@
 				</c:if>
 				
 				<tr>
-					<td><input name="submit" type="submit" value="submit"/></td>
+					<td><input name="submit" type="submit" value="登入"/> | <input type="reset" value="清空"><br/>
+					<a href="register">註冊為新用戶</a> | <a href="#" id="password_send_link">找回密碼</a>
+					</td>
 				</tr>
 			</table>
 
@@ -93,18 +105,9 @@
 	</sec:authorize>
 	
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
-		<h1>you are ROLE_ADMIN</h1>
-	</sec:authorize>
-	
-	<sec:authorize access="hasRole('ROLE_USER')">
-		<h1>you are ROLE_USER</h1>
-	</sec:authorize>
-	
-	<sec:authorize access="isRememberMe()">
-		<h2># This user is login by "Remember Me Cookies".</h2>
-	</sec:authorize>
-	
-	
-	<sec:authorize access="isFullyAuthenticated()">
-		<h2># This user is login by username / password.</h2>
+		<h2 class="pink-me">管理員功能</h2>
+		<div class="admin-class">
+		    <button type="button" id="user_new_button">新增會員</button> | 
+		    <button type="button" id="user_find_button">查詢會員</button><br/>
+		</div>
 	</sec:authorize>

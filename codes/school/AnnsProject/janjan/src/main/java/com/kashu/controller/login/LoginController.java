@@ -25,41 +25,19 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @SessionAttributes({"login_err_flag_session","currentURL"})
 public class LoginController {
-
-	/**
-	 * both "normal login" and "login for update" shared this form.
-	 * 
-	 */
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public ModelAndView login(@RequestParam(value = "logout", required = false) String logout, HttpServletRequest request) {
-
+	
+	//沒有使用的函式
+	public ModelAndView login() {
 		ModelAndView model = new ModelAndView();
-		
-		/*
-		if (error != null) {
-			model.addObject("error", "Invalid username and password!");
-			
-			//login form for update, if login error, get the targetUrl from session again.
-			String targetUrl = getRememberMeTargetUrlFromSession(request);
-			System.out.println("targetUrl=" + targetUrl);
-
-			if(StringUtils.hasText(targetUrl)){
-				model.addObject("targetUrl", targetUrl);
-				model.addObject("loginUpdate", true);
-			}
-			
-		}
-		*/
-
-		if (logout != null) {
-			model.addObject("msg", "You've been logged out successfully.");
-		}
-		//model.addObject("title", "林爸是/login.jsp的title");
-		//model.addObject("currentURL", "/login");
 		model.setViewName("login");
 		System.out.println("LoginController.login() being called");
 		return model;
-
+	}
+	
+	@RequestMapping(value="/register",method = RequestMethod.GET)
+	public String register_form(){
+		// no need for preparing data model
+		return "users/register";
 	}
 	
 	//登入錯誤之後，Spring Security呼叫此函式 (使用session存放)

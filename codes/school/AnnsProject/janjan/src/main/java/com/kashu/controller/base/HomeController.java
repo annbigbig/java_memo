@@ -31,16 +31,6 @@ public class HomeController {
 		   return mv;
 	}
 	
-	@RequestMapping(value = "/login")
-	public ModelAndView login(){
-		   ModelAndView mv = new ModelAndView();
-		   mv.addObject("title", "林爸是/login.jsp的title");
-		   mv.addObject("message", "I am login.jsp 我噗");
-		   mv.setViewName("login");
-		   System.out.println("HomeController.login() being called");
-		   return mv;
-	}
-	
 	@RequestMapping(value = "/user_only")
 	public ModelAndView user_only(HttpServletRequest request, HttpServletResponse response){
 		   ModelAndView mv = new ModelAndView();
