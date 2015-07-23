@@ -75,10 +75,10 @@
 
 			<table>
 				<tr>
-					<td>帳號:<input type='text' name='username' id='username'></td>
+					<td>帳號:<input type='text' name='username' id='username' maxlength="14" style="width: 140px;"></td>
 				</tr>
 				<tr>
-					<td>密碼:<input type='password' name='password' /></td>
+					<td>密碼:<input type='password' name='password' maxlength="14" style="width: 140px;"/></td>
 				</tr>
 
 				<!-- if this is login for update, ignore remember me check -->
@@ -91,7 +91,7 @@
 				
 				<tr>
 					<td><input name="submit" type="submit" value="登入"/> | <input type="reset" value="清空"><br/>
-					<a href="register">註冊為新用戶</a> | <a href="#" id="password_send_link">找回密碼</a>
+					<a href="register" style="font-size: 16px;">註冊為新用戶</a> | <a href="#" id="password_send_link" style="font-size: 16px">找回密碼</a>
 					</td>
 				</tr>
 			</table>
