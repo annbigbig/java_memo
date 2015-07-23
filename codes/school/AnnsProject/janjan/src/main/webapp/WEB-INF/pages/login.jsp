@@ -2,17 +2,12 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
+
 <h2>${title}</h2>
 <h2>${msg}</h2>
   <!-- 已登入的一般會員會看到會員可發動的功能列表 -->
 	<sec:authorize access="hasRole('ROLE_USER')">
-		<!-- For login user -->
-		<c:url value="/j_spring_security_logout" var="logoutUrl" />
-		<form action="${logoutUrl}" method="post" id="logoutForm">
-			<input type="hidden" name="${_csrf.parameterName}"
-				value="${_csrf.token}" />
-		</form>
-		<script>
+  	<script>
 			$(document).ready(function() { 
 			    $('#logout_link').click(function(e) {
 			        e.preventDefault();
@@ -20,10 +15,18 @@
 			    });
 			    
 			    $('#personal_mod_button').click(function(){
-			        window.location='user/mod?username='
+			        window.location='user/mod?username=<sec:authentication property="principal.username"/>';
 			    });
+			    
 			});
-		</script>
+  </script>
+		<!-- For login user -->
+		<c:url value="/j_spring_security_logout" var="logoutUrl" />
+		<form action="${logoutUrl}" method="post" id="logoutForm">
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+		</form>
+
 
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
 			<h2>
@@ -35,6 +38,16 @@
 	
 	<!-- 未登入的訪客會看到登入表單 -->
 	<sec:authorize access="isAnonymous()">
+	<script>
+	$(document).ready(function() { 
+   	$('#password_send_link').click(function(e){
+ 	     e.preventDefault();
+ 	     var username = $('#username').val();
+      window.location='password_send?username='+username;
+   		//alert("test");
+       });
+    });
+	</script>
 	<h3>會員登入</h3>
 
 	<div id="login-box">
@@ -63,7 +76,7 @@
 
 			<table>
 				<tr>
-					<td>帳號:<input type='text' name='username'></td>
+					<td>帳號:<input type='text' name='username' id='username'></td>
 				</tr>
 				<tr>
 					<td>密碼:<input type='password' name='password' /></td>
@@ -78,7 +91,9 @@
 				</c:if>
 				
 				<tr>
-					<td><input name="submit" type="submit" value="submit"/></td>
+					<td><input name="submit" type="submit" value="登入"/> | <input type="reset" value="清空"><br/>
+					<a href="register">註冊為新用戶</a> | <a href="#" id="password_send_link">找回密碼</a>
+					</td>
 				</tr>
 			</table>
 
@@ -90,18 +105,9 @@
 	</sec:authorize>
 	
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
-		<h1>you are ROLE_ADMIN</h1>
-	</sec:authorize>
-	
-	<sec:authorize access="hasRole('ROLE_USER')">
-		<h1>you are ROLE_USER</h1>
-	</sec:authorize>
-	
-	<sec:authorize access="isRememberMe()">
-		<h2># This user is login by "Remember Me Cookies".</h2>
-	</sec:authorize>
-	
-	
-	<sec:authorize access="isFullyAuthenticated()">
-		<h2># This user is login by username / password.</h2>
+		<h2 class="pink-me">管理員功能</h2>
+		<div class="admin-class">
+		    <button type="button" id="user_new_button">新增會員</button> | 
+		    <button type="button" id="user_find_button">查詢會員</button><br/>
+		</div>
 	</sec:authorize>

@@ -111,3 +111,13 @@
 	-moz-border-radius: 2px;
 	border: 1px solid #000;
 }
+
+.admin-class{
+	padding: 20px;
+	margin: 10px auto;
+	background-color:#ffff37;
+}
+
+.pink-me{
+	background-color:#FFE4CA;
+}
