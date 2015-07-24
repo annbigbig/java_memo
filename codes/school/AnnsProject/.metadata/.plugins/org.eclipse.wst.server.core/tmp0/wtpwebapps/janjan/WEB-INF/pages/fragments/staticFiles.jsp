@@ -8,12 +8,19 @@
     <link href="${layoutCss}" rel="stylesheet"/>
     
     <spring:url value="/resources/jquery/ui/1.11.4/jquery-ui.css" var="jQueriUiCss"/>
+    <spring:url value="/resources/jquery/ui/1.10.4/jquery-ui-1.10.4.custom.min.css" var="jQueriUiCss_old"/>
     <link href="${jQueriUiCss}" rel="stylesheet"/>
     
     <spring:url value="/resources/jquery/jquery-1.11.3.min.js" var="jQuery"/>
     <script src="${jQuery}"></script>
     
     <spring:url value="/resources/jquery/ui/1.11.4/jquery-ui.min.js" var="jQueryUI"/>
+    <spring:url value="/resources/jquery/ui/1.10.4/jquery-ui-1.10.4.custom.min.js" var="jQueryUI_old"/>
     <script src="${jQueryUI}"></script>
 
+    <spring:url value="/resources/jquery/twzipcode/jquery.twzipcode.min.js" var="jQueryTwzipcode"/>
+    <script src="${jQueryTwzipcode}"></script>
+    
+    <spring:url value="/resources/jquery/mask/jquery.mask.min.js" var="jQueryMask"/>
+    <script src="${jQueryMask}"></script>
     
