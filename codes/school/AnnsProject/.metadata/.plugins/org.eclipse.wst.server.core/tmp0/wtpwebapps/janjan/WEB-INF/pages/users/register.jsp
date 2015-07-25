@@ -32,7 +32,53 @@ $(function() {
     //this is for jquery-mask-plugin
     $("#telephone").mask("(00)0000-0000");
     $("#mobile").mask("0000-000-000");
-    
+    $("#regform").validate({
+    	    rules:{
+    	    	        username: {
+    	    	        	    required: true,
+    	    	        	    minlength: 6,
+    	    	        	    maxlength: 14
+    	    	                              },
+    	    	        password: {
+    	    	        	    required: true,
+    	    	        	    minlength: 6,
+    	    	        	    maxlength: 14
+    	    	                             },
+    	    	        cpassword: {
+    	    	        	    required: true,
+    	    	        	    minlength: 6,
+    	    	        	    maxlength: 14,
+    	    	        	    equalTo: "#password"
+    	    	                             },
+    	    	        email: {
+    	    	        	    required: true,
+    	    	        	    email: true
+    	    	                             }
+    	              },
+    	    messages:{
+    	    	        username: {
+    	                 required: "帳號名稱不得為空",
+    	                 minlength: "帳號的長度至少需6個字元",
+    	                 maxlength: "帳號的長度最多是14個字元"
+    	    	                             },
+    	    	        password: {
+    	    	        	   required: "密碼不得為空",
+    	    	        	   minlength: "密碼的長度至少需6個字元",
+    	    	        	   maxlength: "密碼的長度最多是14個字元"
+    	    	                             }
+    	              },
+    	    highlight:function(element){
+    	    	     $(element).addClass('validation-error');
+    	               },
+    	    unhighlight:function(element){
+    	         $(element).removeClass('validation-error');
+    	               },
+    	    errorElement: "div",
+    	    errorPlacement: function(error, element){
+    	    	     error.appendTo("div#validation-errors");
+    	              }
+    	      });
+ 
   });
 </script>
 </head>
@@ -51,11 +97,12 @@ $(function() {
     			<label for="username">帳號名稱</label>
     			<br/>
     			<input id="username" name="username" placeholder="請輸入要申請的帳號名稱" type="text" maxlength="14">
+    			<br/>
     		 <p></p> 
     			
     		 <p></p>
     			<label for="password">密碼</label>
-    			<br/> 
+    			<br/>
     			<input id="password" name="password" placeholder="請輸入您設定的密碼" type="password" maxlength="14">
     		 <p></p>
     		 
@@ -71,7 +118,9 @@ $(function() {
     			<input id="email" name="email" placeholder="your@e-mail.address" type="email" maxlength="30">
     		 <p></p>
     			
-    			<input name="submit" id="submit" value="註冊為新用戶" type="submit"> 	 
+    			<input name="submit" id="submit" value="註冊為新用戶" type="submit">
+    			   <br/><br/>
+    			    <div id="validation-errors"></div>
     		
     </div>
     <div id="middle"></div>

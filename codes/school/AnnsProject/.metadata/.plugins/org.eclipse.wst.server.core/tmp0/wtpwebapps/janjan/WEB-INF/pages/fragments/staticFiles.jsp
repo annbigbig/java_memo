@@ -24,3 +24,9 @@
     <spring:url value="/resources/jquery/mask/jquery.mask.min.js" var="jQueryMask"/>
     <script src="${jQueryMask}"></script>
     
+    <spring:url value="/resources/jquery/validation/1.14.0/jquery.validate.min.js" var="jQueryValidate"/>
+    <script src="${jQueryValidate}"></script>
+    
+    <spring:url value="/resources/jquery/validation/1.14.0/additional-methods.min.js" var="addtionalMethod"/>
+    <script src="${addtionalMethod}"></script>
+    
