@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="mvc" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -32,6 +33,7 @@ $(function() {
     //this is for jquery-mask-plugin
     $("#telephone").mask("(00)0000-0000");
     $("#mobile").mask("0000-000-000");
+    /*
     $("#regform").validate({
     	    rules:{
     	    	        username: {
@@ -78,7 +80,7 @@ $(function() {
     	    	     error.appendTo("div#validation-errors");
     	              }
     	      });
- 
+ */
   });
 </script>
 </head>
@@ -88,16 +90,20 @@ $(function() {
  <div id='main'>
     <article>
     <div id="container">
-    <form id="regform" method="post" action="register"> 
+    <mvc:form id="regform" modelAttribute="user" method="post" action="register">
+    <!--  <form id="regform" method="post" action="register"> --> 
     <div id="left">
     
     		<h2 class="contact">註冊為新用戶</h2>
     		
     		 <p></p>
-    			<label for="username">帳號名稱</label>
+    			<!-- <label for="username">帳號名稱</label>  -->
+    			<mvc:label path="username">帳號名稱</mvc:label>
     			<br/>
-    			<input id="username" name="username" placeholder="請輸入要申請的帳號名稱" type="text" maxlength="14">
+    			<!-- <input id="username" name="username" placeholder="請輸入要申請的帳號名稱" type="text" maxlength="14"> -->
+    			<mvc:input path="username" cssErrorClass="formFieldError" />
     			<br/>
+    			<mvc:errors path="username" />
     		 <p></p> 
     			
     		 <p></p>
@@ -176,7 +182,8 @@ $(function() {
     		 <p></p>
     		 
     </div>
-    </form> 
+    <!-- </form>  -->
+         </mvc:form> 
     </div>
 		
     </article>
