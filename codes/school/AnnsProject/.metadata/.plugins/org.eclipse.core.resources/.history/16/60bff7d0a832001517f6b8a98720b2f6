@@ -117,8 +117,7 @@ $(function() {
     			<br/>
     			<input id="email" name="email" placeholder="your@e-mail.address" type="email" maxlength="30">
     		 <p></p>
-    		        <!-- 不要忘了加入這個hidden元素，Spring Security需要它，否則提交表單時會報錯 -->
-    			<input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
+    			
     			<input name="submit" id="submit" value="註冊為新用戶" type="submit">
     			   <br/><br/>
     			    <div id="validation-errors"></div>

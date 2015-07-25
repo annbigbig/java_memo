@@ -34,17 +34,10 @@ public class LoginController {
 		return model;
 	}
 	
-	//給出空白的註冊表單
 	@RequestMapping(value="/register",method = RequestMethod.GET)
 	public String register_form(){
 		// no need for preparing data model
 		return "users/register";
-	}
-	
-	//處理提交來的用戶注冊資訊
-	@RequestMapping(value="/register",method = RequestMethod.POST)
-	public String register(){
-		return "users/register_success";
 	}
 	
 	//登入錯誤之後，Spring Security呼叫此函式 (使用session存放)
