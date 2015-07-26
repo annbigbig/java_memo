@@ -131,13 +131,17 @@
 input { font-size: 18px; }
 
 /* and this is for jquery validator plugin */
-.validation-error-c {
+.error-by-jquery-validation {
 	background-color:#FF0000;
 	color:#FFFFFF;
 }
 
+.error-message-jquery-validate {
+	
+}
+
 /* and this is for hibernate validator */
-.validation-error-s {
+.error-by-hibernate-validation {
 	background-color:#FF0000;
 	color:#FFFFFF;
 }

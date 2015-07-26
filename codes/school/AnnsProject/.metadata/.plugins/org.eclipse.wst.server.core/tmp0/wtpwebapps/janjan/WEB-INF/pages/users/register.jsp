@@ -70,15 +70,15 @@ $(function() {
     	    	                             }
     	              },
     	    highlight:function(element){
-    	    	     $(element).addClass('validation-error-c');
+    	    	     $(element).addClass('error-by-jquery-validation');
     	               },
     	    unhighlight:function(element){
-    	         $(element).removeClass('validation-error-c');
+    	         $(element).removeClass('error-by-jquery-validation');
     	               },
     	    errorElement: "div",
     	    errorClass: "error-message-jquery-validate",
     	    errorPlacement: function(error, element){
-    	    	     error.appendTo("div#validation-errors-c");
+    	    	     error.appendTo("div#errors-client");
     	              }
     	      });
  
@@ -98,22 +98,22 @@ $(function() {
     		
     		 <p></p>
     			<form:label path="username">帳號名稱</form:label><br/>
-    			<form:input path="username" cssErrorClass="validation-error-s" placeholder="請輸入要申請的帳號名稱" maxlength="14" /><br/>
+    			<form:input path="username" cssErrorClass="error-by-hibernate-validation" placeholder="請輸入要申請的帳號名稱" maxlength="14" /><br/>
     		 <p></p> 
     			
     		 <p></p>
     			<form:label path="password">密碼</form:label><br/>
-    			<form:input path="password" cssErrorClass="validation-error-s" placeholder="請輸入您設定的密碼" maxlength="14" /><br/>
+    			<form:input path="password" cssErrorClass="error-by-hibernate-validation" placeholder="請輸入您設定的密碼" maxlength="14" /><br/>
     		 <p></p>
     		 
     		 <p></p>
     			<form:label path="cpassword">確認密碼</form:label><br/>
-    			<form:input path="cpassword" cssErrorClass="validation-error-s" placeholder="請再次輸入您設定的密碼" maxlength="14" /><br/>
+    			<form:input path="cpassword" cssErrorClass="error-by-hibernate-validation" placeholder="請再次輸入您設定的密碼" maxlength="14" /><br/>
     		 <p></p>
     		 
     		 <p></p>
     			<form:label path="email">E-Mail</form:label><br/>
-    			<form:input path="email" cssErrorClass="validation-error-s" placeholder="your@e-mail.com" maxlength="30" /><br/>
+    			<form:input path="email" cssErrorClass="error-by-hibernate-validation" placeholder="your@e-mail.com" maxlength="30" /><br/>
     		 <p></p>
     		 
     		        <!-- 不要忘了加入這個hidden元素，Spring Security需要它，否則提交表單時會報錯 -->
@@ -121,18 +121,18 @@ $(function() {
     			
     			    <!-- 提交鈕 -->
     			<input name="submit" id="submit" value="註冊為新用戶" type="submit"/><br/><br/>
-    			
-    		 <!-- jquery validation plugin 產生的驗證錯誤訊息放入這個div元素 (client端) -->
-    		 <div id="validation-errors-c" class="error"></div>
+    			  <div id="errors-total"  class="error">
+    		   <!-- jquery validation plugin 產生的驗證錯誤訊息放入這個div元素 (client端) -->
+    		   <div id="errors-client"></div>
     			    
-    		 <!-- hibernate validator 產生的驗證錯誤訊息放入這個div元素 (server端) -->
-    		 <div id="validation-errors-s" class="error">
-    		    <form:errors path="username"/><br/>
-    		    <form:errors path="password"/><br/>
-    		    <form:errors path="cpassword"/><br/>
-    		    <form:errors path="email"/>
+    		   <!-- hibernate validator 產生的驗證錯誤訊息放入這個div元素 (server端) -->
+    		   <div id="errors-server">
+    		      <form:errors path="username"/><br/>
+    		      <form:errors path="password"/><br/>
+    		      <form:errors path="cpassword"/><br/>
+    		      <form:errors path="email"/>
+    		   </div>
     		 </div>
-    		
     </div>
     
     <div id="middle"></div>
