@@ -130,8 +130,14 @@
 #right {width: 45%;}
 input { font-size: 18px; }
 
-/* and this is for validation-error */
-.validation-error {
+/* and this is for jquery validator plugin */
+.validation-error-c {
+	background-color:#FF0000;
+	color:#FFFFFF;
+}
+
+/* and this is for hibernate validator */
+.validation-error-s {
 	background-color:#FF0000;
 	color:#FFFFFF;
 }
