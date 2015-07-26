@@ -76,6 +76,7 @@ $(function() {
     	         $(element).removeClass('validation-error-c');
     	               },
     	    errorElement: "div",
+    	    errorClass: "error-message-jquery-validate",
     	    errorPlacement: function(error, element){
     	    	     error.appendTo("div#validation-errors-c");
     	              }
@@ -122,7 +123,7 @@ $(function() {
     			<input name="submit" id="submit" value="註冊為新用戶" type="submit"/><br/><br/>
     			
     		 <!-- jquery validation plugin 產生的驗證錯誤訊息放入這個div元素 (client端) -->
-    		 <div id="validation-errors-c"></div>
+    		 <div id="validation-errors-c" class="error"></div>
     			    
     		 <!-- hibernate validator 產生的驗證錯誤訊息放入這個div元素 (server端) -->
     		 <div id="validation-errors-s" class="error">
