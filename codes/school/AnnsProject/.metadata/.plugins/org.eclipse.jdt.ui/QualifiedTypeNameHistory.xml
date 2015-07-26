@@ -16,4 +16,5 @@
 <fullyQualifiedTypeName name="javax.validation.Valid"/>
 <fullyQualifiedTypeName name="com.kashu.domain.User"/>
 <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotBlank"/>
 </qualifiedTypeNameHistroy>

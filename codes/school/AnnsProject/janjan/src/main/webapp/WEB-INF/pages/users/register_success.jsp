@@ -17,7 +17,10 @@
    <c:if test="${not empty currentURL}">
 		  currentURL = ${currentURL}
 		</c:if>
-		
+		提交來的user.username=${user.username}<br/>
+		user.password=${user.password}<br/>
+		user.cpassword=${user.cpassword}<br/>
+		user.email=${user.email}<br/>
     </article>
     
     <nav>
