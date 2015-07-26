@@ -42,6 +42,7 @@ public class LoginController {
 	@RequestMapping(value="/register",method = RequestMethod.GET)
 	public String register_form(Model model){
 		User user = new User();
+		//user.setUsername("請輸入帳號");
 		model.addAttribute("user", user);
 		return "users/register";
 	}
@@ -49,7 +50,11 @@ public class LoginController {
 	//處理提交來的用戶注冊資訊
 	@RequestMapping(value="/register",method = RequestMethod.POST)
 	public String register(@Valid User user,BindingResult result){
-		return "users/register_success";
+		String viewName = "users/register_success";
+		if(result.hasErrors()){
+			viewName = "users/register";
+		}
+		return viewName;
 	}
 	
 	//登入錯誤之後，Spring Security呼叫此函式 (使用session存放)

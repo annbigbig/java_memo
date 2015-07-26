@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="mvc" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -90,7 +90,7 @@ $(function() {
  <div id='main'>
     <article>
     <div id="container">
-    <mvc:form id="regform" modelAttribute="user" method="post" action="register">
+    <form:form id="regform" modelAttribute="user" method="post" action="register">
     <!--  <form id="regform" method="post" action="register"> --> 
     <div id="left">
     
@@ -98,31 +98,44 @@ $(function() {
     		
     		 <p></p>
     			<!-- <label for="username">帳號名稱</label>  -->
-    			<mvc:label path="username">帳號名稱</mvc:label>
+    			<form:label path="username">帳號名稱</form:label>
     			<br/>
     			<!-- <input id="username" name="username" placeholder="請輸入要申請的帳號名稱" type="text" maxlength="14"> -->
-    			<mvc:input path="username" cssErrorClass="formFieldError" />
+    			<form:input path="username" cssErrorClass="formFieldError" placeholder="請輸入要申請的帳號名稱" maxlength="14" />
     			<br/>
-    			<mvc:errors path="username" />
+    			<form:errors path="username" />
     		 <p></p> 
     			
     		 <p></p>
-    			<label for="password">密碼</label>
+    			<!-- <label for="password">密碼</label>  -->
+    			<form:label path="password">密碼</form:label>
     			<br/>
-    			<input id="password" name="password" placeholder="請輸入您設定的密碼" type="password" maxlength="14">
+    			<!-- <input id="password" name="password" placeholder="請輸入您設定的密碼" type="password" maxlength="14"> -->
+    			<form:input path="password" cssErrorClass="formFieldError" placeholder="請輸入您設定的密碼" maxlength="14" />
+    			<br/>
+    			<form:errors path="password" />
     		 <p></p>
     		 
     		 <p></p>
-    			<label for="cpassword">確認密碼</label>
+    			<!-- <label for="cpassword">確認密碼</label> -->
+    			<form:label path="cpassword">確認密碼</form:label>
     			<br/>
-    			<input id="cpassword" name="cpassword" placeholder="請再次輸入您設定的密碼" type="password" maxlength="14">
+    			<!-- <input id="cpassword" name="cpassword" placeholder="請再次輸入您設定的密碼" type="password" maxlength="14"> -->
+    			<form:input path="cpassword" cssErrorClass="formFieldError" placeholder="請再次輸入您設定的密碼" maxlength="14" />
+    			<br/>
+    			<form:errors path="cpassword" />
     		 <p></p>
     		 
     		 <p></p>
-    			<label for="email">E-Mail</label>
+    			<!-- <label for="email">E-Mail</label> -->
+    			<form:label path="email">E-Mail</form:label>
     			<br/>
-    			<input id="email" name="email" placeholder="your@e-mail.address" type="email" maxlength="30">
+    			<!-- <input id="email" name="email" placeholder="your@e-mail.address" type="email" maxlength="30"> -->
+    			<form:input path="email" cssErrorClass="formFieldError" placeholder="" maxlength="30" />
+    			<br/>
+    			<form:errors path="email" />
     		 <p></p>
+    		 
     		        <!-- 不要忘了加入這個hidden元素，Spring Security需要它，否則提交表單時會報錯 -->
     			<input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
     			<input name="submit" id="submit" value="註冊為新用戶" type="submit">
@@ -183,7 +196,7 @@ $(function() {
     		 
     </div>
     <!-- </form>  -->
-         </mvc:form> 
+         </form:form> 
     </div>
 		
     </article>
