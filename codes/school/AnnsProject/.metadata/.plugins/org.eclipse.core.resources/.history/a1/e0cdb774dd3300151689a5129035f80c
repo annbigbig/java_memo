@@ -1,0 +1,21 @@
+package com.kashu.domain.validator;
+
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
+
+import com.kashu.domain.User;
+
+public class UserPasswordConfirmValidator implements Validator {
+
+	@Override
+	public boolean supports(Class<?> paramClass) {
+		return User.class.equals(paramClass);
+	}
+
+	@Override
+	public void validate(Object arg0, Errors arg1) {
+		
+		
+	}
+
+}

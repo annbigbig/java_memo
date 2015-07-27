@@ -1,0 +1,3 @@
+empty.password=Please Please enter your password
+empty.cpassword=Please Please enter your cpassword
+error.cpassword=Please Please confirm your password again
