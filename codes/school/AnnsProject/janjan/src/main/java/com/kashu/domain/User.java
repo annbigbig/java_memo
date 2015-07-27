@@ -1,26 +1,12 @@
 package com.kashu.domain;
 
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotBlank;
+import java.util.Date;
 
 public class User {
 	
-	@NotBlank
-	@Size(min=6,max=14)
 	private String username;
-	
-	@NotBlank
-	@Size(min=6,max=14)
 	private String password;
-	
-	@NotBlank
-	@Size(min=6,max=14)
 	private String cpassword;
-	
-	@NotBlank
-	@Email
 	private String email;
 	
 	public String getUsername() {

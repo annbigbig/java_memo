@@ -44,6 +44,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/anntony/spring_samples/springmvc_validation_example"/>
 			<item value="/home/anntony/spring_samples/Beginning_Spring/spring-book-ch03/spring-book-ch3/beanvalidation"/>
 			<item value="/home/anntony/spring_samples/spring-petclinic"/>
 			<item value="/home/anntony/spring_samples/spring-security-remember-me"/>

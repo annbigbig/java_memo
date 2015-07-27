@@ -1,0 +1,5 @@
+package com.kashu.domain;
+
+public enum Gender {
+
+}

@@ -33,7 +33,7 @@ $(function() {
     //this is for jquery-mask-plugin
     $("#telephone").mask("(00)0000-0000");
     $("#mobile").mask("0000-000-000");
-    
+    /*
     $("#regform").validate({
     	    rules:{
     	    	        username: {
@@ -81,7 +81,7 @@ $(function() {
     	    	     error.appendTo("div#errors-client");
     	              }
     	      });
- 
+ */
   });
 </script>
 </head>
@@ -138,9 +138,10 @@ $(function() {
     <div id="middle"></div>
     <div id="right">
     		 <p></p><br/><br/><br/>
+    			    		 <p></p>
     			<label for="nickname">暱稱</label>
     			<br/>
-    			<input id="nickname" name="nickname" placeholder="請輸入您的暱稱" type="text" maxlength="14">
+    			<input id="nickname" name="nickname" placeholder="請輸入您的暱稱" type="text" maxlength="20">
     		 <p></p>
     		 
     		 <p></p>

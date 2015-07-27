@@ -1,42 +1,39 @@
 package com.kashu.controller.login;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.RememberMeAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.Validator;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.kashu.domain.User;
-import com.kashu.domain.validator.UserPasswordConfirmValidator;
+import com.kashu.domain.validator.UserValidator;
+
 
 @Controller
 @SessionAttributes({"login_err_flag_session","currentURL"})
 public class LoginController {
 	
+	@Autowired
+	private UserValidator userValidator;
+
 	//沒有使用的函式
 	public ModelAndView login() {
 		ModelAndView model = new ModelAndView();
@@ -47,9 +44,9 @@ public class LoginController {
 	
 	//給出空白的註冊表單
 	@RequestMapping(value="/register",method = RequestMethod.GET)
+	//public String register_form(Model model){
 	public String register_form(Model model){
 		User user = new User();
-		//user.setUsername("請輸入帳號");
 		model.addAttribute("user", user);
 		return "users/register";
 	}
@@ -58,8 +55,11 @@ public class LoginController {
 	@RequestMapping(value="/register",method = RequestMethod.POST)
 	public String register(@Valid User user,BindingResult result){
 		String viewName = "users/register_success";
+		userValidator.validate(user, result);
 		if(result.hasErrors()){
 			viewName = "users/register";
+		}else{
+			//試著寫入user到資料庫
 		}
 		return viewName;
 	}

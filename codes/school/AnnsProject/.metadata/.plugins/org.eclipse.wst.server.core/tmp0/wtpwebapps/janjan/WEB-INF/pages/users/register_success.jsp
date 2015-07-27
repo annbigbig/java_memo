@@ -21,6 +21,7 @@
 		user.password=${user.password}<br/>
 		user.cpassword=${user.cpassword}<br/>
 		user.email=${user.email}<br/>
+		
     </article>
     
     <nav>
