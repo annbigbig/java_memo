@@ -8,6 +8,7 @@ public class User {
 	private String password;
 	private String cpassword;
 	private String email;
+	private String nickname;
 	
 	public String getUsername() {
 		return username;
@@ -32,6 +33,12 @@ public class User {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	
 }

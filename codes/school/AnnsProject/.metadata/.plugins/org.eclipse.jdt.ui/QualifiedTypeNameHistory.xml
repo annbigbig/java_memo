@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="org.springframework.security.web.authentication.AuthenticationFailureHandler"/>
-<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttributes"/>
 <fullyQualifiedTypeName name="java.net.URLEncoder"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
@@ -13,16 +12,19 @@
 <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.Email"/>
-<fullyQualifiedTypeName name="javax.validation.Valid"/>
 <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotBlank"/>
-<fullyQualifiedTypeName name="com.kashu.domain.User"/>
 <fullyQualifiedTypeName name="org.springframework.validation.ValidationUtils"/>
 <fullyQualifiedTypeName name="org.springframework.validation.Validator"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="org.springframework.validation.annotation.Validated"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.WebDataBinder"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.InitBinder"/>
 <fullyQualifiedTypeName name="com.kashu.domain.validator.UserPasswordConfirmValidator"/>
+<fullyQualifiedTypeName name="com.kashu.domain.validator.UserValidator"/>
+<fullyQualifiedTypeName name="com.kashu.domain.User"/>
+<fullyQualifiedTypeName name="javax.validation.Valid"/>
+<fullyQualifiedTypeName name="org.springframework.validation.annotation.Validated"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.InitBinder"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.WebDataBinder"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 </qualifiedTypeNameHistroy>

@@ -5,9 +5,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.kashu.domain.User;
 
 @Controller
 @SessionAttributes({"currentURL"})
@@ -22,6 +27,14 @@ public class HomeController {
       mv.setViewName("home");
       return mv;
 	}
+	
+		/*
+		public String rrregister_form(Model model){
+			User user = new User();
+			model.addAttribute("user", user);
+			return "users/register";
+		}
+		*/
 	
 	@RequestMapping(value = "/part")
 	public ModelAndView part(){

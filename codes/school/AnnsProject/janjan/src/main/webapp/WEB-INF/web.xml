@@ -5,6 +5,20 @@
 
   <display-name>janjan Web Store</display-name>
   
+  <!-- for utf-8 -->
+ <filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+  
  	<!-- Spring MVC -->
 	<servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
@@ -38,5 +52,5 @@
 		<filter-name>springSecurityFilterChain</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
- 
+	
 </web-app>

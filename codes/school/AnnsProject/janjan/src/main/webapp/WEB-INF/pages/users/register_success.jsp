@@ -21,7 +21,7 @@
 		user.password=${user.password}<br/>
 		user.cpassword=${user.cpassword}<br/>
 		user.email=${user.email}<br/>
-		
+		user.nickname=${user.nickname}
     </article>
     
     <nav>

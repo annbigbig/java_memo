@@ -138,10 +138,10 @@ $(function() {
     <div id="middle"></div>
     <div id="right">
     		 <p></p><br/><br/><br/>
-    			    		 <p></p>
-    			<label for="nickname">暱稱</label>
-    			<br/>
-    			<input id="nickname" name="nickname" placeholder="請輸入您的暱稱" type="text" maxlength="20">
+    			<p></p>
+    			<form:label path="nickname">暱稱</form:label><br/>
+    			<form:input path="nickname" cssErrorClass="error-by-hibernate-validation" placeholder="請輸入您的暱稱" maxlength="20" /><br/>
+    			<form:errors path="nickname"/>
     		 <p></p>
     		 
     		 <p></p>
