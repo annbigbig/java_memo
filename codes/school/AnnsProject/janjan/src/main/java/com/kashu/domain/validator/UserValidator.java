@@ -14,8 +14,9 @@ public class UserValidator implements Validator {
 			"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	
 	@Override
-	public boolean supports(Class<?> paramClass) {
-		return User.class.equals(paramClass);
+	public boolean supports(Class<?> clazz) {
+		//return User.class.equals(clazz);
+		return User.class.isAssignableFrom(clazz);
 	}
 
 	@Override

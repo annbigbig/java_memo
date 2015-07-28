@@ -44,6 +44,9 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/anntony/spring_samples/springjpaexample"/>
+			<item value="/home/anntony/java_memo/codes/school/AnnsProject/Simplest"/>
+			<item value="/home/anntony/spring_samples/SampleMVC-JPA/SampleMVC-JPA"/>
 			<item value="/home/anntony/spring_samples/mkyong_radiobutton/SpringMVCForm"/>
 			<item value="/home/anntony/java_memo/codes/school/AnnsProject/Servers"/>
 			<item value="/home/anntony/temp/spring-mvc-enum"/>
