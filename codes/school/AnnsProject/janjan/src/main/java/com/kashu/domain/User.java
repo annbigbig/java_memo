@@ -12,6 +12,10 @@ public class User {
 	private String realname;
 	private String gender;
 	private Date birthday;
+	private String telephone;
+	private String mobile;
+	private String zipcode;
+	private String address;
 	private Integer testint;
 	private Double testdouble;
 	
@@ -74,6 +78,30 @@ public class User {
 	}
 	public void setTestdouble(Double testdouble) {
 		this.testdouble = testdouble;
+	}
+	public String getTelephone() {
+		return telephone;
+	}
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public String getZipcode() {
+		return zipcode;
+	}
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
 }

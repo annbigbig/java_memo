@@ -25,8 +25,14 @@
 		user.realname=${user.realname}<br/>
 		user.gender=${user.gender}<br/>
 		user.birthday=${user.birthday}<br/>
+		user.telephone=${user.telephone}<br/>
+		user.telephone=${user.mobile}<br/>
+		user.zipcode=${user.zipcode}<br/>
+		user.address=${user.address}<br/>
+		
 		user.testint=${user.testint}<br/>
 		user.testdouble=${user.testdouble}<br/>
+		
 
     </article>
     

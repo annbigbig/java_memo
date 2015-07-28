@@ -39,17 +39,11 @@ public class LoginController {
 	
 	@InitBinder("user")
 	private void initBinder(WebDataBinder binder) {
+		//這兩行沒寫的話，不能把表單的生日轉成Date物件
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
+		//設定User物件的校驗器
 		binder.setValidator(userValidator);
-	}
-
-	//沒有使用的函式
-	public ModelAndView login() {
-		ModelAndView model = new ModelAndView();
-		model.setViewName("login");
-		System.out.println("LoginController.login() being called");
-		return model;
 	}
 	
 	//給出空白的註冊表單
@@ -81,7 +75,8 @@ public class LoginController {
 		//response.addCookie(new Cookie("cookie_login_err_messages",URLEncoder.encode("login error : (from cookie)", "UTF-8")));
 		System.out.println("currentURL=" + currentURL);
 		//return "redirect:/user_only";
-		return "redirect:"+currentURL;
+		//return "redirect:"+currentURL;
+		return "redirect:/home";
 	}
 	
 	//登入錯誤之後，Spring Security呼叫此函式 (使用cookie存放)

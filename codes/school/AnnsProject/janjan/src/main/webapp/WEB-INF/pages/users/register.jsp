@@ -165,27 +165,27 @@ $(function() {
     		 <p></p>
     		 
     		 <p></p>
-    			<label for="telephone">市內電話</label>
-    			<br/>
-    			<input id="telephone" name="telephone" placeholder="(00)0000-0000" type="text">
+    			<form:label path="telephone">市內電話</form:label><br/>
+    			<form:input path="telephone" placeholder="(00)0000-0000"/><br/>
+    			<form:errors path="telephone"/>
     		 <p></p>
     		 
     		 <p></p>
-    			<label for="mobile">行動電話</label>
-    			<br/>
-    			<input id="mobile" name="mobile" placeholder="0000-000-000" type="text">
+    			<form:label path="mobile">行動電話</form:label><br/>
+    			<form:input path="mobile" placeholder="0000-000-000"/><br/>
+    			<form:errors path="mobile"/>
     		 <p></p>
     		 
     		 <p></p>
-    		 <label for="zipcode">郵遞區號</label>
-    		 <br/>
+    		 <form:label path="zipcode">郵遞區號</form:label><br/>
     		 <div id="twzipcode"></div>
+    		 <form:errors path="zipcode"/>
     		 <p></p>
     		 
     		 <p></p>
-    			<label for="address">收件地址</label>
-    			<br/>
-    			<input id="address" name="address" placeholder="請輸入您的收件地址" type="text" maxlength="70">
+    		 <form:label path="address">收件地址</form:label><br/>
+    		 <form:input path="address" cssErrorClass="error-by-hibernate-validation" placeholder="請輸入您的收件地址" maxlength="70" /><br/>
+    		 <form:errors path="address"/>
     		 <p></p>
     		 
     		 <p></p>

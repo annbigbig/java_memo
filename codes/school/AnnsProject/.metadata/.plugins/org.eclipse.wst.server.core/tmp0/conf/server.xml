@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/home/anntony/java_memo/codes/school/AnnsProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/anntony/java_memo/codes/school/AnnsProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/spring-mvc-enum" path="/spring-mvc-enum" reloadable="true" source="org.eclipse.jst.jee.server:spring-mvc-enum"/><Context docBase="/home/anntony/java_memo/codes/school/AnnsProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/janjan" path="/janjan" reloadable="true" source="org.eclipse.jst.j2ee.server:janjan"/></Host>
+      <Context docBase="/home/anntony/java_memo/codes/school/AnnsProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/anntony/java_memo/codes/school/AnnsProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/janjan" path="/janjan" reloadable="true" source="org.eclipse.jst.j2ee.server:janjan"/></Host>
     </Engine>
   </Service>
 </Server>
