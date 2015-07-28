@@ -21,7 +21,13 @@
 		user.password=${user.password}<br/>
 		user.cpassword=${user.cpassword}<br/>
 		user.email=${user.email}<br/>
-		user.nickname=${user.nickname}
+		user.nickname=${user.nickname}<br/>
+		user.realname=${user.realname}<br/>
+		user.gender=${user.gender}<br/>
+		user.birthday=${user.birthday}<br/>
+		user.testint=${user.testint}<br/>
+		user.testdouble=${user.testdouble}<br/>
+
     </article>
     
     <nav>

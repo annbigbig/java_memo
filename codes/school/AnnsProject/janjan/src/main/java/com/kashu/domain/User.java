@@ -9,7 +9,18 @@ public class User {
 	private String cpassword;
 	private String email;
 	private String nickname;
+	private String realname;
+	private String gender;
+	private Date birthday;
+	private Integer testint;
+	private Double testdouble;
 	
+	public Date getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 	public String getUsername() {
 		return username;
 	}
@@ -39,6 +50,30 @@ public class User {
 	}
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
+	}
+	public String getRealname() {
+		return realname;
+	}
+	public void setRealname(String realname) {
+		this.realname = realname;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public Integer getTestint() {
+		return testint;
+	}
+	public void setTestint(Integer testint) {
+		this.testint = testint;
+	}
+	public Double getTestdouble() {
+		return testdouble;
+	}
+	public void setTestdouble(Double testdouble) {
+		this.testdouble = testdouble;
 	}
 	
 }

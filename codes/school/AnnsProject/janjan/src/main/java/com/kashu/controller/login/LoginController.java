@@ -1,6 +1,8 @@
 package com.kashu.controller.login;
 
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.security.authentication.RememberMeAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -36,6 +39,8 @@ public class LoginController {
 	
 	@InitBinder("user")
 	private void initBinder(WebDataBinder binder) {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
 		binder.setValidator(userValidator);
 	}
 
@@ -62,6 +67,7 @@ public class LoginController {
 		//userValidator.validate(user, result);
 		if(result.hasErrors()){
 			viewName = "users/register";
+			System.out.println("result.getFieldErrorCount()=" + result.getFieldErrorCount());
 		}else{
 			//試著寫入user到資料庫
 		}

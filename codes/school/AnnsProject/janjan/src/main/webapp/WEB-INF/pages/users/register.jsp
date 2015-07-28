@@ -10,7 +10,7 @@
 $(function() {
 	
 	//initialize the datepicker for birthday field
-    $("#datepicker").datepicker({
+    $("#birthday").datepicker({
     	changeYear: true,
     	changeMonth: true,
     	minDate: "-100y",
@@ -145,22 +145,23 @@ $(function() {
     		 <p></p>
     		 
     		 <p></p>
-    			<label for="realname">真實姓名</label>
-    			<br/>
-    			<input id="realname" name="realname" placeholder="請輸入您的真實姓名" type="text" maxlength="20">
+    			<form:label path="realname">真實姓名</form:label><br/>
+    			<form:input path="realname" cssErrorClass="error-by-hibernate-validation" placeholder="請輸入您的真實姓名" maxlength="20" /><br/>
+    			<form:errors path="realname"/><br/>
     		 <p></p>
     		 
     		 <p></p>
-    			<label for="gender">性別</label>
-    			<br/>
-    			<input type="radio" name="gender" value="1" checked>男
-    			<input type="radio" name="gender" value="0">女
+    			<form:label path="gender">性別</form:label><br/>
+    			<form:radiobutton path="gender" value="MALE" checked="checked"/>男
+    			<form:radiobutton path="gender" value="FEMALE"/>女
+    			<form:errors path="gender"/><br/>
     		 <p></p>
     		 
     		 <p></p>
-    			<label for="birthday">生日</label>
-    			<br/>
-    			<input type="text" id="datepicker" name="birthday">
+    		 <form:label path="birthday">生日</form:label><br/>
+    		 <form:input path="birthday"/><br/>
+    		 <form:errors path="birthday"/>
+    			<!-- <input type="text" id="datepicker" name="birthday"> -->
     		 <p></p>
     		 
     		 <p></p>
@@ -185,6 +186,18 @@ $(function() {
     			<label for="address">收件地址</label>
     			<br/>
     			<input id="address" name="address" placeholder="請輸入您的收件地址" type="text" maxlength="70">
+    		 <p></p>
+    		 
+    		 <p></p>
+    		 <form:label path="testint">測試整數</form:label><br/>
+    		 <form:input path="testint"/><br/>
+    		 <form:errors path="testint"/>
+    		 <p></p>
+    		 
+    		 <p></p>
+    		 <form:label path="testdouble">測試浮點數</form:label><br/>
+    		 <form:input path="testdouble"/><br/>
+    		 <form:errors path="testdouble"/>
     		 <p></p>
     		 
     </div>
