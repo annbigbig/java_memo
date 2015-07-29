@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.kashu.domain.User;
-import com.kashu.domain.validator.UserValidator;
+import com.kashu.validator.UserValidator;
 
 
 @Controller

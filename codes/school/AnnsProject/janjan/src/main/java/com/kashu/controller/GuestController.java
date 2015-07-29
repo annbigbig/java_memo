@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.kashu.domain.User;
-import com.kashu.domain.validator.UserValidator;
+import com.kashu.validator.UserValidator;
 
 @Controller
 @RequestMapping("/register")

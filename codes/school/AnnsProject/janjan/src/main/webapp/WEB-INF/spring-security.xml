@@ -50,7 +50,7 @@
 				authorities-by-username-query="select username, role from user_roles where username =?  " />
 		</authentication-provider>
 	</authentication-manager>
-	
+
 	<beans:bean id="authenticationSuccessHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
     <!-- After login, return to the last visited page -->
     <beans:property name="useReferer" value="true" />
@@ -60,6 +60,6 @@
 	
 	<beans:bean id="logoutSuccessHandler" class="org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler">
     <beans:property name="useReferer" value="true"/>
-  </beans:bean>
+  </beans:bean>	
 
 </beans:beans>
