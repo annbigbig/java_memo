@@ -32,7 +32,6 @@
 		
 		user.testint=${user.testint}<br/>
 		user.testdouble=${user.testdouble}<br/>
-		
 
     </article>
     

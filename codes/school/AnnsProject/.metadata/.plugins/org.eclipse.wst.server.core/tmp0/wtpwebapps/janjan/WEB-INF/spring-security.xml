@@ -17,12 +17,12 @@
 		<!-- redirect to 403 access denied <intercept-url pattern="/update**" access="hasRole('ROLE_ADMIN') 
 			and isFullyAuthenticated()" /> -->
 
-    <!--   -->
-    <!--  authentication-failure-handler-ref="authenticationFailureHandler"  -->
+    <!-- authentication-failure-handler-ref="authenticationFailureHandler"  -->
     <!-- authentication-failure-url="/login?error" -->
+    <!-- authentication-failure-url="/login_err" -->
 		<form-login login-page="/login" 
 		    default-target-url="/welcome"
-			authentication-failure-url="/login_err"
+			authentication-failure-handler-ref="authenticationFailureHandler"
 			username-parameter="username"
 			password-parameter="password" 
 			login-processing-url="/auth/login_check"
@@ -50,5 +50,16 @@
 				authorities-by-username-query="select username, role from user_roles where username =?  " />
 		</authentication-provider>
 	</authentication-manager>
+	
+	<beans:bean id="authenticationSuccessHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+    <!-- After login, return to the last visited page -->
+    <beans:property name="useReferer" value="true" />
+ </beans:bean>
+ 
+ <beans:bean id="authenticationFailureHandler" class="com.kashu.auth.handler.CustomAuthenticationFailureHandler"/>
+	
+	<beans:bean id="logoutSuccessHandler" class="org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler">
+    <beans:property name="useReferer" value="true"/>
+  </beans:bean>
 
 </beans:beans>

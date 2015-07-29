@@ -1,6 +1,7 @@
 package com.kashu.controller.login;
 
 import java.io.UnsupportedEncodingException;
+import java.security.Principal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -37,7 +38,7 @@ public class LoginController {
 	@Autowired
 	private UserValidator userValidator;
 	
-	@InitBinder("user")
+	//@InitBinder("user")
 	private void initBinder(WebDataBinder binder) {
 		//這兩行沒寫的話，不能把表單的生日轉成Date物件
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -47,7 +48,7 @@ public class LoginController {
 	}
 	
 	//給出空白的註冊表單
-	@RequestMapping(value="/register",method = RequestMethod.GET)
+	//@RequestMapping(value="/register",method = RequestMethod.GET)
 	//public String register_form(Model model){
 	public ModelAndView register_form(){
 		ModelAndView mv = new ModelAndView("users/register","user",new User());
@@ -55,8 +56,8 @@ public class LoginController {
 	}
 	
 	//處理提交來的用戶注冊資訊
-	@RequestMapping(value="/register",method = RequestMethod.POST)
-	public String register(@ModelAttribute @Valid User user,BindingResult result){
+	//@RequestMapping(value="/register",method = RequestMethod.POST)
+	public String register(@ModelAttribute @Valid User user,BindingResult result, Principal principal, Model model){
 		String viewName = "users/register_success";
 		//userValidator.validate(user, result);
 		if(result.hasErrors()){
@@ -64,6 +65,7 @@ public class LoginController {
 			System.out.println("result.getFieldErrorCount()=" + result.getFieldErrorCount());
 		}else{
 			//試著寫入user到資料庫
+			model.addAttribute("username", getLoginUsername(principal));
 		}
 		return viewName;
 	}
@@ -80,7 +82,7 @@ public class LoginController {
 	}
 	
 	//登入錯誤之後，Spring Security呼叫此函式 (使用cookie存放)
-	@RequestMapping(value = "/login_err_cookie", method = {RequestMethod.GET,RequestMethod.POST})
+	//@RequestMapping(value = "/login_err_cookie", method = {RequestMethod.GET,RequestMethod.POST})
 	public String login_error_cookie(
 			@CookieValue(value = "cookie_currentURL", defaultValue = "/home") String cookie_currentURL,
 			HttpServletResponse response)
@@ -102,6 +104,16 @@ public class LoginController {
 		}
 
 		return RememberMeAuthenticationToken.class.isAssignableFrom(authentication.getClass());
+	}
+	
+	private String getLoginUsername(Principal principal){
+		String username = "";
+		try{
+		  username = principal.getName();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return username;
 	}
 	
 }
