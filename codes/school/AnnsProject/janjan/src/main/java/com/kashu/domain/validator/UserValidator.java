@@ -21,6 +21,7 @@ public class UserValidator implements Validator {
 
 	@Override
 	public void validate(Object obj, Errors errors) {
+		
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "empty.username");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "empty.password");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cpassword", "empty.cpassword");
@@ -37,6 +38,7 @@ public class UserValidator implements Validator {
 		if(!isEmailValid(user.getEmail())){
 			errors.rejectValue("email", "invalid.email");
 		}
+		
 	}
 	
 	public boolean isEmailValid(String email){

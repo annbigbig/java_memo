@@ -30,6 +30,7 @@
     <property name="basename" value="classpath:messages" />
  </bean>
 
-<bean id="userValidator" class="com.kashu.domain.validator.UserValidator"/> 
+<bean id="userValidator" class="com.kashu.domain.validator.UserValidator"/>
+<bean id="memberValidator" class="com.kashu.test.validator.MemberValidator"/> 
  
 </beans>
