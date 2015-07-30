@@ -2,28 +2,28 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="valida" key="selection"/>
+		<item value="hidden" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="hidden"/>
+			<item value="GlobalResource"/>
+			<item value="Globalr"/>
+			<item value="maria"/>
+			<item value="taglib"/>
 			<item value="valida"/>
 			<item value="javax.valida"/>
 			<item value="message"/>
-			<item value="messageSource"/>
-			<item value="entity"/>
-			<item value="error"/>
-			<item value="hidden"/>
-			<item value="context"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="287" key="DIALOG_WIDTH"/>
+		<item value="295" key="DIALOG_WIDTH"/>
 		<item value="1|Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="441" key="DIALOG_HEIGHT"/>
+		<item value="452" key="DIALOG_HEIGHT"/>
 		<item value="942" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>

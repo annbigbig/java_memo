@@ -241,6 +241,13 @@
         <version>2.6</version>
         <configuration>
           <failOnMissingWebXml>false</failOnMissingWebXml>
+          <webResources>
+                <resource>
+                <!-- this is relative to the pom.xml directory -->
+                <directory>${project.basedir}/src/main/resources
+                </directory>
+             </resource>
+          </webResources>
         </configuration>
      </plugin>
 	 </plugins>   
