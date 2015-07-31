@@ -25,6 +25,11 @@
 		<filter-name>characterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<!-- Session Configuration -->
+  <session-config>
+        <session-timeout>10</session-timeout>
+  </session-config>
   
  	<!-- Spring MVC -->
 	<servlet>
@@ -40,6 +45,12 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	
+	<listener>
+    <listener-class>
+      org.springframework.security.web.session.HttpSessionEventPublisher
+    </listener-class>
+  </listener> 
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>

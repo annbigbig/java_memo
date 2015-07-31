@@ -1,8 +1,0 @@
-127.0.0.1 - - [18/Jul/2015:18:56:41 +0800] "GET / HTTP/1.1" 404 994
-127.0.0.1 - - [18/Jul/2015:18:56:44 +0800] "GET /SpringSecurity/ HTTP/1.1" 200 134
-127.0.0.1 - - [18/Jul/2015:18:56:56 +0800] "GET /SpringSecurity/ HTTP/1.1" 200 134
-127.0.0.1 - - [18/Jul/2015:18:57:03 +0800] "GET /SpringSecurity/login HTTP/1.1" 200 1580
-127.0.0.1 - - [18/Jul/2015:18:58:09 +0800] "POST /SpringSecurity/auth/login_check?targetUrl= HTTP/1.1" 302 -
-127.0.0.1 - - [18/Jul/2015:18:58:09 +0800] "GET /SpringSecurity/ HTTP/1.1" 200 576
-127.0.0.1 - - [18/Jul/2015:19:00:40 +0800] "POST /SpringSecurity/j_spring_security_logout HTTP/1.1" 302 -
-127.0.0.1 - - [18/Jul/2015:19:00:40 +0800] "GET /SpringSecurity/login?logout HTTP/1.1" 200 1648
