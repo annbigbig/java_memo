@@ -22,7 +22,7 @@ import com.kashu.validator.UserValidator;
 
 @Controller
 @RequestMapping("/register")
-@SessionAttributes(value = "user",types = User.class)
+//@SessionAttributes(value = "user",types = User.class)
 public class GuestController {
 	
 	@Autowired

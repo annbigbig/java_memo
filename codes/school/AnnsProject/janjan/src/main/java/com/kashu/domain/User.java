@@ -1,9 +1,14 @@
 package com.kashu.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
-	
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+public class User implements Serializable{
 	private String username;
 	private String password;
 	private String cpassword;

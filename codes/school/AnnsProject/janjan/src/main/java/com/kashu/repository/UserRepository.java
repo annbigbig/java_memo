@@ -1,11 +1,16 @@
 package com.kashu.repository;
 
+import java.util.List;
+
+import com.kashu.domain.TestUser;
 import com.kashu.domain.User;
 
 public interface UserRepository {
 
-	User findByUsername(String username);
+	TestUser findByUsername(String username);
 	
-	User save(User user);
+	TestUser save(TestUser user);
+	
+	List<TestUser> getAllUsers();
 	
 }

@@ -13,9 +13,13 @@
    <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
    <session-management session-authentication-strategy-ref="sas"/>
      -->
-  <session-management invalid-session-url="/invalid-session" session-fixation-protection="migrateSession">
-      <concurrency-control expired-url="/expired-session" max-sessions="1" error-if-maximum-exceeded="true" />
-  </session-management>
+     
+     
+  <!-- <session-management invalid-session-url="/invalid-session" session-fixation-protection="migrateSession"> -->
+  <!-- <session-management session-fixation-protection="migrateSession"> -->
+  
+  <!--     <concurrency-control expired-url="/expired-session" max-sessions="1" error-if-maximum-exceeded="true" /> -->
+  <!-- </session-management> -->
 
 		<headers>
 			<cache-control />
@@ -40,7 +44,7 @@
 		<logout logout-url="/j_spring_security_logout" success-handler-ref="logoutSuccessHandler" delete-cookies="JSESSIONID"/>
 		<!-- <logout logout-success-url="/home" delete-cookies="JSESSIONID" /> -->
 		<!-- enable csrf protection -->
-		<csrf />
+		<!-- <csrf /> -->
 
 		<remember-me 
 		    token-validity-seconds="1209600"
