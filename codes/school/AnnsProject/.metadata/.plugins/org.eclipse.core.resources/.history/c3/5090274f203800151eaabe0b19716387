@@ -1,0 +1,5 @@
+package com.kashu.repository;
+
+public class TestUserRepository {
+
+}

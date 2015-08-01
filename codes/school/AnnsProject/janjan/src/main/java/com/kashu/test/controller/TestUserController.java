@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.kashu.service.UserService;
+import com.kashu.test.service.UserService;
 
 @Controller
 @RequestMapping("/user01")
@@ -16,7 +16,7 @@ public class TestUserController {
 	
 	@RequestMapping("/alluser")
 	public String listAllUsers(Model model){
-		model.addAttribute("testusers", userService.getAllUsers());
+		model.addAttribute("users", userService.getAllUsers());
 		return "test/testuser01";
 	}
 }

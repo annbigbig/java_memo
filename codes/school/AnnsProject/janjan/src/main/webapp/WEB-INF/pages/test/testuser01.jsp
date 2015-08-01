@@ -8,8 +8,8 @@
 </head>
 <body>
 test/testuser01.jsp<br/>
-<c:if test="${not empty testusers}">
-   <c:forEach items="${testusers}" var="user">
+<c:if test="${not empty users}">
+   <c:forEach items="${users}" var="user">
    			username=${user.username}<br/>
    			password=${user.password}<br/>
    			email=${user.email}<br/>

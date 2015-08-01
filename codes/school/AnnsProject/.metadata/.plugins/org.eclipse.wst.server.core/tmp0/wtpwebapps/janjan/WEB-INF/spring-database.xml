@@ -20,7 +20,13 @@
     <bean id="entityManagerFactoryBean" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
       <property name="dataSource" ref="dataSource" />
       <!-- This makes /META-INF/persistence.xml is no longer necessary -->
-      <property name="packagesToScan" value="com.kashu.domain" />
+      <!-- <property name="packagesToScan" value="com.kashu.domain" /> -->
+      <property name="packagesToScan">
+        <list>
+            <value>com.kashu.domain</value>
+            <value>com.kashu.test.domain</value>
+        </list>
+      </property>
       <!-- JpaVendorAdapter implementation for Hibernate EntityManager.
       	   Exposes Hibernate's persistence provider and EntityManager extension interface -->
       <property name="jpaVendorAdapter">
