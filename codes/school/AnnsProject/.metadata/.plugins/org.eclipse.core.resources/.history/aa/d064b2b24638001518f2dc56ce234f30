@@ -21,13 +21,12 @@ public class UserRepositoryImpl implements UserRepository {
 
 	@Override
 	public User save(User user) {
-		//try{
+		try{
 		  manager.persist(user);
-		//}catch(Exception e){
-			//user = null;
-			//e.printStackTrace();
-			//System.out.println(e.getMessage());
-		//}
+		}catch(Exception e){
+			user = null;
+			e.printStackTrace();
+		}
 		return user;
 	}
 
