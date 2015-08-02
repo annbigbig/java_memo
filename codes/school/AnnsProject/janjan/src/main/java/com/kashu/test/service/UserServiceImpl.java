@@ -23,16 +23,38 @@ public class UserServiceImpl implements UserService{
 		}
 		return u;
 	}
+	
+	@Override
+	public User update(User user){
+		User u = null;
+		try{
+			   u = userRepository.update(user);
+			}catch(Exception e){
+				  e.printStackTrace();
+			}
+			return u;
+	}
 
 	@Override
 	public User findByUsername(String username) {
-		
-		return null;
+	  User user = null;
+	  try{
+		   user = userRepository.findByUsername(username);
+	  }catch(Exception e){
+		  e.printStackTrace();
+	  }
+	  return user;
 	}
 
 	@Override
 	public List<User> getAllUsers() {
-		return userRepository.getAllUsers();
+		List<User> users = null;
+		try{
+		   users = userRepository.getAllUsers();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return users;
 	}
 
 }

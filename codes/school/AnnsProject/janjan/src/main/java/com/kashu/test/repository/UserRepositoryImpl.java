@@ -15,8 +15,7 @@ public class UserRepositoryImpl implements UserRepository {
 
 	@Override
 	public User findByUsername(String username) {
-		
-		return null;
+		return manager.find(User.class, username);
 	}
 
 	@Override
@@ -28,6 +27,12 @@ public class UserRepositoryImpl implements UserRepository {
 			//e.printStackTrace();
 			//System.out.println(e.getMessage());
 		//}
+		return user;
+	}
+	
+	@Override
+	public User update(User user){
+		manager.merge(user);
 		return user;
 	}
 
