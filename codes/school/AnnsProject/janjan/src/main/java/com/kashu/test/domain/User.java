@@ -2,15 +2,19 @@ package com.kashu.test.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.hibernate.annotations.Type;
+
 @Entity
-@Table (name="TB_USER")
+@Table (name="TB_USERS")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
@@ -56,11 +60,15 @@ public class User implements Serializable {
 	@Column(name="lastModified")
 	private Date lastModified;
 	
-	@Column(name="errorCounters")
-	private Integer errCounters;
+	@Column(name="errorCounters",columnDefinition = "TINYINT")
+	//@Type(type = "org.hibernate.type.NumericBooleanType")
+	private Integer errorCounters;
 	
-	@Column(name="enabled")
+	@Column(name="enabled",columnDefinition = "TINYINT")
 	private Integer enabled;
+	
+	//@OneToMany(mappedBy="TB_USERS")
+	//private Set<Role> roles;
 	
 	public User(){
 		
@@ -98,5 +106,110 @@ public class User implements Serializable {
 	public void setCpassword(String cpassword) {
 		this.cpassword = cpassword;
 	}
-	
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+	public String getRealname() {
+		return realname;
+	}
+
+	public void setRealname(String realname) {
+		this.realname = realname;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public String getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public Date getCreatedTime() {
+		return createdTime;
+	}
+
+	public void setCreatedTime(Date createdTime) {
+		this.createdTime = createdTime;
+	}
+
+	public Date getLastModified() {
+		return lastModified;
+	}
+
+	public void setLastModified(Date lastModified) {
+		this.lastModified = lastModified;
+	}
+
+	public Integer getErrorCounters() {
+		return errorCounters;
+	}
+
+	public void setErrorCounters(Integer errorCounters) {
+		this.errorCounters = errorCounters;
+	}
+
+	public Integer getEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(Integer enabled) {
+		this.enabled = enabled;
+	}
+
+	/*
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
+	*/
 }

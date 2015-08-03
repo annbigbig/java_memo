@@ -29,7 +29,7 @@
 		<item value="655" key="size.x"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item value="594" key="DIALOG_WIDTH"/>
+		<item value="602" key="DIALOG_WIDTH"/>
 		<item value="1|Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="743" key="DIALOG_HEIGHT"/>
 		<item value="390" key="DIALOG_X_ORIGIN"/>

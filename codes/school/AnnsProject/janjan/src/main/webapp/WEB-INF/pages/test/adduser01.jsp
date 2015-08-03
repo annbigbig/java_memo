@@ -12,6 +12,8 @@
   user.username=${user.username}<br/>
   user.password=${user.password}<br/>
   user.email=${user.email}<br/>
+
+  <br/><br/>
 </c:if>
 </body>
 </html>

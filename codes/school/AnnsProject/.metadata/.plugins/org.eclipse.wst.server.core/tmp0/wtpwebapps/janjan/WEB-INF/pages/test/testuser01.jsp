@@ -13,6 +13,20 @@ test/testuser01.jsp<br/>
    			username=${user.username}<br/>
    			password=${user.password}<br/>
    			email=${user.email}<br/>
+   			nickname=${user.nickname}<br/>
+   			realname=${user.realname}<br/>
+   			gender=${user.gender}<br/>
+   			birthday=${user.birthday}<br/>
+   			telephone=${user.telephone}<br/>
+   			mobile=${user.mobile}<br/>
+   			zipcode=${user.zipcode}<br/>
+   			address=${user.address}<br/>
+   			createdTime=${user.createdTime}<br/>
+   			lastModified=${user.lastModified}<br/>
+   			errorCounters=${user.errorCounters}<br/>
+   			enabled=${user.enabled}<br/>
+   			
+   			<br/><br/>
    </c:forEach>
 </c:if>
 </body>

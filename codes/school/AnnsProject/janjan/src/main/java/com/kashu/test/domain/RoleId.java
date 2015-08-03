@@ -5,19 +5,20 @@ import java.io.Serializable;
 public class RoleId implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
-	private User username;
+	private String user;
 	private String ROLE;
-	public User getUsername() {
-		return username;
+	
+	public String getUser() {
+		return user;
 	}
-	public void setUsername(User username) {
-		this.username = username;
+	public void setUser(String user) {
+		this.user = user;
 	}
 	public String getROLE() {
 		return ROLE;
 	}
-	public void setROLE(String rOLE) {
-		ROLE = rOLE;
+	public void setROLE(String ROLE) {
+		this.ROLE = ROLE;
 	}
 	
 }
