@@ -1,11 +1,15 @@
 package com.kashu.test.controller;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.kashu.test.domain.Role;
 import com.kashu.test.domain.User;
 import com.kashu.test.service.UserService;
 
@@ -25,6 +29,9 @@ public class TestUserController {
 	@RequestMapping("/add")
 	public String addUser(Model model){
 		User user = new User("sakura","sakurapass","sakura@gmail.com");
+		user.setEnabled(true);
+		user.addRole(new Role("ROLE_USER"));
+		user.addRole(new Role("ROLE_ADMIN"));
 		User result = userService.save(user);
 		model.addAttribute("user",result);
 		return "test/adduser01";
@@ -32,7 +39,12 @@ public class TestUserController {
 	
 	@RequestMapping("/update")
 	public String updateUser(Model model){
-		User user = new User("sakura","xxxxxxxx","yyyyyyyy");
+		User user = userService.findByUsername("sakura");
+		for(Role r : user.getRoles()){
+			if(r.getROLE().equals("ROLE_ADMIN")){
+				user.removeRole(r);
+			}
+		}
 		User result = userService.update(user);
 		model.addAttribute("user",result);
 		return "test/updateuser01";

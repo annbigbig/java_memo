@@ -9,9 +9,27 @@
 <body>
 <h1>test/getuser01.jsp</h1><br/>
 <c:if test="${not empty user}">
-  user.username=${user.username}<br/>
-  user.password=${user.password}<br/>
-  user.email=${user.email}<br/>
+     			username=${user.username}<br/>
+   			password=${user.password}<br/>
+   			email=${user.email}<br/>
+   			nickname=${user.nickname}<br/>
+   			realname=${user.realname}<br/>
+   			gender=${user.gender}<br/>
+   			birthday=${user.birthday}<br/>
+   			telephone=${user.telephone}<br/>
+   			mobile=${user.mobile}<br/>
+   			zipcode=${user.zipcode}<br/>
+   			address=${user.address}<br/>
+   			createdTime=${user.createdTime}<br/>
+   			lastModified=${user.lastModified}<br/>
+   			errorCounters=${user.errorCounters}<br/>
+   			enabled=${user.enabled}<br/>
+					<c:forEach var="role" items="${user.roles}">   		
+   						ROLE=${role.ROLE}<br/>
+   			</c:forEach>
+   			<br/><br/>
+
+  <br/><br/>
 </c:if>
 </body>
 </html>

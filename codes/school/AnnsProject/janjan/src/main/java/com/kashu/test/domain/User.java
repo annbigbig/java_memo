@@ -2,6 +2,7 @@ package com.kashu.test.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -70,7 +71,7 @@ public class User implements Serializable {
 	private Boolean enabled;
 	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy="user",cascade = CascadeType.ALL)
-	private Set<Role> roles;
+	private Set<Role> roles = new HashSet<Role>();
 	
 	public User(){
 		
@@ -211,6 +212,17 @@ public class User implements Serializable {
 
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
+	}
+	
+	public void addRole(Role role){
+		role.setUser(this);
+		roles.add(role);
+	}
+	
+	public void removeRole(Role role){
+		role.setUser(null);
+		//http://www.iteye.com/topic/124788
+		roles.remove(role);
 	}
 	
 }
