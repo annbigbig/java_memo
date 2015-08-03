@@ -10,20 +10,20 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-//@Entity
-//@Table(name="TB_ROLES")
-//@IdClass(value=RoleId.class)
+@Entity
+@Table(name="TB_ROLES")
+@IdClass(value=RoleId.class)
 public class Role implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	//@Id
-	//@ManyToOne
-	//@JoinColumn(name = "username", referencedColumnName = "username")
+	@Id
+	@ManyToOne
+	@JoinColumn(name = "username", referencedColumnName = "username")
 	private User user;
 	
-	//@Id
-	//@Column(name="ROLE")
+	@Id
+	@Column(name="ROLE")
 	private String ROLE;
 	
 	public Role(){

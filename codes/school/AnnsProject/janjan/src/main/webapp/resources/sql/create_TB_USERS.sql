@@ -17,5 +17,5 @@ enabled TINYINT UNSIGNED DEFAULT 0,
 PRIMARY KEY(username)
 );
 
-INSERT INTO TB_USERS (username,password,email) VALUES ('tony','tonypass','tony@email.com');
+INSERT INTO TB_USERS (username,password,email,enabled) VALUES ('tony','tonypass','tony@email.com',1);
 INSERT INTO TB_USERS (username,password,email) VALUES ('stark','starkpass','stark@email.com');

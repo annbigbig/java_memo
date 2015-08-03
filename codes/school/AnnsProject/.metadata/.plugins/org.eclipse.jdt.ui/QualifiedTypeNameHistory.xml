@@ -57,4 +57,6 @@
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.Type"/>
+<fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 </qualifiedTypeNameHistroy>

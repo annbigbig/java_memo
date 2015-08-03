@@ -4,8 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -61,14 +63,14 @@ public class User implements Serializable {
 	private Date lastModified;
 	
 	@Column(name="errorCounters",columnDefinition = "TINYINT")
-	//@Type(type = "org.hibernate.type.NumericBooleanType")
 	private Integer errorCounters;
 	
 	@Column(name="enabled",columnDefinition = "TINYINT")
-	private Integer enabled;
+	@Type(type = "org.hibernate.type.NumericBooleanType")
+	private Boolean enabled;
 	
-	//@OneToMany(mappedBy="TB_USERS")
-	//private Set<Role> roles;
+	@OneToMany(fetch = FetchType.EAGER, mappedBy="user",cascade = CascadeType.ALL)
+	private Set<Role> roles;
 	
 	public User(){
 		
@@ -195,15 +197,14 @@ public class User implements Serializable {
 		this.errorCounters = errorCounters;
 	}
 
-	public Integer getEnabled() {
+	public Boolean getEnabled() {
 		return enabled;
 	}
 
-	public void setEnabled(Integer enabled) {
+	public void setEnabled(Boolean enabled) {
 		this.enabled = enabled;
 	}
 
-	/*
 	public Set<Role> getRoles() {
 		return roles;
 	}
@@ -211,5 +212,5 @@ public class User implements Serializable {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
-	*/
+	
 }

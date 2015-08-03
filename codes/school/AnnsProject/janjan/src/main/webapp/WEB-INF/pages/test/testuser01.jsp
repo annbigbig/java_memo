@@ -25,7 +25,9 @@ test/testuser01.jsp<br/>
    			lastModified=${user.lastModified}<br/>
    			errorCounters=${user.errorCounters}<br/>
    			enabled=${user.enabled}<br/>
-   			
+					<c:forEach var="role" items="${user.roles}">   		
+   						ROLE=${role.ROLE}<br/>
+   			</c:forEach>
    			<br/><br/>
    </c:forEach>
 </c:if>
