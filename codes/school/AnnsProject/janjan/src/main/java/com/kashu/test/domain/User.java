@@ -1,11 +1,13 @@
 package com.kashu.test.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table (name="TB_USER")
@@ -18,8 +20,47 @@ public class User implements Serializable {
 	@Column(name="password")
 	private String password;
 	
+	@Transient
+	private String cpassword;
+	
 	@Column(name="email")
 	private String email;
+	
+	@Column(name="nickname")
+	private String nickname;
+	
+	@Column(name="realname")
+	private String realname;
+	
+	@Column(name="gender")
+	private String gender;
+	
+	@Column(name="birthday")
+	private Date birthday;
+	
+	@Column(name="telephone")
+	private String telephone;
+	
+	@Column(name="mobile")
+	private String mobile;
+	
+	@Column(name="zipcode")
+	private String zipcode;
+	
+	@Column(name="address")
+	private String address;
+	
+	@Column(name="createdTime")
+	private Date createdTime;
+	
+	@Column(name="lastModified")
+	private Date lastModified;
+	
+	@Column(name="errorCounters")
+	private Integer errCounters;
+	
+	@Column(name="enabled")
+	private Integer enabled;
 	
 	public User(){
 		
@@ -48,6 +89,14 @@ public class User implements Serializable {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getCpassword() {
+		return cpassword;
+	}
+
+	public void setCpassword(String cpassword) {
+		this.cpassword = cpassword;
 	}
 	
 }
