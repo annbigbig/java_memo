@@ -1,15 +1,21 @@
 package com.kashu.test.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.CollectionTable;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -70,8 +76,12 @@ public class User implements Serializable {
 	@Type(type = "org.hibernate.type.NumericBooleanType")
 	private Boolean enabled;
 	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy="user",cascade = CascadeType.ALL)
-	private Set<Role> roles = new HashSet<Role>();
+	//@ElementCollection
+	//@CollectionTable(name = "Role", joinColumns = @JoinColumn(name = "ROLE"))
+	//@OneToMany(fetch = FetchType.EAGER, mappedBy="user", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(fetch = FetchType.EAGER, mappedBy="user", cascade = CascadeType.ALL,orphanRemoval = true)
+	private List<Role> roles = new ArrayList<Role>();
+	//private Set<Role> roles = new HashSet<Role>();
 	
 	public User(){
 		
@@ -205,24 +215,41 @@ public class User implements Serializable {
 	public void setEnabled(Boolean enabled) {
 		this.enabled = enabled;
 	}
-
-	public Set<Role> getRoles() {
+	
+	public List<Role> getRoles() {
 		return roles;
 	}
 
-	public void setRoles(Set<Role> roles) {
+	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
-	
+
 	public void addRole(Role role){
 		role.setUser(this);
 		roles.add(role);
 	}
 	
+	/*
+	public void removeRole(Role role){
+		//look here
+		//http://stackoverflow.com/questions/19494541/i-am-trying-to-remove-item-from-list-but-i-am-gettin-concurrent-modification-exc
+		//http://www.iteye.com/topic/124788
+		String roleNameToBeRemoved = role.getROLE();
+		Iterator<Role> it = getRoles().iterator();
+		while(it.hasNext()){
+			Role roleTemp = it.next();
+			if(roleTemp.getROLE().equals(roleNameToBeRemoved)){
+				//roleTemp.setUser(this);
+				it.remove();
+			}
+		}
+		*/
+	
 	public void removeRole(Role role){
 		role.setUser(null);
-		//http://www.iteye.com/topic/124788
 		roles.remove(role);
+		//http://www.iteye.com/topic/124788
+
 	}
 	
 }

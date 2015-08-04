@@ -33,7 +33,7 @@ $(function() {
     //this is for jquery-mask-plugin
     $("#telephone").mask("(00)0000-0000");
     $("#mobile").mask("0000-000-000");
-    /*
+   
     $("#regform").validate({
     	    rules:{
     	    	        username: {
@@ -81,7 +81,7 @@ $(function() {
     	    	     error.appendTo("div#errors-client");
     	              }
     	      });
- */
+ 
   });
 </script>
 </head>
@@ -103,12 +103,12 @@ $(function() {
     			
     		 <p></p>
     			<form:label path="password">密碼</form:label><br/>
-    			<form:input path="password" cssErrorClass="error-by-hibernate-validation" placeholder="請輸入您設定的密碼" maxlength="14" /><br/>
+    			<form:input path="password" cssErrorClass="error-by-hibernate-validation" placeholder="請輸入您設定的密碼" maxlength="14" type="password"/><br/>
     		 <p></p>
     		 
     		 <p></p>
     			<form:label path="cpassword">確認密碼</form:label><br/>
-    			<form:input path="cpassword" cssErrorClass="error-by-hibernate-validation" placeholder="請再次輸入您設定的密碼" maxlength="14" /><br/>
+    			<form:input path="cpassword" cssErrorClass="error-by-hibernate-validation" placeholder="請再次輸入您設定的密碼" maxlength="14" type="password"/><br/>
     		 <p></p>
     		 
     		 <p></p>
