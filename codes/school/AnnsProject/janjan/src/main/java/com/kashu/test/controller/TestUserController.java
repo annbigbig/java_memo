@@ -13,20 +13,20 @@ import com.kashu.test.domain.Role;
 import com.kashu.test.domain.User;
 import com.kashu.test.service.UserService;
 
-@Controller
-@RequestMapping("/user01")
+//@Controller
+//@RequestMapping("/user01")
 public class TestUserController {
 
-	@Autowired
+	//@Autowired
 	private UserService userService;
 	
-	@RequestMapping("/alluser")
+	//@RequestMapping("/alluser")
 	public String listAllUsers(Model model){
 		model.addAttribute("users", userService.getAllUsers());
 		return "test/testuser01";
 	}
 	
-	@RequestMapping("/add")
+	//@RequestMapping("/add")
 	public String addUser(Model model){
 		User user = new User("sakura","sakurapass","sakura@gmail.com");
 		user.setEnabled(true);
@@ -37,17 +37,20 @@ public class TestUserController {
 		return "test/adduser01";
 	}
 	
-	@RequestMapping("/update")
+	//@RequestMapping("/update")
 	public String updateUser(Model model){
-		User user = userService.findByUsername("sakura");
+		//User user = userService.findByUsername("sakura");
+		User user = new User("sakura","sakurapass","sakura@gmail.com");
+		user.setPassword("xxxxx444");
 		//user.removeRole(new Role("ROLE_ADMIN"));
+
 		User result = userService.update(user);
 		//User result = userService.save(user);
 		model.addAttribute("user",result);
 		return "test/updateuser01";
 	}
 	
-	@RequestMapping("/get")
+	//@RequestMapping("/get")
 	public String getUser(@RequestParam(value="username",required=false) String username, Model model){
 		User result = userService.findByUsername(username);
 		model.addAttribute("user", result);

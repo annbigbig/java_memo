@@ -40,6 +40,8 @@
       </property>
    </bean>
 
+  <!--Enable injection of the Entity Manager-->
+    <!-- <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/> -->
 
 <!-- 
 	<bean id="dataSource"

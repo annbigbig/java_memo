@@ -22,58 +22,58 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.Type;
 
-@Entity
-@Table (name="TB_USERS")
+//@Entity
+//@Table (name="TB_USERS")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
-	@Id
-	@Column(name="username")
+	//@Id
+	//@Column(name="username")
 	private String username;
 	
-	@Column(name="password")
+	//@Column(name="password")
 	private String password;
 	
-	@Transient
+	//@Transient
 	private String cpassword;
 	
-	@Column(name="email")
+	//@Column(name="email")
 	private String email;
 	
-	@Column(name="nickname")
+	//@Column(name="nickname")
 	private String nickname;
 	
-	@Column(name="realname")
+	//@Column(name="realname")
 	private String realname;
 	
-	@Column(name="gender")
+	//@Column(name="gender")
 	private String gender;
 	
-	@Column(name="birthday")
+	//@Column(name="birthday")
 	private Date birthday;
 	
-	@Column(name="telephone")
+	//@Column(name="telephone")
 	private String telephone;
 	
-	@Column(name="mobile")
+	//@Column(name="mobile")
 	private String mobile;
 	
-	@Column(name="zipcode")
+	//@Column(name="zipcode")
 	private String zipcode;
 	
-	@Column(name="address")
+	//@Column(name="address")
 	private String address;
 	
-	@Column(name="createdTime")
+	//@Column(name="createdTime")
 	private Date createdTime;
 	
-	@Column(name="lastModified")
+	//@Column(name="lastModified")
 	private Date lastModified;
 	
-	@Column(name="errorCounters",columnDefinition = "TINYINT")
+	//@Column(name="errorCounters",columnDefinition = "TINYINT")
 	private Integer errorCounters;
 	
-	@Column(name="enabled",columnDefinition = "TINYINT")
-	@Type(type = "org.hibernate.type.NumericBooleanType")
+	//@Column(name="enabled",columnDefinition = "TINYINT")
+	//@Type(type = "org.hibernate.type.NumericBooleanType")
 	private Boolean enabled;
 	
 	//@ElementCollection

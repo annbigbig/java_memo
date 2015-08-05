@@ -1,0 +1,5 @@
+package com.kashu.service;
+
+public class UserServiceImpl {
+
+}

@@ -188,18 +188,6 @@ $(function() {
     		 <form:errors path="address"/>
     		 <p></p>
     		 
-    		 <p></p>
-    		 <form:label path="testint">測試整數</form:label><br/>
-    		 <form:input path="testint"/><br/>
-    		 <form:errors path="testint"/>
-    		 <p></p>
-    		 
-    		 <p></p>
-    		 <form:label path="testdouble">測試浮點數</form:label><br/>
-    		 <form:input path="testdouble"/><br/>
-    		 <form:errors path="testdouble"/>
-    		 <p></p>
-    		 
     </div>
     <!-- </form>  -->
          </form:form> 

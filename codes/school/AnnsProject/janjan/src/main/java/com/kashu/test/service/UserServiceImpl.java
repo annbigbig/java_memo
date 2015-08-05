@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import com.kashu.test.repository.UserRepository;
 import com.kashu.test.domain.User;
 
-@Service
+//@Service
 public class UserServiceImpl implements UserService{
-	@Autowired
+	//@Autowired
 	private UserRepository userRepository;
 
 	@Override

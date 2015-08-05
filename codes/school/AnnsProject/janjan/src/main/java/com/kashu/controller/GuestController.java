@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.kashu.domain.User;
+import com.kashu.service.UserService;
 import com.kashu.validator.UserValidator;
 
 @Controller
@@ -27,6 +28,9 @@ public class GuestController {
 	
 	@Autowired
 	private UserValidator userValidator;
+	
+	@Autowired
+	private UserService userService;
 	
 	@InitBinder
 	private void initBinder(WebDataBinder binder) {
@@ -54,7 +58,7 @@ public class GuestController {
 			System.out.println("result.getFieldErrorCount()=" + result.getFieldErrorCount());
 		}else{
 			//試著寫入user到資料庫
-			
+			userService.create(user);
 		}
 		return viewName;
 	}
