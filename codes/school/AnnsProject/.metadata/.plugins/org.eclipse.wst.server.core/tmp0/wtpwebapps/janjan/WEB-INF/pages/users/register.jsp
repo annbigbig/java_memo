@@ -131,6 +131,9 @@ $(function() {
     		      <form:errors path="password"/><br/>
     		      <form:errors path="cpassword"/><br/>
     		      <form:errors path="email"/>
+    		      <c:if test="${not empty db_error_messages}">
+    		      					${db_error_messages}
+    		      </c:if>
     		   </div>
     		 </div>
     </div>

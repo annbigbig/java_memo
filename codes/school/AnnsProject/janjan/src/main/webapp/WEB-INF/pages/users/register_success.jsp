@@ -10,9 +10,7 @@
 <body>
  <header>header</header>
  <div id='main'>
-    <article><h2>article</h2><br>
-    偶是register_success.jsp<br>
-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">首頁layout從這抄來的</a><br>
+    <article><h2>恭喜您，註冊成功</h2><br/><br/>
 <h1>${message}</h1><br>
    <c:if test="${not empty currentURL}">
 		  currentURL = ${currentURL}
