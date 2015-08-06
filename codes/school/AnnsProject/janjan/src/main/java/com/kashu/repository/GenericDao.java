@@ -22,6 +22,9 @@ public interface GenericDao<T> {
 
     T update(T t);
     
+    //this is added by me
+    T refresh(T t);
+    
     List<T> findByParams(Map<String, Object> params,Map<String, Object> orderParams);
     
     List<T> listAll();

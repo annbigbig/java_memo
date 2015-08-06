@@ -15,7 +15,7 @@
 			    });
 			    
 			    $('#personal_mod_button').click(function(){
-			        window.location='user/mod?username=<sec:authentication property="principal.username"/>';
+			        window.location='${pageContext.request.contextPath}/user/modify/<sec:authentication property="principal.username"/>';
 			    });
 			    
 			});

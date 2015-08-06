@@ -21,7 +21,7 @@ import com.kashu.domain.Role;
 @Entity
 @Table (name="TB_USERS")
 public class User implements Serializable {
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name="username")
 	private String username;
@@ -75,7 +75,8 @@ public class User implements Serializable {
 	//@ElementCollection
 	//@CollectionTable(name = "Role", joinColumns = @JoinColumn(name = "ROLE"))
 	//@OneToMany(fetch = FetchType.EAGER, mappedBy="user", cascade = CascadeType.ALL, orphanRemoval = true)
-	@OneToMany(fetch = FetchType.EAGER, mappedBy="user", cascade = CascadeType.ALL,orphanRemoval = true)
+	////@OneToMany(fetch = FetchType.EAGER, mappedBy="user",cascade = CascadeType.ALL,orphanRemoval = true)
+	@Transient
 	private List<Role> roles = new ArrayList<Role>();
 	//private Set<Role> roles = new HashSet<Role>();
 	

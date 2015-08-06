@@ -1,0 +1,7 @@
+package com.kashu.test.others;
+
+public class HashCodeTest {
+	public static void main(String[] args){
+		
+	}
+}

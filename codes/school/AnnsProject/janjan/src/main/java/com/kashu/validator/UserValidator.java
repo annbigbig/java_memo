@@ -29,7 +29,7 @@ public class UserValidator implements Validator {
 		if(!user.getPassword().equals(user.getCpassword())){
 			errors.rejectValue("cpassword", "error.passwordDiff");
 		}
-		if(user.getUsername().length()<6||user.getUsername().length()>14){
+		if(user.getUsername().length()<4||user.getUsername().length()>14){
 			errors.rejectValue("username", "length.username");
 		}
 		if(user.getPassword().length()<6||user.getPassword().length()>14){

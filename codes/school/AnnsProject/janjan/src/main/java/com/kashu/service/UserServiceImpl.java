@@ -30,7 +30,24 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User update(User user) {
-		return userRepository.update(user);
+		User result = null;
+		try{
+		  result = userRepository.update(user);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	@Override
+	public User refresh(User user){
+		User result = null;
+		try{
+			  result = userRepository.refresh(user);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		return result;
 	}
 
 	@Override

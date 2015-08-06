@@ -97,7 +97,21 @@ public abstract class GenericDaoImpl<T> implements GenericDao<T> {
 
     @Override
     public T update(final T t) {
+    	/*
+    	  if(manager.contains(t)){
+    		  			System.out.println("Object" + t.getClass().getSimpleName() + "is in current persistence context.");
+    	  }else{
+	  			    System.out.println("Object" + t.getClass().getSimpleName() + "is NOT in current persistence context.");
+    	        }
+    	        */
+    	manager.clear();
         return this.manager.merge(t);
+    }
+    
+    @Override
+    public T refresh(final T t){
+    		this.manager.refresh(t);
+    return t;
     }
     
     @Override
