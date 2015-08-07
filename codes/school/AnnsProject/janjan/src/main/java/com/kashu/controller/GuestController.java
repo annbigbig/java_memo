@@ -61,10 +61,14 @@ public class GuestController {
 			//準備子表的Role物件
 			Role r1 = new Role("ROLE_USER");
 			//Role r2 = new Role("ROLE_ADMIN");
-			r1.setUser(user);
+			//r1.setUser(user);
 			//r2.setUser(user);
 			user.addRole(r1);
 			//user.addRole(r2);
+			//Role r1 = new Role();
+			//r1.setUsername(user.getUsername());
+			//r1.setROLE("ROLE_USER");
+			//user.getRoles().add(r1);
 			
 			//試著寫入user到資料庫
 			if(userService.create(user)==null){

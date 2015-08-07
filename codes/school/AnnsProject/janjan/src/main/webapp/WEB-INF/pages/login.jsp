@@ -91,7 +91,7 @@
 				
 				<tr>
 					<td><input name="submit" type="submit" value="登入"/> | <input type="reset" value="清空"><br/>
-					<a href="register" style="font-size: 16px;">註冊為新用戶</a> | <a href="#" id="password_send_link" style="font-size: 16px">找回密碼</a>
+					<a href="${pageContext.request.contextPath}/register" style="font-size: 16px;">註冊為新用戶</a> | <a href="#" id="password_send_link" style="font-size: 16px">找回密碼</a>
 					</td>
 				</tr>
 			</table>

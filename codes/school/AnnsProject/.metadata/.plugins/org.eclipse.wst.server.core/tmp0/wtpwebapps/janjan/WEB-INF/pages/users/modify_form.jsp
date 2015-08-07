@@ -95,6 +95,7 @@ $(function() {
     <div id="left">
     
     		<h2 class="contact">修改個人資料</h2>
+    		 <form:hidden path="id"/>
     		
     		 <p></p>
     			<form:label path="username">帳號名稱</form:label><br/>
@@ -194,6 +195,7 @@ $(function() {
     		 <p></p>
     		 <c:forEach items="${user.roles}" var="role">
     		 ${role.ROLE}<br/>
+    		 		
     		 </c:forEach>
     		 
     </div>

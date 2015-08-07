@@ -9,20 +9,24 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-
 import org.hibernate.annotations.Type;
-
 import com.kashu.domain.Role;
 
 @Entity
 @Table (name="TB_USERS")
 public class User implements Serializable {
-	//private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	@Id
+	@Column(name="id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+	
 	@Column(name="username")
 	private String username;
 	
@@ -72,11 +76,8 @@ public class User implements Serializable {
 	@Type(type = "org.hibernate.type.NumericBooleanType")
 	private Boolean enabled;
 	
-	//@ElementCollection
-	//@CollectionTable(name = "Role", joinColumns = @JoinColumn(name = "ROLE"))
-	//@OneToMany(fetch = FetchType.EAGER, mappedBy="user", cascade = CascadeType.ALL, orphanRemoval = true)
-	////@OneToMany(fetch = FetchType.EAGER, mappedBy="user",cascade = CascadeType.ALL,orphanRemoval = true)
-	@Transient
+	
+ @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL}, orphanRemoval = true , mappedBy="user")
 	private List<Role> roles = new ArrayList<Role>();
 	//private Set<Role> roles = new HashSet<Role>();
 	
@@ -90,6 +91,14 @@ public class User implements Serializable {
 		this.email = email;
 	}
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public String getUsername() {
 		return username;
 	}
@@ -225,7 +234,7 @@ public class User implements Serializable {
 		role.setUser(this);
 		roles.add(role);
 	}
-	
+		
 	/*
 	public void removeRole(Role role){
 		//look here
@@ -242,11 +251,12 @@ public class User implements Serializable {
 		}
 		*/
 	
+	/*
 	public void removeRole(Role role){
 		role.setUser(null);
 		roles.remove(role);
 		//http://www.iteye.com/topic/124788
-
 	}
+	*/
 	
 }

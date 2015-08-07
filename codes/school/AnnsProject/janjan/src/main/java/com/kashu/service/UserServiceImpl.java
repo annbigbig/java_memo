@@ -40,19 +40,31 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	@Override
-	public User refresh(User user){
-		User result = null;
+	public User delete(User user){
+		User result = user;
 		try{
-			  result = userRepository.refresh(user);
+			  userRepository.delete(user.getId());
 			}catch(Exception e){
+				result = null;
 				e.printStackTrace();
 			}
 		return result;
 	}
+	
 
-	@Override
 	public User findByUsername(String username) {
-		return userRepository.find(username);
+		User result = null;
+		try{
+			result = userRepository.findByUsername(username);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	  return result;
+	}
+	
+ @Override
+	public User findById(Long id){
+		return userRepository.find(id);
 	}
 
 	@Override

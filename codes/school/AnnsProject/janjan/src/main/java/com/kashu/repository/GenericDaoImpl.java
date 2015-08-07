@@ -17,7 +17,7 @@ public abstract class GenericDaoImpl<T> implements GenericDao<T> {
 //	/http://www.codeproject.com/Articles/251166/The-Generic-DAO-pattern-in-Java-with-Spring-3-and
 
     @PersistenceContext
-    private EntityManager manager;
+    protected EntityManager manager;
 
     private Class<T> type;
 
@@ -121,7 +121,8 @@ public abstract class GenericDaoImpl<T> implements GenericDao<T> {
     
     @Override
     public List<T> listAll(){
-      	String queryStr = "SELECT COUNT(o) FROM " + type.getSimpleName() + " o";
+      	//String queryStr = "SELECT COUNT(o) FROM " + type.getSimpleName() + " o";
+    	  String queryStr = "SELECT o FROM " + type.getSimpleName() + " o";
     	  List<T> result = manager.createQuery(queryStr,type).getResultList();
     	return result;
     }

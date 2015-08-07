@@ -3,6 +3,7 @@ package com.kashu.controller;
 import java.security.Principal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -17,13 +18,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.kashu.domain.Role;
 import com.kashu.domain.User;
 import com.kashu.service.UserService;
 import com.kashu.validator.UserValidator;
 
 @Controller
-@RequestMapping("/user/modify")
+@RequestMapping("/user")
 public class UserController {
 
 	@Autowired
@@ -42,7 +45,7 @@ public class UserController {
 	}
 	
 	//給出修改用戶的表單
-	@RequestMapping(value="/{username}",method=RequestMethod.GET)
+	@RequestMapping(value="/modify/{username}",method=RequestMethod.GET)
 	public String form(@PathVariable String username, Principal principal, Model model){
 		String viewName = "users/modify_failed";
 		String logonUsername = getLoginUsername(principal);
@@ -64,21 +67,19 @@ public class UserController {
 		return viewName;
 	}
 	
-	@RequestMapping(method=RequestMethod.POST)
+	@RequestMapping(value="/modify" , method = RequestMethod.POST)
 	public String modify(@Valid @ModelAttribute User user, Model model, BindingResult result){
 		String viewName = "users/modify_success";
 		if(result.hasErrors()){
 			viewName = "users/modify_form";
 		}else{
-			//以用戶提交來的User資料，取出username欄位值之後，再拿它叫EntityManager取出User物件u
-			User u = userService.findByUsername(user.getUsername());
-			//System.out.println("hashcode of u = " + u.hashCode());
-			//System.out.println("hashcode of user = " + user.hashCode());
+			//以用戶提交來的User資料，取出id欄位值之後，再拿它叫EntityManager取出User物件u
+			User u = userService.findById(user.getId());
 			
-			//if(u==null){
-			//	model.addAttribute("error_message_not_exist", "該用戶不存在");
-			//	viewName = "users/modify_failed";
-			//}else{
+			if(u==null){
+				model.addAttribute("error_message_not_exist", "該用戶不存在");
+				viewName = "users/modify_failed";
+			}else{
 				//將用戶的修正放入u這個物件實體
 				
 				u.setPassword(user.getPassword());
@@ -92,16 +93,21 @@ public class UserController {
 				u.setAddress(user.getAddress());
 				u.setLastModified(new Date());
 				
+			/*
+			Role r = new Role();
+			r.setROLE("ROLE_USER");
+			r.setUsername(user.getUsername());
+			user.getRoles().add(r);
+			*/
 				
 				//更新物件u
 				if(userService.update(u)==null){
-				//if(userService.refresh(u)==null){
 					model.addAttribute("error_message_updated_failed", "沒有寫入用戶資料到資料庫，更新失敗");
 					viewName = "users/modify_failed";
 				}else{
 					model.addAttribute("user", u);
 				}
-			//}
+			}
 		}
 		return viewName;
 	}
@@ -116,6 +122,33 @@ public class UserController {
 			e.printStackTrace();
 		}
 		return username;
+	}
+	
+	//just for test delete feature
+	@RequestMapping("/delete")
+	public String deleteOne(@RequestParam(value="id",required = false) Long id,Model model){
+		User u = userService.findById(id);
+		if(u==null){
+			model.addAttribute("message", "該用戶不存在");
+		}else{
+			// try to delete that one
+			System.out.println("u.id=" + u.getId());
+			if(userService.delete(u)==null){
+				model.addAttribute("message", "用戶" + u.getUsername()+"刪除失敗");
+			}else{
+				model.addAttribute("message", "用戶" + u.getUsername()+"刪除成功");
+			}
+		}
+		
+		return "users/deleteResult";
+	}
+	
+	//just for test list users feature
+	@RequestMapping("/list")
+	public String list(Model model){
+		List<User> users = userService.getAllUsers();
+		model.addAttribute("users", users);
+		return "users/listall";
 	}
 	
 }

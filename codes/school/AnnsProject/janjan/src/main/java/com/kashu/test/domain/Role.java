@@ -38,9 +38,11 @@ public class Role implements Serializable {
 	public User getUser() {
 		return user;
 	}
+
 	public void setUser(User user) {
 		this.user = user;
 	}
+
 	public String getROLE() {
 		return ROLE;
 	}
