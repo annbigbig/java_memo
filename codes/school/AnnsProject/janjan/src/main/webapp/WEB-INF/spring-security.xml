@@ -58,8 +58,8 @@
 	<authentication-manager>
 		<authentication-provider>
 			<jdbc-user-service data-source-ref="dataSource"
-				users-by-username-query="select username,password, enabled from users where username=?"
-				authorities-by-username-query="select username, role from user_roles where username =?  " />
+				users-by-username-query="select username,password, enabled from TB_USERS where username=?"
+				authorities-by-username-query="SELECT u.username,r.role FROM TB_USERS u LEFT OUTER JOIN TB_ROLES r ON u.id = r.user_id WHERE u.username = ?"/>
 		</authentication-provider>
 	</authentication-manager>
 

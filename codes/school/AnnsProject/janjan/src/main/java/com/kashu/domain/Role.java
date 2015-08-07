@@ -30,15 +30,15 @@ public class Role implements Serializable {
 	@JoinColumn(name="user_id")
 	private User user;
 	
-	@Column(name="ROLE")
-	private String ROLE;
+	@Column(name="role")
+	private String role;
 	
 	public Role(){
 		
 	}
 	
-	public Role(String ROLE){
-		this.ROLE = ROLE;
+	public Role(String role){
+		this.role = role;
 	}
 
 	public Long getId() {
@@ -57,11 +57,12 @@ public class Role implements Serializable {
 		this.user = user;
 	}
 
-	public String getROLE() {
-		return ROLE;
+	public String getRole() {
+		return role;
 	}
-	public void setROLE(String ROLE) {
-		this.ROLE = ROLE;
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 }

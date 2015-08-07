@@ -70,6 +70,9 @@ public class GuestController {
 			//r1.setROLE("ROLE_USER");
 			//user.getRoles().add(r1);
 			
+			//設定user為啟用狀態
+			user.setEnabled(true);
+			
 			//試著寫入user到資料庫
 			if(userService.create(user)==null){
 				model.addAttribute("db_error_messages", "註冊失敗，沒有寫入資料庫");

@@ -194,7 +194,7 @@ $(function() {
     		 
     		 <p></p>
     		 <c:forEach items="${user.roles}" var="role">
-    		 ${role.ROLE}<br/>
+    		 ${role.role}<br/>
     		 		
     		 </c:forEach>
     		 

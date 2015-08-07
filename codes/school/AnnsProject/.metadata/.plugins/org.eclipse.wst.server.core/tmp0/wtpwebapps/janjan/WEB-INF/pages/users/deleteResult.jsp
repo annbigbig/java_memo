@@ -32,7 +32,7 @@
 		user.zipcode=${user.zipcode}<br/>
 		user.address=${user.address}<br/>
 	    		 <c:forEach items="${user.roles}" var="role">
-    		 ${role.ROLE}<br/>
+    		 ${role.role}<br/>
     		 </c:forEach>
 		
     </article>
