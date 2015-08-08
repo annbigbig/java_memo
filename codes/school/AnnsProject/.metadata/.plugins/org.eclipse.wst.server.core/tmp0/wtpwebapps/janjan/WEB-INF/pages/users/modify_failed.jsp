@@ -29,7 +29,7 @@
 		  ${error_message_updated_failed}<br/>
 		</c:if>
 		
-		
+		   <br/><a href="${pageContext.request.contextPath}/home">回首頁</a><br/>
     </article>
     
     <nav>

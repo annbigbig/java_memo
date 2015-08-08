@@ -28,6 +28,7 @@
 	    		 <c:forEach items="${user.roles}" var="role">
     		 ${role.role}<br/>
     		 </c:forEach>
+    		 <br/><a href="${pageContext.request.contextPath}/home">回首頁</a><br/>
     </article>
     
     <nav>

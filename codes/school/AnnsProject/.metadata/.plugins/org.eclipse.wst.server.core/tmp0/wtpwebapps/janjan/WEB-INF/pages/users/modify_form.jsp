@@ -34,7 +34,7 @@ $(function() {
     $("#telephone").mask("(00)0000-0000");
     $("#mobile").mask("0000-000-000");
    
-    $("#regform").validate({
+    $("#modform").validate({
     	    rules:{
     	    	        username: {
     	    	        	    required: true,
@@ -91,7 +91,7 @@ $(function() {
  <div id='main'>
     <article>
     <div id="container">
-    <form:form id="regform" modelAttribute="user" method="post" action="${pageContext.request.contextPath}/user/modify">
+    <form:form id="modform" modelAttribute="user" method="post" action="${pageContext.request.contextPath}/user/modify">
     <div id="left">
     
     		<h2 class="contact">修改個人資料</h2>
@@ -121,7 +121,7 @@ $(function() {
     			<input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
     			
     			    <!-- 提交鈕 -->
-    			<input name="submit" id="submit" value="註冊為新用戶" type="submit"/><br/><br/>
+    			<input name="submit" id="submit" value="修改個人資料" type="submit"/><br/><br/>
     			  <div id="errors-total"  class="error">
     		   <!-- jquery validation plugin 產生的驗證錯誤訊息放入這個div元素 (client端) -->
     		   <div id="errors-client"></div>

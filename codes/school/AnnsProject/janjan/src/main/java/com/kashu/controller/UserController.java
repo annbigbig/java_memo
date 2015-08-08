@@ -101,11 +101,11 @@ public class UserController {
 			*/
 				
 				//更新物件u
-				if(userService.update(u)==null){
+				if(userService.update(user)==null){
 					model.addAttribute("error_message_updated_failed", "沒有寫入用戶資料到資料庫，更新失敗");
 					viewName = "users/modify_failed";
 				}else{
-					model.addAttribute("user", u);
+					model.addAttribute("user", user);
 				}
 			}
 		}

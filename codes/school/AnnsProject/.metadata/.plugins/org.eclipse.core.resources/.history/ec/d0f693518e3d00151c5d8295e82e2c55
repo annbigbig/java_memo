@@ -1,0 +1,22 @@
+package com.kashu.test.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CollegeCmd {
+
+    private List<College> collegeList;
+
+    public CollegeCmd() {
+        // initialize collegeList with six colleges
+        collegeList = new ArrayList<College>();
+    }
+
+    public List<College> getCollegeList() {
+        return collegeList;
+    }
+
+    public void setCollegeList(List<College> collegeList) {
+        this.collegeList = collegeList;
+    }
+}
