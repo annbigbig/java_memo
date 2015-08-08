@@ -1,5 +1,0 @@
-package com.kashu.test.repository;
-
-public interface UserRepository {
-
-}

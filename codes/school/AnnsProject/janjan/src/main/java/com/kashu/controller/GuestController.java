@@ -42,10 +42,21 @@ public class GuestController {
 		binder.setValidator(userValidator);
 	}
 
+	//準備註冊用的User的空白模型
+	@ModelAttribute("user")
+	public User initModel(){
+		User user = new User();
+		Role r1 = new Role("ROLE_USER");
+		user.addRole(r1);
+		user.setEnabled(true);
+		user.setErrorCounters(0);
+		return user;
+	}
+	
 	//給出空白的用戶註冊表單
 	@RequestMapping(method = RequestMethod.GET)
 	public String form(Model model){
-		model.addAttribute("user", new User());
+		//model.addAttribute("user", new User());
 		return "users/register";
 	}
 	
@@ -59,11 +70,11 @@ public class GuestController {
 			System.out.println("result.getFieldErrorCount()=" + result.getFieldErrorCount());
 		}else{
 			//準備子表的Role物件
-			Role r1 = new Role("ROLE_USER");
+			//Role r1 = new Role("ROLE_USER");
 			//Role r2 = new Role("ROLE_ADMIN");
 			//r1.setUser(user);
 			//r2.setUser(user);
-			user.addRole(r1);
+			//user.addRole(r1);
 			//user.addRole(r2);
 			//Role r1 = new Role();
 			//r1.setUsername(user.getUsername());
@@ -71,7 +82,12 @@ public class GuestController {
 			//user.getRoles().add(r1);
 			
 			//設定user為啟用狀態
-			user.setEnabled(true);
+			//user.setEnabled(true);
+			
+			//設定新用戶的createdTime和lastModified欄位值
+			Date now = new Date();
+			user.setCreatedTime(now);
+			user.setLastModified(now);
 			
 			//試著寫入user到資料庫
 			if(userService.create(user)==null){
