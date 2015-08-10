@@ -103,10 +103,24 @@
 	</div>
 	</sec:authorize>
 	
+	<!-- 管理員功能 -->
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
+	<script>
+	$(document).ready(function() { 
+		$('#product_new_button').click(function(e){
+	      window.location='${pageContext.request.contextPath}/admin/product/new';
+	  
+	       });
+	});
+	</script>
 		<h2 class="pink-me">管理員功能</h2>
 		<div class="admin-class">
 		    <button type="button" id="user_new_button">新增會員</button> | 
 		    <button type="button" id="user_find_button">查詢會員</button><br/>
+		</div>
+		<div class="admin-class">
+		  <button type="button" id="product_new_button">新增產品</button> | 
+		  <input type='text' name='productTitle' id='productTitle' maxlength="8" size="4"/>
+		  <button type="button" id="product_find_button">查詢產品</button> | 
 		</div>
 	</sec:authorize>

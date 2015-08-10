@@ -44,6 +44,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/anntony/spring_samples/Beginning_Spring/spring-book-ch04"/>
+			<item value="/home/anntony/spring_samples/spring-book-ch05/spring-book-ch5"/>
 			<item value="/home/anntony/spring_samples/springjpaexample"/>
 			<item value="/home/anntony/java_memo/codes/school/AnnsProject/Simplest"/>
 			<item value="/home/anntony/spring_samples/SampleMVC-JPA/SampleMVC-JPA"/>
@@ -57,8 +59,6 @@
 			<item value="/home/anntony/spring_samples/logincontrolapp"/>
 			<item value="/home/anntony/spring_samples/SpringMVC-CookieHandling"/>
 			<item value="/home/anntony/spring_samples/spring-security-remember-me-annotation"/>
-			<item value="/home/anntony/spring_samples/SpringSecurity"/>
-			<item value="/home/anntony/spring_samples/spring-mvc-examples/bookstore-example-with-mvc"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

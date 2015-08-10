@@ -1,0 +1,7 @@
+package com.kashu.repository;
+
+import com.kashu.domain.Product;
+
+public interface ProductRepository {
+	public Product insert(Product product);
+}

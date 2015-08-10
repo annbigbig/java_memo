@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1439095275613_1" label="spring-book-ch4" name="spring-book-ch4">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/configuring-single-conn-datasource" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/queries-with-in-clause" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/encapsulating-sql-queries" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/encapsulating-dml-operations" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/pooled-datasource" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/running-queries-with-jdbctemplate" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/configuring-datasource" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/embedded-db-support" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/inserting-updating-deleting-records" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/performing-batch-operations" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/configuring-and-using-jdbctemplate" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/handling-lob-objects" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-book-ch4" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/using-named-parameters" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/initializing-db" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/calling-storedprocedures" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/encapsulating-storedprocedures" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/using-preparedstatements" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1436856540111_0" label="Window Working Set" name="Aggregate for window 1436856540110"/>
 </workingSetManager>

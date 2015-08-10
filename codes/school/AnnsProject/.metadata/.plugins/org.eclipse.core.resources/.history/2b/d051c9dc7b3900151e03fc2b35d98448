@@ -1,7 +1,0 @@
-package com.kashu.test.domain;
-
-import java.io.Serializable;
-
-public class RoleId implements Serializable{
-
-}

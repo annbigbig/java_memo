@@ -209,6 +209,12 @@
 	    <artifactId>hibernate-entitymanager</artifactId>
 	    <version>${hibernate.entity.manager}</version>
     </dependency>
+    
+    <dependency>
+      <groupId>com.nurkiewicz.jdbcrepository</groupId>
+      <artifactId>jdbcrepository</artifactId>
+      <version>0.4</version>
+    </dependency>
    
   </dependencies>
   <build>

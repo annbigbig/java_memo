@@ -13,6 +13,7 @@
 
   <!-- To validate the posted add employee form -->
   <bean id="userValidator" class="com.kashu.validator.UserValidator"/>
+  <bean id="productValidator" class="com.kashu.validator.ProductValidator"/>
   <bean id="memberValidator" class="com.kashu.test.validator.MemberValidator"/>
 
     <!-- This produces a container-managed EntityManagerFactory; 

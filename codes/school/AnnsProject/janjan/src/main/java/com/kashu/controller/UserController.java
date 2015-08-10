@@ -93,6 +93,11 @@ public class UserController {
 				u.setAddress(user.getAddress());
 				u.setLastModified(new Date());
 				
+
+			//寫入user修改時間
+			u.setLastModified(new Date());
+			
+			
 			/*
 			Role r = new Role();
 			r.setROLE("ROLE_USER");
@@ -101,11 +106,11 @@ public class UserController {
 			*/
 				
 				//更新物件u
-				if(userService.update(user)==null){
+				if(userService.update(u)==null){
 					model.addAttribute("error_message_updated_failed", "沒有寫入用戶資料到資料庫，更新失敗");
 					viewName = "users/modify_failed";
 				}else{
-					model.addAttribute("user", user);
+					model.addAttribute("user", u);
 				}
 			}
 		}

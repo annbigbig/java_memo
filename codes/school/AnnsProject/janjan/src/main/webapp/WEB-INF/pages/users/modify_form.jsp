@@ -193,13 +193,15 @@ $(function() {
     		 <p></p>
     		 
     		 <p></p>
-    		 <c:forEach items="${user.roles}" var="role">
-    		 ${role.role}<br/>
-    		 		
-    		 </c:forEach>
     		 
     </div>
     <!-- </form>  -->
+           <form:hidden path="enabled"/>
+           <form:hidden path="errorCounters"/>
+           <c:forEach items="${user.roles}" var="role" varStatus="status">
+             <input type="hidden" name="roles[${status.index}].role" value="${role.role}"/>
+             <!-- <input type="hidden" name="roles[${status.index}].user.id" value="${role.user.id}"/> -->          
+           </c:forEach>
          </form:form> 
     </div>
 		

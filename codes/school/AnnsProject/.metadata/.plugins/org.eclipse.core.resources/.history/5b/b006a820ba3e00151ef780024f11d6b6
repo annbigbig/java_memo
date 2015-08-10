@@ -1,0 +1,13 @@
+package com.kashu.repository;
+
+import java.util.List;
+
+import com.kashu.domain.Product;
+
+public interface ProductRepository {
+	public Product insert(Product product);
+	public Product update(Product product);
+	public List<Product> update(List<Product> products);
+	public Product find(Long id);
+	public List<Product> find();
+}

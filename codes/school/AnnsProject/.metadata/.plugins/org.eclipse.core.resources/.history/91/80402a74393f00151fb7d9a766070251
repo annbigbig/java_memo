@@ -1,0 +1,5 @@
+package com.kashu.validator;
+
+public class ProductValidator {
+
+}
