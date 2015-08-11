@@ -68,7 +68,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/modify" , method = RequestMethod.POST)
-	public String modify(@Valid @ModelAttribute User user, Model model, BindingResult result){
+	public String modify(@Valid @ModelAttribute User user, BindingResult result, Model model){
 		String viewName = "users/modify_success";
 		if(result.hasErrors()){
 			viewName = "users/modify_form";

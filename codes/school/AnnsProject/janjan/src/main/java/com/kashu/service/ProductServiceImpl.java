@@ -28,4 +28,15 @@ public class ProductServiceImpl implements ProductService {
 		return null;
 	}
 
+	@Override
+	public Boolean delete(Long id) {
+		Boolean b = false;
+		try{
+			b = productRepository.delete(id);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return b;
+	}
+
 }

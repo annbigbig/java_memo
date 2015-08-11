@@ -1,0 +1,18 @@
+package com.kashu.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.kashu.domain.Category;
+
+@Service
+public class CategoryServiceImpl implements CategoryService {
+
+	@Override
+	public List<Category> findAll() {
+		
+		return null;
+	}
+
+}

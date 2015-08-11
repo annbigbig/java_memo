@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.kashu.domain.Product;
 import com.kashu.exception.InsertFailedException;
+import com.kashu.exception.DeleteFailedException;
 
 @Repository("productRepository")
 public class ProductRepositoryJdbcImpl implements ProductRepository {
@@ -20,6 +21,7 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 
 	@Override
 	public Product insert(Product product) {
+		Product result = null;
 		PreparedStatementCreatorFactory psCreatorFactory = new PreparedStatementCreatorFactory(
 				"INSERT INTO TB_PRODUCTS(title,price,unit,enabled,category_id) VALUES(?,?,?,?,?)",
 				new int[] { Types.VARCHAR, Types.INTEGER, Types.VARCHAR, Types.BOOLEAN, Types.BIGINT });
@@ -28,17 +30,27 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 				psCreatorFactory.newPreparedStatementCreator(
 						new Object[] {product.getTitle(),product.getPrice(),product.getUnit(),product.getEnabled(),product.getCategory().getId()})
 						,keyHolder);
-		if (count != 1){
-			throw new InsertFailedException("Cannot insert Product");
+		if (count == 1){
+			product.setId(keyHolder.getKey().longValue());
+			result = product;
 		}
-		product.setId(keyHolder.getKey().longValue());
-		return product;
+		return result;
 	}
 
 	@Override
 	public Product update(Product product) {
 		
 		return null;
+	}
+
+	@Override
+	public Boolean delete(Long id) {
+		Boolean result = false;
+		int count = jdbcTemplate.update("DELETE FROM TB_PRODUCTS where id = ?",id);
+		if (count == 1){
+			result = true;
+		}
+		return result;
 	}
 
 }

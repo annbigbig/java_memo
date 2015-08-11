@@ -18,12 +18,14 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.kashu.domain.Category;
 import com.kashu.domain.Product;
 import com.kashu.property.editors.CategoryEditor;
 import com.kashu.repository.CategoryRepository;
 import com.kashu.repository.ProductRepository;
+import com.kashu.service.CategoryService;
 import com.kashu.service.ProductService;
 import com.kashu.validator.ProductValidator;
 
@@ -34,7 +36,7 @@ public class ProductController {
 	private ProductValidator productValidator;
 	
 	@Autowired
-	private CategoryRepository categoryRepository;
+	private CategoryService categoryService;
 	
 	@Autowired
 	private ProductService productService;
@@ -51,31 +53,34 @@ public class ProductController {
 	}
 	
 	//準備註冊用的Product的空白模型
-	@ModelAttribute
+	@ModelAttribute("product")
 	public Product initModel(){
 		Product product = new Product();
+		product.setTitle("");
 		product.setPrice(0);
 		product.setUnit("個");
 		return product;
 	}
 	
-	@RequestMapping(value="/admin/product/new ",method=RequestMethod.GET)
-	public String addForm(Model model){
-		List<Category> categories = categoryRepository.findAll();
-		
+	//準備分類Categories的map物件
+	@ModelAttribute("categoriesMap")
+	public Map initCategories(){
+		List<Category> categories = categoryService.findAll();
 		Map categoriesMap = new HashMap<String,String>();
 		for(Category c : categories){
 			System.out.println(c.getId() + " : " + c.getName());
 			categoriesMap.put(c.getId(), c.getName());
 		}
-		
-		model.addAttribute("categories", categories);
-		model.addAttribute("categoriesMap", categoriesMap);
+		return categoriesMap;
+	}
+	
+	@RequestMapping(value="/admin/product/new ",method=RequestMethod.GET)
+	public String addForm(Model model){
 		return "product/new";
 	}
 	
 	@RequestMapping(value="/admin/product/new ",method=RequestMethod.POST)
-	public String addProduct(@ModelAttribute @Valid Product product,Model model,BindingResult result){
+	public String addProduct(@ModelAttribute @Valid Product product,BindingResult result,Model model){
 		String viewName = "product/new_success";
 		if(result.hasErrors()){
 			viewName = "product/new";
@@ -87,17 +92,27 @@ public class ProductController {
 			System.out.println("product.unit=" + product.getUnit());
 			System.out.println("product.category.id=" + product.getCategory().getId());
 			Product p = productService.insert(product);
-			//if(p.getId()==null){
-				//model.addAttribute("error_message_db", "新增失敗，無法寫入產品到資料庫");
-				//viewName = "product/new";
-			//}else{
+			if(p.getId()==null){
+				model.addAttribute("error_message_db", "新增失敗，無法寫入產品到資料庫");
+				viewName = "product/new";
+			}else{
 				//寫入成功
 				model.addAttribute("product", p);
-			//}
+			}
 		}
 		
 		System.out.println("addProduct() was called");
 		return viewName;
+	}
+	
+	@RequestMapping(value="/admin/product/delete")
+	public String delete(@RequestParam(value="id",required = false) Long id,Model model){
+		if(productService.delete(id)){
+			model.addAttribute("product_id", id);
+			return "product/delete_success";
+		}
+		
+		return "product/delete_failed";
 	}
 	
 }

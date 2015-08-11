@@ -8,9 +8,9 @@ import com.kashu.domain.Product;
 public interface ProductRepository {
 	public Product insert(Product product);
 	public Product update(Product product);
+	public Boolean delete(Long id);
 	/*
 	public List<Product> update(List<Product> products);
-	public Boolean delete(Long id);
 	public Boolean isExisted(Long id);
 	public Product find(Long id);
 	public List<Product> findAll();
