@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -22,6 +23,8 @@ import com.kashu.domain.Category;
 import com.kashu.domain.Product;
 import com.kashu.property.editors.CategoryEditor;
 import com.kashu.repository.CategoryRepository;
+import com.kashu.repository.ProductRepository;
+import com.kashu.service.ProductService;
 import com.kashu.validator.ProductValidator;
 
 @Controller
@@ -32,6 +35,9 @@ public class ProductController {
 	
 	@Autowired
 	private CategoryRepository categoryRepository;
+	
+	@Autowired
+	private ProductService productService;
 	
 	@InitBinder
 	private void initBinder(WebDataBinder binder) {
@@ -69,10 +75,29 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value="/admin/product/new ",method=RequestMethod.POST)
-	public String addProduct(@ModelAttribute @Valid Product product,Model model){
-		model.addAttribute("product", product);
+	public String addProduct(@ModelAttribute @Valid Product product,Model model,BindingResult result){
+		String viewName = "product/new_success";
+		if(result.hasErrors()){
+			viewName = "product/new";
+		}else{
+			//試著將Product寫入資料庫
+			System.out.println("product.title=" + product.getTitle());
+			System.out.println("product.price=" + product.getPrice());
+			System.out.println("product.enabled=" + product.getEnabled());
+			System.out.println("product.unit=" + product.getUnit());
+			System.out.println("product.category.id=" + product.getCategory().getId());
+			Product p = productService.insert(product);
+			//if(p.getId()==null){
+				//model.addAttribute("error_message_db", "新增失敗，無法寫入產品到資料庫");
+				//viewName = "product/new";
+			//}else{
+				//寫入成功
+				model.addAttribute("product", p);
+			//}
+		}
+		
 		System.out.println("addProduct() was called");
-		return "product/new_success";
+		return viewName;
 	}
 	
 }

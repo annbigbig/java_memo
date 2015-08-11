@@ -5,10 +5,12 @@ import java.util.List;
 import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.kashu.domain.User;
 
 @Repository("userRepository")
+@Transactional
 public class UserRepositoryImpl extends GenericDaoImpl<User> implements UserRepository{
 
 	@Override

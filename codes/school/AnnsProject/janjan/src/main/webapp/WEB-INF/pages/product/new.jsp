@@ -47,7 +47,12 @@
     		 <p></p>
     		 -->
     		 
-    		 用spring form tag的寫法<br/>
+    		 <form:radiobutton path="enabled" value="true"/>上架
+    		 <form:radiobutton path="enabled" value="true"/>下架
+    		 <br/>
+    		 
+    		 <!--  用spring form tag的寫法 -->
+    		 <br/>
     		 <form:select path="category" items="${categoriesMap}">
     		 </form:select><br/>
     			
@@ -62,8 +67,8 @@
     		      <form:errors path="title"/><br/>
     		      <form:errors path="price"/><br/>
     		      <form:errors path="unit"/><br/>
-    		      <c:if test="${not empty db_error_messages}">
-    		      					${db_error_messages}
+    		      <c:if test="${not empty error_message_db}">
+    		      					${error_message_db}
     		      </c:if>
     		   </div>
     		 </div>

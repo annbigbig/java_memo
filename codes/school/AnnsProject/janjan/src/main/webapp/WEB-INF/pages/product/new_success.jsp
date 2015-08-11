@@ -18,11 +18,13 @@
     
     <h2>新增產品成功</h2>
     		<c:if test="${not empty product}">
+    					product.id = ${product.id}<br/>
     					product.title = ${product.title}<br/>
     					product.price = ${product.price}<br/>
     					product.unit = ${product.unit}<br/>
-    					product.category.id = ${product.category.id}
-    					product.category.name = ${product.category.name}
+    					product.enabled = ${product.enabled}<br/>
+    					product.category.id = ${product.category.id}<br/>
+    					product.category.name = ${product.category.name}<br/>
     		</c:if>
     
     </article>

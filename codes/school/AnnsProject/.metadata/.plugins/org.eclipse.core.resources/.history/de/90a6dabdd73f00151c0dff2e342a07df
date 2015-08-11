@@ -1,0 +1,8 @@
+package com.kashu.service;
+
+import com.kashu.domain.Product;
+
+public interface ProductService {
+	public Product insert(Product product);
+	public Product update(Product product);
+}
