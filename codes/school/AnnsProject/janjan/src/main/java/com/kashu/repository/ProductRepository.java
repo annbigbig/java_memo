@@ -8,6 +8,7 @@ import com.kashu.domain.Product;
 public interface ProductRepository {
 	public Product insert(Product product);
 	public Product update(Product product);
+	/*
 	public List<Product> update(List<Product> products);
 	public Boolean delete(Long id);
 	public Boolean isExisted(Long id);
@@ -18,5 +19,6 @@ public interface ProductRepository {
 	public List<Product> find(Map<String,Object> searchParams, Map<String,Object> orderParams, Map<String,Object> pageParams);
 	public Long countAll();
 	public Long count(Map<String,Object> searchParams);
+	*/
 	
 }

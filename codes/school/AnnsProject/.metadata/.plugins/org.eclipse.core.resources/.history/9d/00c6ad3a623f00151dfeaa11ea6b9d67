@@ -1,0 +1,15 @@
+package com.kashu.repository;
+
+import java.util.List;
+
+import com.kashu.domain.Category;
+
+public class CategoryRepositoryJdbcImpl implements CategoryRepository {
+
+	@Override
+	public List<Category> findAll() {
+		
+		return null;
+	}
+
+}

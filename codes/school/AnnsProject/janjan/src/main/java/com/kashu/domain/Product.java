@@ -8,6 +8,8 @@ public class Product {
 	private Integer price;
 	private String unit;
 	private Date createdTime;
+	private Date lastModified;
+	private Boolean enabled;
 	private Category category;
 	public Long getId() {
 		return id;
@@ -38,6 +40,18 @@ public class Product {
 	}
 	public void setCreatedTime(Date createdTime) {
 		this.createdTime = createdTime;
+	}
+	public Date getLastModified() {
+		return lastModified;
+	}
+	public void setLastModified(Date lastModified) {
+		this.lastModified = lastModified;
+	}
+	public Boolean getEnabled() {
+		return enabled;
+	}
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
 	}
 	public Category getCategory() {
 		return category;

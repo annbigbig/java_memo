@@ -32,9 +32,24 @@
     		 <p></p>
     		 
     		 <p></p>
-    			<form:label path="unit">確認密碼</form:label><br/>
+    			<form:label path="unit">計價單位</form:label><br/>
     			<form:input path="unit" cssErrorClass="error-by-hibernate-validation" placeholder="請輸入計價單位" maxlength="14"/><br/>
     		 <p></p>
+    		 
+    		 <p></p>
+    		 <!-- 
+    		 用c tag的寫法<br/>
+    		 		<form:select path="category.id">
+    		 		 <c:forEach var="category" items="${categories}" varStatus="status">
+    		 				<form:option value="${category.id}">${category.name}</form:option>
+    		 			</c:forEach>
+    		 		</form:select>
+    		 <p></p>
+    		 -->
+    		 
+    		 用spring form tag的寫法<br/>
+    		 <form:select path="category" items="${categoriesMap}">
+    		 </form:select><br/>
     			
     			    <!-- 提交鈕 -->
     			<input name="submit" id="submit" value="新增產品" type="submit"/><br/><br/>
@@ -60,9 +75,9 @@
     		 
     </div>
     </form:form>
-		
+		 </div>
     </article>
-    
+   
     <nav>
           <jsp:include page="../login.jsp"/>
     </nav>

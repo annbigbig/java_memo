@@ -1,0 +1,7 @@
+package com.kashu.property.editors;
+
+import java.beans.PropertyEditorSupport;
+
+public class CategoryEditor extends PropertyEditorSupport {
+
+}
