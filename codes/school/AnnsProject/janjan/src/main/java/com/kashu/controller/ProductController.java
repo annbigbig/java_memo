@@ -1,5 +1,6 @@
 package com.kashu.controller;
 
+import java.sql.Types;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -115,4 +116,32 @@ public class ProductController {
 		return "product/delete_failed";
 	}
 	
+	@RequestMapping(value="/admin/product/find")
+	public String find(@RequestParam(value="column") String column,
+			@RequestParam(value="operator") String operator,
+			@RequestParam(value="argValue") String argValue,
+			Model model){
+		model.addAttribute("column", column);
+		model.addAttribute("operator", operator);
+		model.addAttribute("argValue", argValue);
+		//把用戶傳來的參數放到一個map裡，這是搜尋參數
+		Map<String,Object> searchParams = new HashMap<String,Object>();
+		searchParams.put("column", column);
+		searchParams.put("operator", operator);
+		searchParams.put("argTypes", new int[] {Types.VARCHAR});
+		argValue = "%" + argValue + "%";
+		searchParams.put("argValues", new Object[]{argValue});
+		
+		//取出產品列表
+		List<Product> products = productService.find(searchParams);
+ 		model.addAttribute("products",products);
+		return "product/find_success";
+	}
+	
+	@RequestMapping(value="/admin/product/all")
+	public String all(Model model){
+		List<Product> products = productService.findAll();
+		model.addAttribute("products", products);
+		return "product/find_success";
+	}
 }

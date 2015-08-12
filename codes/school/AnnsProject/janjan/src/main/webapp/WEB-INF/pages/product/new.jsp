@@ -52,7 +52,7 @@
     		 <br/>
     		 
     		 <!--  用spring form tag的寫法 -->
-    		 <br/>
+    		 <br/>產品分類<br/>
     		 <form:select path="category" items="${categoriesMap}">
     		 </form:select><br/>
     			

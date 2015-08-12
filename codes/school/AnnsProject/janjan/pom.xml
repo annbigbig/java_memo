@@ -15,7 +15,7 @@
 		<spring.security.version>3.2.7.RELEASE</spring.security.version>
 		<jstl.version>1.2</jstl.version>
 		<taglibs.standard.version>1.1.2</taglibs.standard.version>
-		<mariadb.connector.version>1.1.7</mariadb.connector.version>
+		<mariadb.connector.version>1.2.0</mariadb.connector.version>
 		<javax.servlet.version>3.1.0</javax.servlet.version>
 		<javax.validation.version>1.0.0.GA</javax.validation.version>
 		<logback.version>1.0.13</logback.version>
@@ -162,11 +162,14 @@
 		 </dependency>
      -->
 
+<!-- 
+if you want log something , open this
 		 <dependency>
 			 <groupId>ch.qos.logback</groupId>
 			 <artifactId>logback-classic</artifactId>
 			 <version>${logback.version}</version>
 		 </dependency>
+		-->
 		 
     <dependency>
       <groupId>junit</groupId>
@@ -210,11 +213,13 @@
 	    <version>${hibernate.entity.manager}</version>
     </dependency>
     
+    <!-- 
     <dependency>
       <groupId>com.nurkiewicz.jdbcrepository</groupId>
       <artifactId>jdbcrepository</artifactId>
       <version>0.4</version>
     </dependency>
+   -->
    
   </dependencies>
   <build>

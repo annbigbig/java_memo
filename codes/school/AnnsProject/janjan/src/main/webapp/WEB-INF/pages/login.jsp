@@ -111,6 +111,13 @@
 	      window.location='${pageContext.request.contextPath}/admin/product/new';
 	  
 	       });
+		
+		$('#product_find_button').click(function(e){
+	 	     e.preventDefault();
+	 	     var productTitle = $('#productTitle').val();
+	      window.location='${pageContext.request.contextPath}/admin/product/find?title='+productTitle;
+	   		//alert("test");
+	       });
 	});
 	</script>
 		<h2 class="pink-me">管理員功能</h2>

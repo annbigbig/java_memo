@@ -1,5 +1,8 @@
 package com.kashu.service;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,4 +42,26 @@ public class ProductServiceImpl implements ProductService {
 		return b;
 	}
 
+	@Override
+	public List<Product> findAll() {
+		List<Product> products = null;
+		try{
+			products = productRepository.findAll();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return products;
+	}
+
+	@Override
+	public List<Product> find(Map<String, Object> searchParams) {
+		List<Product> products = null;
+		try{
+			products = productRepository.find(searchParams);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return products;
+	}
+	
 }

@@ -1,5 +1,0 @@
-package com.kashu.repository;
-
-public interface GenericDao {
-
-}

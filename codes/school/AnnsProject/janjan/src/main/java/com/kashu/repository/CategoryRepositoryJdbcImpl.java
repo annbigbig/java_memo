@@ -30,7 +30,7 @@ public class CategoryRepositoryJdbcImpl implements CategoryRepository {
 	@Override
 	public List<Category> findAll() {
 		String sql = "SELECT * FROM TB_CATEGORIES";
-		List<Category> categories = (List<Category>) jdbcTemplate.query(sql, new CategoryRowMapper());
+		List<Category> categories = jdbcTemplate.query(sql, new CategoryRowMapper());
 		return categories;
 	}
 
