@@ -112,12 +112,18 @@
 	  
 	       });
 		
+		/*
 		$('#product_find_button').click(function(e){
 	 	     e.preventDefault();
 	 	     var productTitle = $('#productTitle').val();
 	      window.location='${pageContext.request.contextPath}/admin/product/find?title='+productTitle;
 	   		//alert("test");
 	       });
+		*/
+		
+		$("#searchButton").click(function() {
+			  $( "#searchForm" ).submit();
+			});
 	});
 	</script>
 		<h2 class="pink-me">管理員功能</h2>
@@ -129,5 +135,13 @@
 		  <button type="button" id="product_new_button">新增產品</button> | 
 		  <input type='text' name='productTitle' id='productTitle' maxlength="8" size="4"/>
 		  <button type="button" id="product_find_button">查詢產品</button> | 
+		</div>
+		<div class="admin-class">
+			<form id="searchForm" action="${pageContext.request.contextPath}/admin/product/find" method="post">
+				<input type="hidden" name="column" value="title"/>
+				<input type="hidden" name="operator" value="LIKE"/>
+				<input type="text" name="argValue" maxlength="8" size="4"/>
+			</form><br/>
+			<button type="button" id="searchButton">查詢產品2</button> 
 		</div>
 	</sec:authorize>
