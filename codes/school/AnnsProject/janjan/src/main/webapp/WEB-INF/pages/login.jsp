@@ -114,6 +114,10 @@
 	  
 	       });
 		
+		$('#random_insert_button').click(function(e){
+		      window.location='${pageContext.request.contextPath}/admin/product/random';
+		       });
+		
 		/*
 		$('#product_find_button').click(function(e){
 	 	     e.preventDefault();
@@ -137,39 +141,17 @@
 		    <button type="button" id="user_find_button">查詢會員</button><br/>
 		</div>
 		<div class="admin-class">
-		  <button type="button" id="product_new_button">新增產品</button> | 
-		  <input type='text' name='productTitle' id='productTitle22' maxlength="8" size="4"/>
-		  <button type="button" id="product_find_button">查詢產品</button> | 
-		</div>
-		<div class="admin-class">
-		<!-- 
-			<form id="searchFormX" action="${pageContext.request.contextPath}/admin/product/find" method="post">
-				<input type="hidden" name="column" value="title"/>
-				<input type="hidden" name="operator" value="LIKE"/>
-				<input type="text" name="argValue" maxlength="8" size="4"/>
-			</form><br/>
-			-->
-			
-			<!-- 
-			<form:form id="searchForm" modelAttribute="page" method="post" action="${pageContext.request.contextPath}/admin/product/find">
-			<input type="hidden" name="searchParams['column']" value="title"/>
-			<input type="hidden" name="searchParams['operator']" value="LIKE"/>
-			<input type="text" name="searchParams['argValue']" maxlength="8" size="4"/>
-			<input type="hidden" name="searchParams['argType']" value="varchar"/>
-			</form:form>
-			-->
-			<form id="searchForm" method="post" action="${pageContext.request.contextPath}/admin/product/find">
+		  <button type="button" id="product_new_button">新增產品</button> | <button type="button" id="searchButton">查詢產品</button> 
+		  	<form id="searchForm" method="post" action="${pageContext.request.contextPath}/admin/product/find">
 				<input type="hidden" name="searchColumn" value="title"/>
 				<input type="hidden" name="searchOperator" value="LIKE"/>
-				<input id="productTitle" type="text" name="searchArgValues[0]" maxlength="8" size="4"/>
+				<input id="productTitle" type="text" name="searchArgValues[0]" maxlength="8" size="3"/>
 				<input type="hidden" name="searchArgTypes[0]" value="12"/>
 				<input type="hidden" name="orderColumn" value="id"/>
 				<input type="hidden" name="orderType" value="ASC"/>
 				<input type="hidden" name="pageNumber" value="1"/>
 				<input type="hidden" name="pageSize" value="10"/>
-			</form>
-			
-			<button type="button" id="searchButton">查詢產品2</button> 
+			</form><br/>
+			<button type="button" id="random_insert_button">隨機新增10筆產品資料</button>
 		</div>
-		
 	</sec:authorize>

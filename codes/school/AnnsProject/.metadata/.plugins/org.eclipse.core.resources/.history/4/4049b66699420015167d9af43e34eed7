@@ -1,0 +1,18 @@
+package com.kashu.utility;
+
+import java.util.Date;
+
+public class RandomUtil {
+	
+	public String get_a_chinese_word(int length){
+		return null;
+	}
+	
+	public Integer get_a_number(int min,int max){
+		return 0;
+	}
+	
+	public Date get_a_date(Date startDate,Date endDate){
+		return null;
+	}
+}

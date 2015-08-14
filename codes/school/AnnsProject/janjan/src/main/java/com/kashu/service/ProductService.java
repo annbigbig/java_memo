@@ -9,13 +9,14 @@ import com.kashu.pager.Page;
 
 public interface ProductService {
 	public Product insert(Product product);
+	public Integer insert(List<Product> products);
 	public Product update(Product product);
 	public Boolean delete(Long id);
 	public Boolean isThisPageExisted(ProductSearchParams searchParams);
-	public List<Product> findAll();
-	public List<Product> find(ProductSearchParams searchParams);
+	//public List<Product> findAll();
+	//public List<Product> find(ProductSearchParams searchParams);
 	public Page<Product> getPage(ProductSearchParams searchParams);
-	public Long countAll();
+	//public Long countAll();
 	public Long count(ProductSearchParams searchParams);
 
 	/*

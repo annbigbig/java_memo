@@ -1,5 +1,6 @@
 package com.kashu.controller;
 
+import java.sql.Timestamp;
 import java.sql.Types;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,6 +27,7 @@ import com.kashu.domain.Product;
 import com.kashu.property.editors.CategoryEditor;
 import com.kashu.service.CategoryService;
 import com.kashu.service.ProductService;
+import com.kashu.utility.RandomUtil;
 import com.kashu.validator.ProductValidator;
 
 @Controller
@@ -39,6 +41,9 @@ public class ProductController {
 	
 	@Autowired
 	private ProductService productService;
+	
+	@Autowired
+	private RandomUtil randomUtil;
 	
 	@InitBinder
 	private void initBinder(WebDataBinder binder) {
@@ -104,6 +109,18 @@ public class ProductController {
 		return viewName;
 	}
 	
+	//產生10筆隨機的產品資料，新增至資料庫
+	@RequestMapping(value="/admin/product/random")
+	public String random(Model model){
+		Date startDate = new Date(Timestamp.valueOf("2015-01-01 00:00:00").getTime());
+		Date endDate = new Date(Timestamp.valueOf("2015-12-31 23:59:59").getTime());
+		List<Date> dateList = randomUtil.get_dateList(startDate, endDate, 10);
+		List<Integer> intList = randomUtil.get_IntegerList(1, 100, 20);
+		model.addAttribute("dateList", dateList);
+		model.addAttribute("intList", intList);
+		return "product/random";
+	}
+	
 	@RequestMapping(value="/admin/product/delete")
 	public String delete(@RequestParam(value="id",required = false) Long id,Model model){
 		if(productService.delete(id)){
@@ -114,34 +131,4 @@ public class ProductController {
 		return "product/delete_failed";
 	}
 	
-	/*
-	@RequestMapping(value="/admin/product/find")
-	public String find(@RequestParam(value="column") String column,
-			@RequestParam(value="operator") String operator,
-			@RequestParam(value="argValue") String argValue,
-			Model model){
-		model.addAttribute("column", column);
-		model.addAttribute("operator", operator);
-		model.addAttribute("argValue", argValue);
-		//把用戶傳來的參數放到一個map裡，這是搜尋參數
-		Map<String,Object> searchParams = new HashMap<String,Object>();
-		searchParams.put("column", column);
-		searchParams.put("operator", operator);
-		searchParams.put("argTypes", new int[] {Types.VARCHAR});
-		argValue = "%" + argValue + "%";
-		searchParams.put("argValues", new Object[]{argValue});
-		
-		//取出產品列表
-		List<Product> products = productService.find(searchParams);
- 		model.addAttribute("products",products);
-		return "product/find_success";
-	}
-	*/
-	
-	@RequestMapping(value="/admin/product/all")
-	public String all(Model model){
-		List<Product> products = productService.findAll();
-		model.addAttribute("products", products);
-		return "product/find_success";
-	}
 }

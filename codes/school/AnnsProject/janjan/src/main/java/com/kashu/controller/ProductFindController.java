@@ -23,9 +23,7 @@ public class ProductFindController {
 	@RequestMapping(value="/admin/product/find")
 	public String find(@ModelAttribute ProductSearchParams searchParams,Model model){
 		model.addAttribute("searchParams", searchParams);
-		//Long totalRows = PageFactory.totalRows(searchParams);
-		//Long totalRows = productService.count(searchParams);
-		//model.addAttribute("totalRows", totalRows);
+		
 		Boolean isThisPageExisted = productService.isThisPageExisted(searchParams);
 		System.out.println("isThisPageExisted = " + isThisPageExisted);
 		if(isThisPageExisted){
@@ -33,21 +31,8 @@ public class ProductFindController {
 		}else{
 			model.addAttribute("page", null);
 		}
-		//model.addAttribute("products",productService.find(searchParams));
-		System.out.println("//-----debug-----//");
-		//System.out.println("searchParams.getSearchArgValues().get('0')=" + searchParams.getSearchArgValues().get("0"));
-		//System.out.println("searchParams.getSearchArgTypes().get('0')=" + searchParams.getSearchArgTypes().get("0"));
-		/*
-		System.out.println("searchParams.getSearchArgValues()[0]=" + searchParams.getSearchArgValues()[0]);
-		System.out.println("searchParams.getSearchArgTypes()[0]=" + searchParams.getSearchArgTypes()[0]);
-		System.out.println("searchParams.getOrderColumn()=" + searchParams.getOrderColumn());
-		System.out.println("searchParams.getOrderType()=" + searchParams.getOrderType());
-		System.out.println("searchParams.getPageNumber()=" + searchParams.getPageNumber());
-		System.out.println("searchParams.getPageSize()=" + searchParams.getPageSize());
-		*/
-
-		return "product/find_success";
+		
+		return "product/list";
 	}
-
 	
 }

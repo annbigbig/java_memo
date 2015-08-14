@@ -1,5 +1,6 @@
 package com.kashu.repository;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
@@ -7,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
 import org.springframework.jdbc.core.RowMapper;
@@ -29,6 +31,7 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 			+ "ON p.category_id = c.id";
 	
 	private String sql_count_rows = "SELECT COUNT(p.id) FROM TB_PRODUCTS AS p";
+	private String sql_insert_a_row = "INSERT INTO TB_PRODUCTS(title,price,unit,enabled,category_id) VALUES(?,?,?,?,?)";
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -179,6 +182,23 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 		Object[] searchArgValues = searchParams.getSearchArgValues();
 		rowCount = jdbcTemplate.queryForLong(sql, searchArgValues, searchArgTypes);
 		return rowCount;
+	}
+
+	@Override
+	public Integer insert(List<Product> products) {
+		int[] counts = jdbcTemplate.batchUpdate(sql_insert_a_row, new BatchPreparedStatementSetter(){
+			@Override
+			public int getBatchSize() {
+				return products.size();
+			}
+			@Override
+			public void setValues(PreparedStatement ps, int i) throws SQLException {
+				Product product = products.get(i);
+				ps.setString(1, product.getTitle());
+				ps.setInt(2, product.getPrice());
+			}
+		});
+		return counts.length;
 	}
 	
 }

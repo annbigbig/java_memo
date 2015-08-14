@@ -8,6 +8,7 @@ import com.kashu.domain.temp.ProductSearchParams;
 
 public interface ProductRepository {
 	public Product insert(Product product);
+	public Integer insert(List<Product> products);
 	public Product update(Product product);
 	public Boolean delete(Long id);
 	public List<Product> find(ProductSearchParams searchParams);

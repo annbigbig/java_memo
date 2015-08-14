@@ -1,0 +1,33 @@
+package com.kashu.utility;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class RandomUtil {
+	
+	public String get_a_chinese_word(int length){
+		return null;
+	}
+	
+	public Integer get_a_number(int min,int max){
+		return 0;
+	}
+	
+	// http://www.leveluplunch.com/java/examples/generate-random-date/
+	public Date get_a_date(Date startDate,Date endDate){
+		Long begin = startDate.getTime();
+		Long end = startDate.getTime();
+		Long diff = end - begin +1;
+		Date randomDate = new Date(begin + (long)Math.random()*diff);
+		return randomDate;
+	}
+	
+	public List<Date> get_dateList(Date startDate,Date endDate,int arraySize){
+		List<Date> dateList = new ArrayList<Date>();
+		return dateList;
+	}
+}
