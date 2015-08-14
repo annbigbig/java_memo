@@ -15,14 +15,25 @@
  <header>header</header>
  <div id='main'>
     <article>
-   			<h1>查詢產品列表</h1><br/>
-   			提交了column = ${column} <br/>
-   			operator = ${operator} <br/>
-   			argValue = ${argValue} <br/>
-   			<br/>
    			
-   			<c:if test="${not empty products}">
-   						<c:forEach var="product" items="${products}">
+   			<c:if test="${not empty searchParams}">
+   						searchParams.searchColumn = ${searchParams.searchColumn}<br/>
+   						searchParams.searchOperator = ${searchParams.searchOperator}<br/>
+   						searchParams.searchArgValues[0] = ${searchParams.searchArgValues[0]}<br/>
+   						searchParams.searchArgTypes[0] = ${searchParams.searchArgTypes[0]}<br/>
+   						searchParams.orderColumn = ${searchParams.orderColumn}<br/>
+   						searchParams.orderType = ${searchParams.orderType}<br/>
+   						searchParams.pageNumber = ${searchParams.pageNumber}<br/>
+   						searchParams.pageSize = ${searchParams.pageSize}<br/>
+   			</c:if><br/>
+   			
+   			<c:if test="${not empty totalRows}">
+   							totalRows = ${totalRows}<br/><br/>
+   			</c:if>
+   			
+   			<br/><br/>
+   			<c:if test="${not empty page.elements}">
+   						<c:forEach var="product" items="${page.elements}">
    									product.id = ${product.id} <br/>
 											product.title = ${product.title} <br/>
 											product.price = ${product.price} <br/>

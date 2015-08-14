@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kashu.domain.Product;
+import com.kashu.domain.temp.ProductSearchParams;
+import com.kashu.pager.Page;
 import com.kashu.repository.ProductRepository;
 
 @Service
@@ -54,7 +56,7 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public List<Product> find(Map<String, Object> searchParams) {
+	public List<Product> find(ProductSearchParams searchParams) {
 		List<Product> products = null;
 		try{
 			products = productRepository.find(searchParams);
@@ -62,6 +64,48 @@ public class ProductServiceImpl implements ProductService {
 			e.printStackTrace();
 		}
 		return products;
+	}
+
+	public ProductRepository getProductRepository() {
+		return productRepository;
+	}
+
+	public void setProductRepository(ProductRepository productRepository) {
+		this.productRepository = productRepository;
+	}
+
+	@Override
+	public Long countAll() {
+		
+		return null;
+	}
+
+	@Override
+	public Long count(ProductSearchParams searchParams) {
+		Long result = 0l;
+		try{
+			result = productRepository.count(searchParams);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public Boolean isThisPageExisted(ProductSearchParams searchParams) {
+		Integer totalRows = count(searchParams).intValue();
+		Integer pageNumber = searchParams.getPageNumber();		// user requested page number
+		Integer pageSize = searchParams.getPageSize();
+		Integer maxPageNumber = (totalRows / pageSize) +1;
+		return ((pageNumber > 0)&&(pageNumber <= maxPageNumber)) ? true : false;
+	}
+
+	@Override
+	public Page<Product> getPage(ProductSearchParams searchParams) {
+		Page<Product> page = new Page<Product>(searchParams);
+		List<Product> products = productRepository.find(searchParams);
+		page.setElements(products);
+		return page;
 	}
 	
 }

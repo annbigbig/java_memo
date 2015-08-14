@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
@@ -121,7 +123,10 @@
 	       });
 		*/
 		
-		$("#searchButton").click(function() {
+		$("#searchButton").click(function(e) {
+			e.preventDefault();
+			var productTitle = $('#productTitle').val();
+			$('#productTitle').val('%' + productTitle + '%');
 			  $( "#searchForm" ).submit();
 			});
 	});
@@ -133,15 +138,38 @@
 		</div>
 		<div class="admin-class">
 		  <button type="button" id="product_new_button">新增產品</button> | 
-		  <input type='text' name='productTitle' id='productTitle' maxlength="8" size="4"/>
+		  <input type='text' name='productTitle' id='productTitle22' maxlength="8" size="4"/>
 		  <button type="button" id="product_find_button">查詢產品</button> | 
 		</div>
 		<div class="admin-class">
-			<form id="searchForm" action="${pageContext.request.contextPath}/admin/product/find" method="post">
+		<!-- 
+			<form id="searchFormX" action="${pageContext.request.contextPath}/admin/product/find" method="post">
 				<input type="hidden" name="column" value="title"/>
 				<input type="hidden" name="operator" value="LIKE"/>
 				<input type="text" name="argValue" maxlength="8" size="4"/>
 			</form><br/>
+			-->
+			
+			<!-- 
+			<form:form id="searchForm" modelAttribute="page" method="post" action="${pageContext.request.contextPath}/admin/product/find">
+			<input type="hidden" name="searchParams['column']" value="title"/>
+			<input type="hidden" name="searchParams['operator']" value="LIKE"/>
+			<input type="text" name="searchParams['argValue']" maxlength="8" size="4"/>
+			<input type="hidden" name="searchParams['argType']" value="varchar"/>
+			</form:form>
+			-->
+			<form id="searchForm" method="post" action="${pageContext.request.contextPath}/admin/product/find">
+				<input type="hidden" name="searchColumn" value="title"/>
+				<input type="hidden" name="searchOperator" value="LIKE"/>
+				<input id="productTitle" type="text" name="searchArgValues[0]" maxlength="8" size="4"/>
+				<input type="hidden" name="searchArgTypes[0]" value="12"/>
+				<input type="hidden" name="orderColumn" value="id"/>
+				<input type="hidden" name="orderType" value="ASC"/>
+				<input type="hidden" name="pageNumber" value="1"/>
+				<input type="hidden" name="pageSize" value="10"/>
+			</form>
+			
 			<button type="button" id="searchButton">查詢產品2</button> 
 		</div>
+		
 	</sec:authorize>

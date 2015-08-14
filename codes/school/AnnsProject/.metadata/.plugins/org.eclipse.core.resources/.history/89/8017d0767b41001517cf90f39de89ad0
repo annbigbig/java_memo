@@ -1,0 +1,8 @@
+package com.kashu.pager;
+
+import java.util.List;
+
+public class Page<T> {
+	private List<T> elements;
+	
+}

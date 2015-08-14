@@ -2,29 +2,29 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="log" key="selection"/>
+		<item value="productTitle" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="productTitle"/>
+			<item value="searchButton"/>
 			<item value="log"/>
 			<item value="stored"/>
 			<item value="impleJdbcCall"/>
 			<item value="SimpleJdbcCall"/>
 			<item value="regform"/>
 			<item value="timeout"/>
-			<item value="listen"/>
-			<item value="Publi"/>
 		</list>
 		<list key="replacehistory">
 			<item value="modform"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="311" key="DIALOG_WIDTH"/>
+		<item value="319" key="DIALOG_WIDTH"/>
 		<item value="1|Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="474" key="DIALOG_HEIGHT"/>
+		<item value="485" key="DIALOG_HEIGHT"/>
 		<item value="942" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>

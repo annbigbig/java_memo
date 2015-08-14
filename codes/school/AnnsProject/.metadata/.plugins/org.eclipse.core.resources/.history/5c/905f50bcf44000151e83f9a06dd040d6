@@ -1,0 +1,44 @@
+package com.kashu.pager;
+
+import java.util.List;
+
+public class Page<T> {
+	private String column;
+	private String operator;
+	private String argValue;
+	private String argType;
+	private List<T> elements;
+	private Integer currentPage;
+	
+	public String getColumn() {
+		return column;
+	}
+	public void setColumn(String column) {
+		this.column = column;
+	}
+	public String getOperator() {
+		return operator;
+	}
+	public void setOperator(String operator) {
+		this.operator = operator;
+	}
+	public String getArgValue() {
+		return argValue;
+	}
+	public void setArgValue(String argValue) {
+		this.argValue = argValue;
+	}
+	public String getArgType() {
+		return argType;
+	}
+	public void setArgType(String argType) {
+		this.argType = argType;
+	}
+	public List<T> getElements() {
+		return elements;
+	}
+	public void setElements(List<T> elements) {
+		this.elements = elements;
+	}
+	
+}

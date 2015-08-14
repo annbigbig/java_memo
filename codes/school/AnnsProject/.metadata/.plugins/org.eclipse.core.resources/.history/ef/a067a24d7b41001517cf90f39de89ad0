@@ -1,0 +1,5 @@
+package com.kashu.pager;
+
+public class Page {
+
+}

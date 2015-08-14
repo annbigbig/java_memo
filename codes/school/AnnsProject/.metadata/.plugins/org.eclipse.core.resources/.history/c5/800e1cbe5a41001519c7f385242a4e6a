@@ -1,0 +1,43 @@
+package com.kashu.domain.temp;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ProductSearchParams {
+	private String searchColumn;
+	private String searchOperator;
+	private String searchValue1;
+	private Map<String,String> searchArgValues = new HashMap<String,String>();
+	private Map<String,String> searchArgTypes = new HashMap<String,String>();
+	public String getSearchColumn() {
+		return searchColumn;
+	}
+	public void setSearchColumn(String searchColumn) {
+		this.searchColumn = searchColumn;
+	}
+	public String getSearchOperator() {
+		return searchOperator;
+	}
+	public void setSearchOperator(String searchOperator) {
+		this.searchOperator = searchOperator;
+	}
+	public String getSearchValue1() {
+		return searchValue1;
+	}
+	public void setSearchValue1(String searchValue1) {
+		this.searchValue1 = searchValue1;
+	}
+	public Map<String, String> getSearchArgValues() {
+		return searchArgValues;
+	}
+	public void setSearchArgValues(Map<String, String> searchArgValues) {
+		this.searchArgValues = searchArgValues;
+	}
+	public Map<String, String> getSearchArgTypes() {
+		return searchArgTypes;
+	}
+	public void setSearchArgTypes(Map<String, String> searchArgTypes) {
+		this.searchArgTypes = searchArgTypes;
+	}
+	
+}

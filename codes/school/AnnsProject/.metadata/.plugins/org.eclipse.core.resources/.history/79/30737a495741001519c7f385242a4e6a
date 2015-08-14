@@ -1,0 +1,19 @@
+package com.kashu.domain.temp;
+
+public class ProductSearchParams {
+	private String searchColumn;
+	private String searchOperator;
+	public String getSearchColumn() {
+		return searchColumn;
+	}
+	public void setSearchColumn(String searchColumn) {
+		this.searchColumn = searchColumn;
+	}
+	public String getSearchOperator() {
+		return searchOperator;
+	}
+	public void setSearchOperator(String searchOperator) {
+		this.searchOperator = searchOperator;
+	}
+	
+}

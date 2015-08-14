@@ -1,0 +1,16 @@
+package com.kashu.pager;
+
+import java.util.List;
+
+import com.kashu.domain.temp.ProductSearchParams;
+
+public class Page<T> {
+	private List<T> elements;
+	private ProductSearchParams searchParams;
+	private Integer currentPageNumber;
+	
+	public Page(ProductSearchParams searchParams){
+		this.searchParams = searchParams;
+		this.currentPageNumber = searchParams.getPageNumber();
+	}
+}

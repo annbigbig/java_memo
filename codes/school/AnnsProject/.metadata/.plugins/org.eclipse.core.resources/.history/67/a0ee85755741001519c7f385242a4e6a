@@ -1,0 +1,26 @@
+package com.kashu.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.kashu.domain.Product;
+import com.kashu.domain.temp.ProductSearchParams;
+import com.kashu.pager.Page;
+import com.kashu.service.ProductService;
+
+@Controller
+public class ProductFindController {
+	
+	@Autowired
+	private ProductService productService;
+	
+	@RequestMapping(value="/admin/product/find")
+	public String find(@ModelAttribute ProductSearchParams searchParams,Model model){
+		model.addAttribute("page", searchParams);
+		return "product/find_success";
+	}
+
+}

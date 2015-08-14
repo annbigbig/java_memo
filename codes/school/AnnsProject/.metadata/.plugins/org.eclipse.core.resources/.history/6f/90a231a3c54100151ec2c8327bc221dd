@@ -1,0 +1,9 @@
+package com.kashu.pager;
+
+public class PageFactory<T> {
+
+		public static <T> Page<T> getPage(T t){
+			Page<T> page = new Page<T>();
+			return page;
+		}
+}

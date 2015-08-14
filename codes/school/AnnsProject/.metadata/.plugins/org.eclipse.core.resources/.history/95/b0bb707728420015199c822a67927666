@@ -1,0 +1,17 @@
+package com.kashu.pager;
+
+import com.kashu.domain.Product;
+import com.kashu.domain.temp.ProductSearchParams;
+
+public class PageFactory {
+
+	public static Page<Product> getPage(ProductSearchParams searchParams){
+		
+		return null;
+	}
+	
+	public static Boolean isExisted(ProductSearchParams searchParams){
+		return null;
+	}
+	
+}

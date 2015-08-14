@@ -24,8 +24,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.kashu.domain.Category;
 import com.kashu.domain.Product;
 import com.kashu.property.editors.CategoryEditor;
-import com.kashu.repository.CategoryRepository;
-import com.kashu.repository.ProductRepository;
 import com.kashu.service.CategoryService;
 import com.kashu.service.ProductService;
 import com.kashu.validator.ProductValidator;
@@ -116,6 +114,7 @@ public class ProductController {
 		return "product/delete_failed";
 	}
 	
+	/*
 	@RequestMapping(value="/admin/product/find")
 	public String find(@RequestParam(value="column") String column,
 			@RequestParam(value="operator") String operator,
@@ -137,6 +136,7 @@ public class ProductController {
  		model.addAttribute("products",products);
 		return "product/find_success";
 	}
+	*/
 	
 	@RequestMapping(value="/admin/product/all")
 	public String all(Model model){

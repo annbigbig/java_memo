@@ -16,11 +16,19 @@ import org.springframework.stereotype.Repository;
 
 import com.kashu.domain.Category;
 import com.kashu.domain.Product;
+import com.kashu.domain.temp.ProductSearchParams;
 import com.kashu.exception.InsertFailedException;
 import com.kashu.exception.DeleteFailedException;
 
 @Repository("productRepository")
 public class ProductRepositoryJdbcImpl implements ProductRepository {
+	private String sql_base = "SELECT p.id,p.title,p.price,p.unit,"
+			+ "p.createdTime,p.lastModified,p.enabled,"
+			+ "p.category_id,c.name as category_name "
+			+ "FROM TB_PRODUCTS as p LEFT JOIN TB_CATEGORIES as c "
+			+ "ON p.category_id = c.id";
+	
+	private String sql_count_rows = "SELECT COUNT(p.id) FROM TB_PRODUCTS AS p";
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -81,98 +89,96 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 	@Override
 	public List<Product> findAll() {
 		List<Product> products = null;
-		String sql = "SELECT t.id,t.title,t.price,t.unit,"
-				+ "t.createdTime,t.lastModified,t.enabled,"
-				+ "t.category_id,c.name as category_name "
-				+ "FROM TB_PRODUCTS as t LEFT JOIN TB_CATEGORIES as c "
-				+ "ON t.category_id = c.id ORDER BY t.id ASC";
+		String sql = sql_base + " ORDER BY p.id ASC";
 		products = jdbcTemplate.query(sql, new ProductRowMapper());
 		System.out.println("findAll() : " + products.size());
 		return products;
 	}
 
 	@Override
-	public List<Product> find(Map<String, Object> searchParams) {
+	public List<Product> find(ProductSearchParams searchParams) {
 		List<Product> products = null;
-		//String sql = "SELECT * FROM TB_PRODUCTS" + getWhere(searchParams);
-		String sql = "SELECT t.id,t.title,t.price,t.unit,"
-				+ "t.createdTime,t.lastModified,t.enabled,"
-				+ "t.category_id,c.name as category_name "
-				+ "FROM TB_PRODUCTS as t LEFT JOIN TB_CATEGORIES as c "
-				+ "ON t.category_id = c.id" + getWhere(searchParams);
-		
-		System.out.println("sql = " + sql);
-		Object[] argValues = (Object[])searchParams.get("argValues");
-		System.out.println("======= argValues =======");
-		for(Object o: argValues){
-			System.out.println("o.toString() = " + o.toString());
-		}
-		int[] argTypes = (int[])searchParams.get("argTypes");
-		System.out.println("======= argTypes =======");
-		for(int i : argTypes){
-			System.out.println("i.toString() = " + i);
-		}
-		PreparedStatementCreatorFactory psCreatorFactory = new PreparedStatementCreatorFactory(sql,argTypes);
-		products = jdbcTemplate.query(psCreatorFactory.newPreparedStatementCreator(argValues),new ProductRowMapper());
+		String sql = getSqlForQuery(searchParams);
+		int[] searchArgTypes = searchParams.getSearchArgTypes();
+		Object[] searchArgValues = searchParams.getSearchArgValues();
+		PreparedStatementCreatorFactory psCreatorFactory = new PreparedStatementCreatorFactory(sql,searchArgTypes);
+		products = jdbcTemplate.query(psCreatorFactory.newPreparedStatementCreator(searchArgValues),new ProductRowMapper());
 		return products;
 	}
-
-	@Override
-	public List<Product> find(Map<String, Object> searchParams,
-			Map<String, Object> orderParams) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Product> find(Map<String, Object> searchParams,
-			Map<String, Object> orderParams, Map<String, Object> pageParams) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public String getSqlForQuery(ProductSearchParams searchParams){
+		String sql = sql_base + getWhere(searchParams) + getOrder(searchParams) + getLimit(searchParams);
+		System.out.println("//----debug----//");
+		System.out.print("sql = " + sql);
+		return sql;
 	}
 	
-	public String getWhere(Map<String,Object> searchParams){
+	public String getWhere(ProductSearchParams searchParams){
 		String where = "";
-		String column = searchParams.get("column").toString();
-		String operator = searchParams.get("operator").toString();
-		Object[] argValues = (Object[])searchParams.get("argValues");
-		if((column!= null)&&(operator!=null)&&(argValues!=null)){
-			where = " WHERE " + column;
-			switch(operator){
-			 case "LIKE":
-				 where += " LIKE ?";
-				 break;
-			 case "BETWEEN":
-				 where += " BETWEEN ? AND ?";
-				 break;
-			 default:
-				 where += " " + operator + "?"; 
-				 break;
+		String searchColumn = searchParams.getSearchColumn();
+		String searchOperator = searchParams.getSearchOperator();
+	
+		if(searchColumn!=null && searchOperator!=null){
+			switch(searchOperator){
+					case "LIKE":
+						where = " WHERE p." + searchColumn + " LIKE ?";  
+						break;
+					case "BETWEEN":
+						where = " WHERE p." + searchColumn + " BETWEEN ? AND ?";
+						break;
+					default:
+						where = " WHERE p." + searchColumn + " " + searchOperator + " ?";
+						break;
 			}
 		}
-		System.out.println("where = " + where);
+		System.out.println("//----debug----//");
+		System.out.print("where = " + where);
 		return where;
 	}
 	
-	public String getOrder(Map<String,Object> orderParams){
+	public String getOrder(ProductSearchParams searchParams){
 		String order = "";
-		String column = orderParams.get("column").toString();
-		String type = orderParams.get("type").toString();
-		if((column!=null)&&(type!=null)){
-			if(type.equals("ASC")){
-				order = " ORDER BY " + column + " ASC";
-			}else if(type.equals("DESC")){
-				order = " ORDER BY " + column + " DESC";
+		String orderColumn = searchParams.getOrderColumn();
+		String orderType = searchParams.getOrderType();
+		if(orderColumn!=null && orderType!=null){
+			if(orderType.equals("ASC")){
+				order = " ORDER BY p." + orderColumn + " ASC";
+			}else if(orderType.equals("DESC")){
+				order = " ORDER BY p." + orderColumn + " DESC";
 			}
 		}
-		System.out.println("order = " + order);
+		System.out.println("//----debug----//");
+		System.out.print("order = " + order);
 		return order;
 	}
 	
-	public String getLimit(Map<String,Object> pageParams){
+	public String getLimit(ProductSearchParams searchParams){
 		String limit = "";
+		Integer pageNumber = searchParams.getPageNumber();
+		Integer pageSize = searchParams.getPageSize();
+		if(pageNumber<1) pageNumber = 1;
+		if((pageSize>10)||(pageSize<1)) pageSize = 10;
+		limit = " LIMIT " + (pageNumber-1)* pageSize + "," + pageSize;
 		
+		System.out.println("//----debug----//");
+		System.out.print("limit = " + limit);
 		return limit;
 	}
 
+	@Override
+	public Long countAll() {
+		
+		return null;
+	}
+
+	@Override
+	public Long count(ProductSearchParams searchParams) {
+		Long rowCount = 0l;
+		String sql = sql_count_rows + getWhere(searchParams);
+		int[] searchArgTypes = searchParams.getSearchArgTypes();
+		Object[] searchArgValues = searchParams.getSearchArgValues();
+		rowCount = jdbcTemplate.queryForLong(sql, searchArgValues, searchArgTypes);
+		return rowCount;
+	}
+	
 }

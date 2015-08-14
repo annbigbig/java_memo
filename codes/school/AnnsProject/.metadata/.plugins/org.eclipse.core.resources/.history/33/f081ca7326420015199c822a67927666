@@ -1,0 +1,11 @@
+package com.kashu.pager;
+
+import com.kashu.domain.temp.ProductSearchParams;
+
+public class PageFactory<T> {
+
+		public static <T> Page<T> getPage(ProductSearchParams searchParams){
+			Page<T> page = new Page<T>();
+			return page;
+		}
+}
