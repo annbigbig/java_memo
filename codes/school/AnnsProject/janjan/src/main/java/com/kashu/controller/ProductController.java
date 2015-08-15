@@ -3,6 +3,7 @@ package com.kashu.controller;
 import java.sql.Timestamp;
 import java.sql.Types;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -112,12 +113,34 @@ public class ProductController {
 	//產生10筆隨機的產品資料，新增至資料庫
 	@RequestMapping(value="/admin/product/random")
 	public String random(Model model){
-		Date startDate = new Date(Timestamp.valueOf("2015-01-01 00:00:00").getTime());
-		Date endDate = new Date(Timestamp.valueOf("2015-12-31 23:59:59").getTime());
-		List<Date> dateList = randomUtil.get_dateList(startDate, endDate, 10);
-		List<Integer> intList = randomUtil.get_IntegerList(1, 100, 20);
-		model.addAttribute("dateList", dateList);
-		model.addAttribute("intList", intList);
+		
+		List<Product> products = new ArrayList<Product>();
+		Product p;
+		//Category c;
+		for(int i=0;i<10;i++){
+			p = new Product();
+			p.setTitle(randomUtil.get_a_chinese_word(randomUtil.get_a_number(6, 10)));
+			p.setUnit(randomUtil.get_a_chinese_word(1));
+			p.setPrice(randomUtil.get_a_number(100, 1000));
+			p.setEnabled(false);
+			switch(randomUtil.get_a_number(1, 3)){
+				case 1:
+					p.setCategory(new Category(1l,"jam"));
+					break;
+				case 2:
+					p.setCategory(new Category(2l,"router"));
+					break;
+				case 3:
+					p.setCategory(new Category(3l,"book"));
+					break;
+			}
+			products.add(p);
+		}
+	
+		Integer inserted_rows = productService.insert(products);
+		model.addAttribute("inserted_rows", inserted_rows);
+		model.addAttribute("products",products);
+		
 		return "product/random";
 	}
 	

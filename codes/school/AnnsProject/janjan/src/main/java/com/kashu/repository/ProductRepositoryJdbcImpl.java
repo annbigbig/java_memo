@@ -196,6 +196,9 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 				Product product = products.get(i);
 				ps.setString(1, product.getTitle());
 				ps.setInt(2, product.getPrice());
+				ps.setString(3, product.getUnit());
+				ps.setBoolean(4, product.getEnabled());
+				ps.setLong(5, product.getCategory().getId());
 			}
 		});
 		return counts.length;

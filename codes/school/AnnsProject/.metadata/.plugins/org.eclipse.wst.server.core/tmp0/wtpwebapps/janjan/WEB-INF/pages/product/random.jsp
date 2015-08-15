@@ -15,23 +15,29 @@
  <header>header</header>
  <div id='main'>
     <article>
-   			<c:if test="${not empty totalRows}">
-   							totalRows = ${totalRows}<br/><br/>
-   			</c:if>
-   			
-   			<br/><br/>
-   			
-   			<c:if test="${not empty dateList}">
-   						<c:forEach var="date" items="${dateList}">
-   										${date}<br/>
-   						</c:forEach>
+   			<c:if test="${not empty inserted_rows}">
+   							inserted_rows = ${inserted_rows}<br/><br/>
    			</c:if><br/><br/>
    			
-   			<c:if test="${not empty intList}">
-   						<c:forEach var="_inte" items="${intList}">
-   										${_inte}<br/>
+   			  			<c:choose>
+   				<c:when test="${not empty products}">
+   						<c:forEach var="product" items="${products}">
+   									product.id = ${product.id} <br/>
+											product.title = ${product.title} <br/>
+											product.price = ${product.price} <br/>
+											product.unit = ${product.unit} <br/>
+											product.createdTime = ${product.createdTime}<br/>
+											product.lastModified = ${product.lastModified} <br/>
+											product.enabled = ${product.enabled} <br/>
+											product.category.id = ${product.category.id} <br/>
+											product.category.name = ${product.category.name} <br/>
+											<br/><br/>
    						</c:forEach>
-   			</c:if>
+   				</c:when>
+   				<c:otherwise>
+   								要求的頁面不存在<br/><br/>
+   				</c:otherwise>
+   			</c:choose>
    			
    			<a href="${pageContext.request.contextPath}/home">回首頁</a><br/>
    			
