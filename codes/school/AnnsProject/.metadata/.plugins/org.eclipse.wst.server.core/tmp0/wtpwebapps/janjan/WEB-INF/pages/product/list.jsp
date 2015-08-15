@@ -18,19 +18,32 @@ $(function() {
 		$("#searchForm").submit();
 	});
 	
+	$("#previous10PageButton").click(function(){
+		var currentPage = $("#pageNumber").val();
+		$("#pageNumber").val(+currentPage-10);
+		$("#searchForm").submit();
+	});
+	
 	$("#previousPageButton").click(function(){
 		var currentPage = $("#pageNumber").val();
-		var argValue0 = $("#argValue0").val();
-		alert("argValue0=" + argValue0);
-		$("#pageNumber").val(currentPage-1);
+		$("#pageNumber").val(+currentPage-1);
+		$("#searchForm").submit();
+	});
+	
+	$(".page").not("#firstPageButton,#previous10PageButton,#previousPageButton,#nextPageButton,#next10PageButton,#lastPageButton").click(function(){
+		$("#pageNumber").val($(this).text());
 		$("#searchForm").submit();
 	});
 	
 	$("#nextPageButton").click(function(){
 		var currentPage = $("#pageNumber").val();
-		var argValue0 = $("#argValue0").val();
-		alert("argValue0=" + argValue0);
-		$("#pageNumber").val(currentPage+1);
+		$("#pageNumber").val(+currentPage+1);
+		$("#searchForm").submit();
+	});
+	
+	$("#next10PageButton").click(function(){
+		var currentPage = $("#pageNumber").val();
+		$("#pageNumber").val(+currentPage+10);
 		$("#searchForm").submit();
 	});
 	

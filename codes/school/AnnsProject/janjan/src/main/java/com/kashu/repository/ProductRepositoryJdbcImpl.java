@@ -104,6 +104,10 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 		String sql = getSqlForQuery(searchParams);
 		int[] searchArgTypes = searchParams.getSearchArgTypes();
 		Object[] searchArgValues = searchParams.getSearchArgValues();
+		System.out.println("//-----debug----ProductRepository.find()----//");
+		for(Object value : searchArgValues){
+			System.out.println("value=" + value);
+		}
 		PreparedStatementCreatorFactory psCreatorFactory = new PreparedStatementCreatorFactory(sql,searchArgTypes);
 		products = jdbcTemplate.query(psCreatorFactory.newPreparedStatementCreator(searchArgValues),new ProductRowMapper());
 		return products;
@@ -180,6 +184,11 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 		String sql = sql_count_rows + getWhere(searchParams);
 		int[] searchArgTypes = searchParams.getSearchArgTypes();
 		Object[] searchArgValues = searchParams.getSearchArgValues();
+		System.out.println("");
+		System.out.println("//-----ProductRepository.count()-----//");
+		for(Object value : searchArgValues){
+			System.out.println("value=" + value);
+		}
 		rowCount = jdbcTemplate.queryForLong(sql, searchArgValues, searchArgTypes);
 		return rowCount;
 	}
