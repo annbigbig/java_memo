@@ -9,6 +9,7 @@ public class Page<T> {
 	private ProductSearchParams searchParams;
 	private String pageButtons;
 	private Long totalRows;	//how many rows will be returned if we omit the LIMIT part in SQL query;
+	private Integer maxPageNumber;
 	
 	public Page(ProductSearchParams searchParams){
 		this.searchParams = searchParams;
@@ -45,9 +46,11 @@ public class Page<T> {
 		this.pageButtons = pageButtons;
 	}
 	
+	// http://css.maxdesign.com.au/listamatic/horizontal13.htm
+	// http://cssdeck.com/labs/css-pagination-styles
 	public String initPageButtons(){
-		String buttons = "<div id=\"navcontainer\">\n";
-		buttons += "<ul id=\"navlist\">\n";
+		String buttons = "<div id=\"pagebuttons-container\">\n";
+		buttons += "<div class=\"pagination\">";
 		
 		Integer currentPageNumber = searchParams.getPageNumber();
 		Integer pageSize = searchParams.getPageSize();
@@ -55,24 +58,31 @@ public class Page<T> {
 		
 		// first page
 		if(currentPageNumber==1){
-			buttons += "<li id=\"active\"><a href=\"#\" id=\"current\">第一頁</a></li>";
+			buttons += "<span class=\"page active\">first</span>";
 		}else{
-			buttons += "<li><a href=\"#\">第一頁</a></li>";
+			buttons += "<a id=\"firstPageButton\" href=\"#\" class=\"page\">first</a>";
 		}
 		
 		// previous page
-		
-		
-		//last page
-		if(currentPageNumber==maxPageNumber){
-			buttons += "<li id=\"active\"><a href=\"#\" id=\"current\">最後頁</a></li>";
-		}else{
-			buttons += "<li><a href=\"#\">最後頁</a></li>";
+		if(currentPageNumber>1){
+			buttons += "<a id=\"previousPageButton\" href=\"#\" class=\"page\">previous</a>";
 		}
 		
 		
-		//enclose the </ul></div>
-		buttons += "</ul>\n</div>";
+		// next page
+		if(currentPageNumber<maxPageNumber){
+			buttons += "<a id=\"nextPageButton\" href=\"#\" class=\"page\">next</a>";
+		}
+		
+		//last page
+		if(currentPageNumber==maxPageNumber){
+			buttons += "<span class=\"page active\">last</span>";
+		}else{
+			buttons += "<a id=\"lastPageButton\" href=\"#\" class=\"page\">last</a>";
+		}
+		
+		//enclose the </div>\n</div>
+		buttons += "</div>\n</div>";
 		
 		return buttons;
 	}
@@ -83,6 +93,19 @@ public class Page<T> {
 
 	public void setTotalRows(Long totalRows) {
 		this.totalRows = totalRows;
+	}
+
+	public Integer getMaxPageNumber() {
+		if(maxPageNumber==null){
+			Integer totalRowsI = totalRows.intValue();
+			Integer pageSize = searchParams.getPageSize();
+			maxPageNumber = (totalRowsI % pageSize == 0) ? (totalRowsI / pageSize) : (totalRowsI / pageSize) + 1;
+		}
+		return maxPageNumber;
+	}
+
+	public void setMaxPageNumber(Integer maxPageNumber) {
+		this.maxPageNumber = maxPageNumber;
 	}
 	
 }

@@ -91,7 +91,7 @@ $(function() {
  <div id='main'>
     <article>
     <div id="container">
-    <form:form id="regform" modelAttribute="user" method="post" action="register">
+    <form:form id="regform" modelAttribute="user" method="post" action="${pageContext.request.contextPath}/register">
     <div id="left">
     
     		<h2 class="contact">註冊為新用戶</h2>

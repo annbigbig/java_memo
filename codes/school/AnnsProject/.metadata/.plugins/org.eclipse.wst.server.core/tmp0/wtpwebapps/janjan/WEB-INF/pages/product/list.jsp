@@ -7,7 +7,40 @@
 <head>
   <jsp:include page="../fragments/staticFiles.jsp"/>
 <script>
-
+$(function() {
+	$("#navlist li").click(function(){
+		var content = $(this).text();
+		alert('content = ' + content);
+	});
+	
+	$("#firstPageButton").click(function(){
+		$("#pageNumber").val(1);
+		$("#searchForm").submit();
+	});
+	
+	$("#previousPageButton").click(function(){
+		var currentPage = $("#pageNumber").val();
+		var argValue0 = $("#argValue0").val();
+		alert("argValue0=" + argValue0);
+		$("#pageNumber").val(currentPage-1);
+		$("#searchForm").submit();
+	});
+	
+	$("#nextPageButton").click(function(){
+		var currentPage = $("#pageNumber").val();
+		var argValue0 = $("#argValue0").val();
+		alert("argValue0=" + argValue0);
+		$("#pageNumber").val(currentPage+1);
+		$("#searchForm").submit();
+	});
+	
+	$("#lastPageButton").click(function(){
+		var maxPageNumber = ${page.maxPageNumber};
+		$("#pageNumber").val(maxPageNumber);
+		$("#searchForm").submit();
+	});
+	
+});
 </script>
 </head>
 <body>
@@ -17,14 +50,16 @@
     <article>
    			
    			<c:if test="${not empty searchParams}">
-   						searchParams.searchColumn = ${searchParams.searchColumn}<br/>
-   						searchParams.searchOperator = ${searchParams.searchOperator}<br/>
-   						searchParams.searchArgValues[0] = ${searchParams.searchArgValues[0]}<br/>
-   						searchParams.searchArgTypes[0] = ${searchParams.searchArgTypes[0]}<br/>
-   						searchParams.orderColumn = ${searchParams.orderColumn}<br/>
-   						searchParams.orderType = ${searchParams.orderType}<br/>
-   						searchParams.pageNumber = ${searchParams.pageNumber}<br/>
-   						searchParams.pageSize = ${searchParams.pageSize}<br/>
+   					<form id="searchForm" action="${pageContext.request.contextPath}/admin/product/find" method="post">
+   								<input type="hidden" name="searchColumn" value="${searchParams.searchColumn}"/>
+										<input type="hidden" name="searchOperator" value="${searchParams.searchOperator}"/>
+										<input id="argValue0" type="hidden" name="searchArgValues[0]" value="${searchParams.searchArgValues[0]}"/>
+										<input type="hidden" name="searchArgTypes[0]" value="${searchParams.searchArgTypes[0]}"/>
+										<input type="hidden" name="orderColumn" value="${searchParams.orderColumn}"/>
+										<input type="hidden" name="orderType" value="${searchParams.orderType}"/>
+										<input id="pageNumber" type="hidden" name="pageNumber" value="${searchParams.pageNumber}"/>
+										<input type="hidden" name="pageSize" value="${searchParams.pageSize}"/>
+   					</form>
    			</c:if><br/>
    			
    			<c:if test="${not empty totalRows}">
