@@ -1,5 +1,5 @@
   body {
-   font: 24px Helvetica;
+   /* font: 24px Helvetica; */
    background: #999999;
   }
 
@@ -229,5 +229,33 @@ input { font-size: 18px; }
 
 .page.dark.gradient {
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#565b5f), to(#3e4347));
-
+}
 /*  pagination buttons end */
+
+/* and this is for table elements */
+/*    */
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+/* https://css-tricks.com/responsive-data-tables/ */
+tr { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+/* table elements ends */

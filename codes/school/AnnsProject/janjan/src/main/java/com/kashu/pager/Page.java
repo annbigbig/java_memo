@@ -50,7 +50,7 @@ public class Page<T> {
 	// http://cssdeck.com/labs/css-pagination-styles
 	public String initPageButtons(){
 		String buttons = "<div id=\"pagebuttons-container\">\n";
-		buttons += "<div class=\"pagination\">";
+		buttons += "<div class=\"pagination\">\n";
 		
 		Integer currentPageNumber = searchParams.getPageNumber();
 		Integer pageSize = searchParams.getPageSize();
@@ -58,19 +58,19 @@ public class Page<T> {
 		
 		// first page
 		if(currentPageNumber==1){
-			buttons += "<span class=\"page active\">|&lt;</span>";
+			buttons += "<span class=\"page active\">|&lt;</span>\n";
 		}else{
-			buttons += "<a id=\"firstPageButton\" href=\"#\" class=\"page\">|&lt;</a>";
+			buttons += "<a id=\"firstPageButton\" href=\"#\" class=\"page\">|&lt;</a>\n";
 		}
 		
 		// previous 10 page
 		if(currentPageNumber>10){
-			buttons += "<a id=\"previous10PageButton\" href=\"#\" class=\"page\">&lt;&lt;</a>";
+			buttons += "<a id=\"previous10PageButton\" href=\"#\" class=\"page\">&lt;&lt;</a>\n";
 		}
 		
 		// previous page
 		if(currentPageNumber>1){
-			buttons += "<a id=\"previousPageButton\" href=\"#\" class=\"page\">&lt;</a>";
+			buttons += "<a id=\"previousPageButton\" href=\"#\" class=\"page\">&lt;</a>\n";
 		}
 		
 		// number part
@@ -78,29 +78,34 @@ public class Page<T> {
 		for(int i=min;i<min+10;i++){
 			if(i<=maxPageNumber){
 				if(i==currentPageNumber){
-					buttons += "<span class=\"page active\">" + i + "</span>";
+					buttons += "<span class=\"page active\">" + i + "</span>\n";
 				}else{
-					buttons += "<a href=\"#\" class=\"page\">"  + i + "</a>";
+					buttons += "<a href=\"#\" class=\"page\">"  + i + "</a>\n";
 				}
 			}
 		}
 		
 		// next page
 		if(currentPageNumber<maxPageNumber){
-			buttons += "<a id=\"nextPageButton\" href=\"#\" class=\"page\">&gt;</a>";
+			buttons += "<a id=\"nextPageButton\" href=\"#\" class=\"page\">&gt;</a>\n";
 		}
 		
 		// next 10 page
 		if(currentPageNumber+10<=maxPageNumber){
-			buttons += "<a id=\"next10PageButton\" href=\"#\" class=\"page\">&gt;&gt;</a>";
+			buttons += "<a id=\"next10PageButton\" href=\"#\" class=\"page\">&gt;&gt;</a>\n";
 		}
 		
 		//last page
 		if(currentPageNumber==maxPageNumber){
-			buttons += "<span class=\"page active\">Last</span>";
+			buttons += "<span class=\"page active\">&gt;|</span>\n";
 		}else{
-			buttons += "<a id=\"lastPageButton\" href=\"#\" class=\"page\">&gt;|(" + maxPageNumber + ")</a>";
+			buttons += "<a id=\"lastPageButton\" href=\"#\" class=\"page\">&gt;|</a>\n";
 		}
+		
+		//go this page
+		buttons += "<input id=\"pageNumberInput\" type=\"text\" maxlength=\"3\" size=\"2\"/>\n";
+		buttons += "<label>(" + currentPageNumber + "/" + maxPageNumber + ")</label>";
+		buttons += "<button id=\"goToButton\" type=\"button\">Go</button>\n";
 		
 		//enclose the </div>\n</div>
 		buttons += "</div>\n</div>";

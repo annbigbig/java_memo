@@ -54,6 +54,17 @@ $(function() {
 		$("#searchForm").submit();
 	});
 	
+	$("#pageNumberInput").mask("000");
+	
+	$("#goToButton").click(function(){
+		var pageNumber = $("#pageNumberInput").val();
+		if(pageNumber==null||pageNumber==0){
+			pageNumber =1;
+		}
+		$("#pageNumber").val(pageNumber);
+		$("#searchForm").submit();
+	});
+	
 });
 </script>
 </head>
@@ -83,24 +94,35 @@ $(function() {
    			<br/><br/>
    			<c:choose>
    				<c:when test="${not empty page.elements}">
+   				 <table>
+   				 <thead>
+   				 		<th>產品名稱</th>
+   				 		<th>價格</th>
+   				 		<th>單位</th>
+   				 		<th></th>
+   				 	</thead>
+   				 	<tbody>
    						<c:forEach var="product" items="${page.elements}">
-   									product.id = ${product.id} <br/>
-											product.title = ${product.title} <br/>
-											product.price = ${product.price} <br/>
-											product.unit = ${product.unit} <br/>
-											product.createdTime = ${product.createdTime}<br/>
-											product.lastModified = ${product.lastModified} <br/>
-											product.enabled = ${product.enabled} <br/>
-											product.category.id = ${product.category.id} <br/>
-											product.category.name = ${product.category.name} <br/>
-											<br/><br/>
+   									<tr>
+   										<td><a href="${pageContext.request.contextPath}/admin/product/detail/${product.id}">${product.title}</a></td>
+   										<td>${product.price}</td>
+   										<td>${product.unit}</td>
+   										<!-- product.createdTime = ${product.createdTime} -->
+   										<!-- product.lastModified = ${product.lastModified} -->
+												<!-- product.enabled = ${product.enabled} --> 
+												<!-- product.category.id = ${product.category.id} --> 
+												<!-- product.category.name = ${product.category.name} --> 
+												<td><button type="button">修改</button>|<button type="button">刪除</button>
+											</tr>
    						</c:forEach>
+   					</tbody>
+   					</table>
    				</c:when>
    				<c:otherwise>
    								要求的頁面不存在<br/><br/>
    				</c:otherwise>
    			</c:choose>
-   			
+  
    			<a href="${pageContext.request.contextPath}/home">回首頁</a><br/>
    			
    			<c:if test="${not empty page.pageButtons}">
