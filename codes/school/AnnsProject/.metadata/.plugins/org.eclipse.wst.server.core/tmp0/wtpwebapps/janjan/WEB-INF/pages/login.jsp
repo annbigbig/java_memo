@@ -131,7 +131,7 @@
 			e.preventDefault();
 			var productTitle = $('#productTitle').val();
 			$('#productTitle').val('%' + productTitle + '%');
-			  $( "#searchForm" ).submit();
+			  $( "#searchFormLeft" ).submit();
 			});
 	});
 	</script>
@@ -142,7 +142,7 @@
 		</div>
 		<div class="admin-class">
 		  <button type="button" id="product_new_button">新增產品</button> | <button type="button" id="searchButton">查詢產品</button> 
-		  	<form id="searchForm" method="post" action="${pageContext.request.contextPath}/admin/product/find">
+		  	<form id="searchFormLeft" method="post" action="${pageContext.request.contextPath}/admin/product/find">
 				<input type="hidden" name="searchColumn" value="title"/>
 				<input type="hidden" name="searchOperator" value="LIKE"/>
 				<input id="productTitle" type="text" name="searchArgValues[0]" maxlength="8" size="3"/>

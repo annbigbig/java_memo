@@ -30,7 +30,8 @@ $(function() {
 		$("#searchForm").submit();
 	});
 	
-	$(".page").not("#firstPageButton,#previous10PageButton,#previousPageButton,#nextPageButton,#next10PageButton,#lastPageButton").click(function(){
+	$("a.page").not("#firstPageButton,#previous10PageButton,#previousPageButton,#nextPageButton,#next10PageButton,#lastPageButton").click(function(){
+		//alert($(this).text());
 		$("#pageNumber").val($(this).text());
 		$("#searchForm").submit();
 	});
@@ -48,8 +49,8 @@ $(function() {
 	});
 	
 	$("#lastPageButton").click(function(){
-		var maxPageNumber = ${page.maxPageNumber};
-		$("#pageNumber").val(maxPageNumber);
+		//var maxPageNumber = ${page.maxPageNumber};
+		$("#pageNumber").val("<c:out value='${page.maxPageNumber}'/>");
 		$("#searchForm").submit();
 	});
 	

@@ -58,19 +58,19 @@ public class Page<T> {
 		
 		// first page
 		if(currentPageNumber==1){
-			buttons += "<span class=\"page active\">First</span>";
+			buttons += "<span class=\"page active\">|&lt;</span>";
 		}else{
-			buttons += "<a id=\"firstPageButton\" href=\"#\" class=\"page\">First</a>";
+			buttons += "<a id=\"firstPageButton\" href=\"#\" class=\"page\">|&lt;</a>";
 		}
 		
 		// previous 10 page
 		if(currentPageNumber>10){
-			buttons += "<a id=\"previous10PageButton\" href=\"#\" class=\"page\">-10</a>";
+			buttons += "<a id=\"previous10PageButton\" href=\"#\" class=\"page\">&lt;&lt;</a>";
 		}
 		
 		// previous page
 		if(currentPageNumber>1){
-			buttons += "<a id=\"previousPageButton\" href=\"#\" class=\"page\">-1</a>";
+			buttons += "<a id=\"previousPageButton\" href=\"#\" class=\"page\">&lt;</a>";
 		}
 		
 		// number part
@@ -87,19 +87,19 @@ public class Page<T> {
 		
 		// next page
 		if(currentPageNumber<maxPageNumber){
-			buttons += "<a id=\"nextPageButton\" href=\"#\" class=\"page\">+1</a>";
+			buttons += "<a id=\"nextPageButton\" href=\"#\" class=\"page\">&gt;</a>";
 		}
 		
 		// next 10 page
 		if(currentPageNumber+10<=maxPageNumber){
-			buttons += "<a id=\"next10PageButton\" href=\"#\" class=\"page\">+10</a>";
+			buttons += "<a id=\"next10PageButton\" href=\"#\" class=\"page\">&gt;&gt;</a>";
 		}
 		
 		//last page
 		if(currentPageNumber==maxPageNumber){
 			buttons += "<span class=\"page active\">Last</span>";
 		}else{
-			buttons += "<a id=\"lastPageButton\" href=\"#\" class=\"page\">Last</a>";
+			buttons += "<a id=\"lastPageButton\" href=\"#\" class=\"page\">&gt;|(" + maxPageNumber + ")</a>";
 		}
 		
 		//enclose the </div>\n</div>

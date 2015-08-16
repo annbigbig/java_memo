@@ -22147,3 +22147,200 @@ org.eclipse.core.runtime.CoreException: Launch configuration HashCodeTest refere
 2015-08-15 23:56:25,686 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2015-08-15 23:56:25,689 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-08-15 23:56:25,690 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 09:54:12,288 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:12,364 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/MySpringMvc/src/main/resources
+2015-08-16 09:54:12,370 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:12,371 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/MySpringMvc/src/test/resources
+2015-08-16 09:54:12,984 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:12,999 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 09:54:13,002 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:13,003 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/Spring4MVCHelloWorld/src/test/resources
+2015-08-16 09:54:13,894 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:13,895 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 09:54:13,897 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:13,898 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/SpringMVCPayrollSystem/src/test/resources
+2015-08-16 09:54:16,859 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:16,859 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-08-16 09:54:16,911 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:16,912 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch03/spring-book-ch3/beanvalidation/src/test/resources
+2015-08-16 09:54:20,694 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:20,722 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 315 resources
+2015-08-16 09:54:20,992 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:20,993 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-08-16 09:54:21,792 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:21,793 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/calling-storedprocedures/src/main/resources
+2015-08-16 09:54:21,797 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:21,798 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/calling-storedprocedures/src/test/resources
+2015-08-16 09:54:22,032 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:22,032 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/configuring-and-using-jdbctemplate/src/main/resources
+2015-08-16 09:54:22,038 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:22,041 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/configuring-and-using-jdbctemplate/src/test/resources
+2015-08-16 09:54:22,248 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:22,249 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/configuring-datasource/src/main/resources
+2015-08-16 09:54:22,258 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:22,259 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/configuring-datasource/src/test/resources
+2015-08-16 09:54:22,382 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:22,383 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/configuring-single-conn-datasource/src/main/resources
+2015-08-16 09:54:22,384 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:22,385 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/configuring-single-conn-datasource/src/test/resources
+2015-08-16 09:54:22,927 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:22,928 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 09:54:22,929 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:22,930 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/SpringMVC-CookieHandling/cookiehandling/src/test/resources
+2015-08-16 09:54:23,114 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,115 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 09:54:23,133 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,134 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/embedded-db-support/src/test/resources
+2015-08-16 09:54:23,243 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,243 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/encapsulating-dml-operations/src/main/resources
+2015-08-16 09:54:23,245 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,245 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/encapsulating-dml-operations/src/test/resources
+2015-08-16 09:54:23,360 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,361 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/encapsulating-sql-queries/src/main/resources
+2015-08-16 09:54:23,365 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,365 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/encapsulating-sql-queries/src/test/resources
+2015-08-16 09:54:23,527 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,527 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/encapsulating-storedprocedures/src/main/resources
+2015-08-16 09:54:23,529 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,529 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/encapsulating-storedprocedures/src/test/resources
+2015-08-16 09:54:23,655 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,656 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/handling-lob-objects/src/main/resources
+2015-08-16 09:54:23,658 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,659 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/handling-lob-objects/src/test/resources
+2015-08-16 09:54:23,733 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,734 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 09:54:23,778 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,779 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/initializing-db/src/test/resources
+2015-08-16 09:54:23,913 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,913 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/inserting-updating-deleting-records/src/main/resources
+2015-08-16 09:54:23,915 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:23,915 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/inserting-updating-deleting-records/src/test/resources
+2015-08-16 09:54:25,139 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 09:54:25,140 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 09:54:25,197 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 09:54:25,197 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 09:54:25,295 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:25,295 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/performing-batch-operations/src/main/resources
+2015-08-16 09:54:25,297 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:25,297 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/performing-batch-operations/src/test/resources
+2015-08-16 09:54:25,465 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:25,466 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/pooled-datasource/src/main/resources
+2015-08-16 09:54:25,467 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:25,468 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/pooled-datasource/src/test/resources
+2015-08-16 09:54:25,566 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:25,567 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/queries-with-in-clause/src/main/resources
+2015-08-16 09:54:25,568 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:25,568 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/queries-with-in-clause/src/test/resources
+2015-08-16 09:54:25,643 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:25,645 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/running-queries-with-jdbctemplate/src/main/resources
+2015-08-16 09:54:25,647 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:25,648 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/running-queries-with-jdbctemplate/src/test/resources
+2015-08-16 09:54:26,147 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:26,148 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 09:54:26,149 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:26,149 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/temp/spring-mvc-enum/src/test/resources
+2015-08-16 09:54:28,173 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 09:54:28,174 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2015-08-16 09:54:28,215 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 09:54:28,215 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2015-08-16 09:54:28,227 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/spring-petclinic/src/test/resources
+2015-08-16 09:54:28,892 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:28,892 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-08-16 09:54:28,914 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:28,914 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/spring-security-remember-me/src/test/resources
+2015-08-16 09:54:29,129 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:29,131 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-08-16 09:54:29,157 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:29,162 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/spring-security-remember-me-annotation/src/test/resources
+2015-08-16 09:54:29,686 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:29,687 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-08-16 09:54:29,701 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:29,702 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/springjpaexample/src/test/resources
+2015-08-16 09:54:29,915 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:29,917 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-08-16 09:54:29,923 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:29,924 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/springmvc_validation_example/src/test/resources
+2015-08-16 09:54:30,023 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:30,023 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/using-named-parameters/src/main/resources
+2015-08-16 09:54:30,024 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:30,025 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/using-named-parameters/src/test/resources
+2015-08-16 09:54:30,092 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:30,093 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/using-preparedstatements/src/main/resources
+2015-08-16 09:54:30,094 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-08-16 09:54:30,095 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/spring_samples/Beginning_Spring/spring-book-ch04/spring-book-ch4/using-preparedstatements/src/test/resources
+2015-08-16 09:59:01,021 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 09:59:01,078 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 09:59:01,083 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 09:59:01,083 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 09:59:28,583 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 09:59:28,584 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 09:59:28,585 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 09:59:28,585 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:00:13,620 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:00:13,621 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 10:00:13,625 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:00:13,625 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:02:15,835 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:02:15,835 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 10:02:15,836 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:02:15,837 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:15:01,064 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:15:01,064 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 10:15:01,066 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:15:01,075 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:25:28,110 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:25:28,111 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 10:25:28,112 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:25:28,112 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:34:15,052 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:34:15,052 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 10:34:15,053 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:34:15,054 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:37:48,720 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:37:48,721 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 10:37:48,726 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:37:48,726 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:38:07,241 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:38:07,242 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 10:38:07,243 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:38:07,244 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:40:56,079 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:40:56,081 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 10:40:56,084 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:40:56,085 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:49:22,309 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:49:22,310 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 10:49:22,313 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:49:22,314 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:56:14,576 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:56:14,577 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 10:56:14,580 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:56:14,582 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:56:25,150 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:56:25,150 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-08-16 10:56:25,152 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:56:25,152 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 10:57:30,885 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:57:30,885 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 10:57:30,923 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 10:57:30,923 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 11:07:31,113 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:07:31,115 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 11:07:31,121 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:07:31,121 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 11:07:47,159 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:07:47,160 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 11:07:47,161 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:07:47,161 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 11:10:14,076 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:10:14,077 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 11:10:14,079 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:10:14,079 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 11:25:18,167 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:25:18,168 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 11:25:18,169 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:25:18,178 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources
+2015-08-16 11:26:26,600 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:26:26,601 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-08-16 11:26:26,604 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-16 11:26:26,605 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/anntony/java_memo/codes/school/AnnsProject/janjan/src/test/resources

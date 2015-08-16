@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="contain" key="selection"/>
+		<item value="searchForm" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="searchForm"/>
 			<item value="contain"/>
 			<item value="resources"/>
 			<item value="classpath"/>
@@ -15,9 +16,9 @@
 			<item value="searchButton"/>
 			<item value="log"/>
 			<item value="stored"/>
-			<item value="impleJdbcCall"/>
 		</list>
 		<list key="replacehistory">
+			<item value="searchFormLeft"/>
 			<item value="modform"/>
 		</list>
 	</section>

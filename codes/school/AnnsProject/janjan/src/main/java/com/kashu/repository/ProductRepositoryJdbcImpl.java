@@ -183,10 +183,13 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 		Long rowCount = 0l;
 		String sql = sql_count_rows + getWhere(searchParams);
 		int[] searchArgTypes = searchParams.getSearchArgTypes();
-		Object[] searchArgValues = searchParams.getSearchArgValues();
+		Object[] searchArgValues = searchParams.getSearchArgValues();		//the values that user submitted
+		//Object[] searchArgValues_ = new Object[searchArgValues.length];
 		System.out.println("");
 		System.out.println("//-----ProductRepository.count()-----//");
-		for(Object value : searchArgValues){
+		Object value;
+		for(int i=0;i<searchArgValues.length;i++){
+			value = searchArgValues[i];
 			System.out.println("value=" + value);
 		}
 		rowCount = jdbcTemplate.queryForLong(sql, searchArgValues, searchArgTypes);
