@@ -108,9 +108,8 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 		for(Object value : searchArgValues){
 			System.out.println("value=" + value);
 		}
-		Object[] objs = addPercentSign(searchArgValues,searchArgTypes);
 		PreparedStatementCreatorFactory psCreatorFactory = new PreparedStatementCreatorFactory(sql,searchArgTypes);
-		products = jdbcTemplate.query(psCreatorFactory.newPreparedStatementCreator(objs),new ProductRowMapper());
+		products = jdbcTemplate.query(psCreatorFactory.newPreparedStatementCreator(searchArgValues),new ProductRowMapper());
 		return products;
 	}
 	
@@ -203,7 +202,7 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 		Object value;
 		for(int i=0;i<searchArgValues.length;i++){
 			value = searchArgValues[i];
-			System.out.println("value[" + i + "]=" + value);
+			System.out.println("value=" + value);
 		}
 		Object[] objs = addPercentSign(searchArgValues,searchArgTypes);
 		rowCount = jdbcTemplate.queryForLong(sql, objs, searchArgTypes);

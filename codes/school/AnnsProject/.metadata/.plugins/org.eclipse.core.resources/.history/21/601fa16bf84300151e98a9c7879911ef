@@ -128,9 +128,9 @@
 		*/
 		
 		$("#searchButton").click(function(e) {
-			//e.preventDefault();
-			//var productTitle = $('#productTitle').val();
-			//$('#productTitle').val('%' + productTitle + '%');
+			e.preventDefault();
+			var productTitle = $('#productTitle').val();
+			$('#productTitle').val('%' + productTitle + '%');
 			  $( "#searchFormLeft" ).submit();
 			});
 	});

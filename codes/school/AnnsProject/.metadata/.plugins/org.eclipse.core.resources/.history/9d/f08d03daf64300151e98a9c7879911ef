@@ -108,9 +108,8 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 		for(Object value : searchArgValues){
 			System.out.println("value=" + value);
 		}
-		Object[] objs = addPercentSign(searchArgValues,searchArgTypes);
 		PreparedStatementCreatorFactory psCreatorFactory = new PreparedStatementCreatorFactory(sql,searchArgTypes);
-		products = jdbcTemplate.query(psCreatorFactory.newPreparedStatementCreator(objs),new ProductRowMapper());
+		products = jdbcTemplate.query(psCreatorFactory.newPreparedStatementCreator(searchArgValues),new ProductRowMapper());
 		return products;
 	}
 	
@@ -172,19 +171,6 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 		System.out.print("limit = " + limit);
 		return limit;
 	}
-	
-	public Object[] addPercentSign(Object[] searchArgValues,int[] searchArgTypes){
-		int length = searchArgValues.length;
-		Object[] result = new Object[length];
-		for(int i=0;i<length;i++){
-			if (searchArgTypes[i] == Types.VARCHAR){
-				result[i] = "%" + searchArgValues[i] + "%";
-			}else{
-				result[i] = searchArgValues[i]; 
-			}
-		}
-		return result;
-	}
 
 	@Override
 	public Long countAll() {
@@ -198,15 +184,15 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 		String sql = sql_count_rows + getWhere(searchParams);
 		int[] searchArgTypes = searchParams.getSearchArgTypes();
 		Object[] searchArgValues = searchParams.getSearchArgValues();		//the values that user submitted
+		//Object[] searchArgValues_ = new Object[searchArgValues.length];
 		System.out.println("");
 		System.out.println("//-----ProductRepository.count()-----//");
 		Object value;
 		for(int i=0;i<searchArgValues.length;i++){
 			value = searchArgValues[i];
-			System.out.println("value[" + i + "]=" + value);
+			System.out.println("value=" + value);
 		}
-		Object[] objs = addPercentSign(searchArgValues,searchArgTypes);
-		rowCount = jdbcTemplate.queryForLong(sql, objs, searchArgTypes);
+		rowCount = jdbcTemplate.queryForLong(sql, searchArgValues, searchArgTypes);
 		return rowCount;
 	}
 
