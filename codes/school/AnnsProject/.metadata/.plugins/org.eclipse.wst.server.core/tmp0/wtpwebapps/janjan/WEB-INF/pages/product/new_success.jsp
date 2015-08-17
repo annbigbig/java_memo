@@ -31,6 +31,7 @@
     
     <nav>
           <jsp:include page="../login.jsp"/>
+          <jsp:include page="../fragments/productFeatures.jsp"/>
     </nav>
     
     <aside>aside<br>

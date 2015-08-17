@@ -24,6 +24,7 @@
 		<hibernate.validator>4.3.2.Final</hibernate.validator>
 		<hibernate.commons.annotations>5.0.0.Final</hibernate.commons.annotations>
 		<hibernate.jpa.2.0.api>1.0.1.Final</hibernate.jpa.2.0.api>
+		<hibernate.jpa.2.1.api>1.0.0.Final</hibernate.jpa.2.1.api>
 		<hibernate.entity.manager>4.3.10.Final</hibernate.entity.manager>
 	</properties>
   
@@ -110,6 +111,24 @@
 		 <dependency>
 			 <groupId>org.springframework</groupId>
 			 <artifactId>spring-jdbc</artifactId>
+			 <version>${spring.version}</version>
+		 </dependency>
+		 
+		 <dependency>
+			 <groupId>org.springframework</groupId>
+			 <artifactId>spring-aop</artifactId>
+			 <version>${spring.version}</version>
+		 </dependency>
+		 
+		 	<dependency>
+			 <groupId>org.springframework</groupId>
+			 <artifactId>spring-tx</artifactId>
+			 <version>${spring.version}</version>
+		 </dependency>
+		 
+		 	<dependency>
+			 <groupId>org.springframework</groupId>
+			 <artifactId>spring-expression</artifactId>
 			 <version>${spring.version}</version>
 		 </dependency>
   
@@ -202,11 +221,19 @@ if you want log something , open this
 	    <version>${hibernate.commons.annotations}</version>
     </dependency>
     
+    	<!-- 
     <dependency>
       <groupId>org.hibernate.javax.persistence</groupId>
       <artifactId>hibernate-jpa-2.0-api</artifactId>
       <version>${hibernate.jpa.2.0.api}</version>
     </dependency>
+    -->
+    <dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>${hibernate.jpa.2.1.api}</version>
+		</dependency>
+    
     <dependency>
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-entitymanager</artifactId>

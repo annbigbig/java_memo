@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="table" key="selection"/>
+		<item value="admin" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="table"/>
-			<item value="class"/>
-			<item value="searchForm"/>
-			<item value="contain"/>
-			<item value="resources"/>
-			<item value="classpath"/>
-			<item value="productTitle"/>
-			<item value="searchButton"/>
+			<item value="admin"/>
+			<item value="logout"/>
+			<item value="jpa"/>
+			<item value="orm"/>
+			<item value="spring-ex"/>
+			<item value="spring-jdbc"/>
+			<item value="spring-tx"/>
+			<item value="spring-aop"/>
 		</list>
 		<list key="replacehistory">
 			<item value="searchFormLeft"/>
@@ -26,7 +26,7 @@
 		<item value="327" key="DIALOG_WIDTH"/>
 		<item value="1|Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="496" key="DIALOG_HEIGHT"/>
-		<item value="863" key="DIALOG_X_ORIGIN"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="882" key="DIALOG_X_ORIGIN"/>
+		<item value="247" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -20,7 +20,7 @@ public class ProductFindController {
 	@Autowired
 	private PageFactory pageFactory;
 	
-	@RequestMapping(value="/admin/product/find")
+	@RequestMapping(value="/product/find")
 	public String find(@ModelAttribute ProductSearchParams searchParams,Model model){
 		model.addAttribute("searchParams", searchParams);
 		

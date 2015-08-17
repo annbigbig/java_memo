@@ -75,7 +75,7 @@ $(function() {
     <article>
    			
    			<c:if test="${not empty searchParams}">
-   					<form id="searchForm" action="${pageContext.request.contextPath}/admin/product/find" method="post">
+   					<form id="searchForm" action="${pageContext.request.contextPath}/product/find" method="GET">
    								<input type="hidden" name="searchColumn" value="${searchParams.searchColumn}"/>
 										<input type="hidden" name="searchOperator" value="${searchParams.searchOperator}"/>
 										<input id="argValue0" type="hidden" name="searchArgValues[0]" value="${searchParams.searchArgValues[0]}"/>
@@ -104,7 +104,7 @@ $(function() {
    				 	<tbody>
    						<c:forEach var="product" items="${page.elements}">
    									<tr>
-   										<td><a href="${pageContext.request.contextPath}/admin/product/detail/${product.id}">${product.title}</a></td>
+   										<td><a href="${pageContext.request.contextPath}/product/detail/${product.id}">${product.title}</a></td>
    										<td>${product.price}</td>
    										<td>${product.unit}</td>
    										<!-- product.createdTime = ${product.createdTime} -->
@@ -132,6 +132,7 @@ $(function() {
    
     <nav>
           <jsp:include page="../login.jsp"/>
+          <jsp:include page="../fragments/productFeatures.jsp"/>
     </nav>
     
     <aside>aside<br>

@@ -41,8 +41,8 @@
 			authentication-success-handler-ref="authenticationSuccessHandler"/>
 
 		<!-- <logout logout-success-url="/login?logout" delete-cookies="JSESSIONID" /> -->
-		<logout logout-url="/j_spring_security_logout" success-handler-ref="logoutSuccessHandler" delete-cookies="JSESSIONID"/>
-		<!-- <logout logout-success-url="/home" delete-cookies="JSESSIONID" /> -->
+		<!-- <logout logout-url="/j_spring_security_logout" success-handler-ref="logoutSuccessHandler" delete-cookies="JSESSIONID"/> -->
+		<logout logout-success-url="/home" delete-cookies="JSESSIONID" />
 		<!-- enable csrf protection -->
 		<!-- <csrf /> -->
 

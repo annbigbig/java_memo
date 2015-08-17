@@ -118,6 +118,12 @@
 	background-color:#ffff37;
 }
 
+.guest-class{
+	padding: 10px;
+	margin: 10px auto;
+	background-color:#58FAD0;
+}
+
 .pink-me{
 	background-color:#FFE4CA;
 }
