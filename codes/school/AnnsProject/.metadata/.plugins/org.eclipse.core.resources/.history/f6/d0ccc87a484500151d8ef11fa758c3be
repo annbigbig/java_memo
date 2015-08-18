@@ -267,6 +267,6 @@ td, th {
 /* table elements ends */
 
 /* this is for yellow span */
-.yellow-box {
+.yellow-span {
 	background-color: #F2F5A9;
 }

@@ -75,6 +75,7 @@ $(function() {
     <article>
    			
    			<c:if test="${not empty searchParams}">
+   					<div class="yellow-box"><H3>搜尋關鍵字 [ ${ searchParams.searchArgValues[0]} ]</H3></div>
    					<form id="searchForm" action="${pageContext.request.contextPath}/product/find" method="GET">
    								<input type="hidden" name="searchColumn" value="${searchParams.searchColumn}"/>
 										<input type="hidden" name="searchOperator" value="${searchParams.searchOperator}"/>
@@ -87,13 +88,9 @@ $(function() {
    					</form>
    			</c:if><br/>
    			
-   			<c:if test="${not empty totalRows}">
-   							totalRows = ${totalRows}<br/><br/>
-   			</c:if>
-   			
-   			<br/><br/>
    			<c:choose>
    				<c:when test="${not empty page.elements}">
+   							<h3>返回了${page.totalRows}筆記錄</h3>
    				 <table>
    				 <thead>
    				 		<th>產品名稱</th>
