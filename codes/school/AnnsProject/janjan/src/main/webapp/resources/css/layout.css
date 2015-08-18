@@ -270,3 +270,31 @@ td, th {
 .yellow-box {
 	background-color: #F2F5A9;
 }
+
+.visible-span {
+	display: none;
+}
+
+/*  http://www.bestcssbuttongenerator.com/  */
+.addToCart {
+	background-color:#79bbff;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 28px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.addToCart:hover {
+	background-color:#378de5;
+}
+.addToCart:active {
+	position:relative;
+	top:1px;
+}

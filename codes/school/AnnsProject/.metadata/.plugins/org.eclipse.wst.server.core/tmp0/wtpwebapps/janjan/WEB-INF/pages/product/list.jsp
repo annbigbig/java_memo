@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -65,6 +66,20 @@ $(function() {
 		$("#searchForm").submit();
 	});
 	
+	$(".spinner").spinner({
+		min : 0,
+		max : 99,
+		step : 1,
+		numberFormat: "n"
+	}).width(30);
+	
+	$(".addToCart").click(function(){
+		var productId = $(this).children("span").text();
+		//var amount = $(this).prev().spinner("value");
+		var testValue = $(this).prev().text();
+		alert("productId=" + productId + testValue);
+	});
+	
 });
 </script>
 </head>
@@ -109,7 +124,15 @@ $(function() {
 												<!-- product.enabled = ${product.enabled} --> 
 												<!-- product.category.id = ${product.category.id} --> 
 												<!-- product.category.name = ${product.category.name} --> 
-												<td><button type="button">修改</button>|<button type="button">刪除</button>
+												<td>
+														數量 : <input class="spinner" name="value"/>
+														<span class="visible-span">test-h2-here</span>
+														<button class="addToCart" type="button"><span class="visible-span">${product.id}</span>放入購物車</button>
+														<sec:authorize access="hasRole('ROLE_ADMIN')">
+															|<button type="button"><span class="visible-span">${product.id}</span>修改</button>
+															|<button type="button"><span class="visible-span">${product.id}</span>刪除</button>
+														</sec:authorize>
+												</td>
 											</tr>
    						</c:forEach>
    					</tbody>
