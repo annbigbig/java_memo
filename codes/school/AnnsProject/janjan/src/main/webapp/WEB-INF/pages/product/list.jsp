@@ -83,19 +83,21 @@ $(function() {
         }
 	}).width(30);
 	
+	//  http://stackoverflow.com/questions/16125913/javascript-returning-undefined
 	$(".addToCart").click(function(){
 		var productId = $(this).children("span").text();
 		//var amount = $(this).prev().spinner("value").html();
 		//var testValue = $(this).prev(".spinner").val();
 		//var testValue = $("#test-spinner").spinner("value");		//working
-		var amount = $(this).closest(".spinner").spinner("value");
+		//var amount = $(this).closest("input.spinner").attr("value");
+		var amount = $(this).siblings("span.ui-spinner").children("input.spinner").spinner("value");
 		//var amount = $(this).closest("input.spinner.ui-spinner-input").val();
 		//alert("productId=" + productId + " amount=" + amount);
 		$("#productId").val(productId);
-		//$("#amount").val(amount);
-		$("#amount").val(5);
+		$("#amount").val(amount);
+		console.log("productId=" + productId + " amount=" + amount);
+		//$("#amount").val(5);
 		$("#cartForm").submit();
-		
 	});
 	
 });
