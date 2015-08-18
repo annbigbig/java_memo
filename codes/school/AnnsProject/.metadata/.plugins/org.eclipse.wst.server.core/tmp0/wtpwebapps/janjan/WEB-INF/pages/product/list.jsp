@@ -66,18 +66,36 @@ $(function() {
 		$("#searchForm").submit();
 	});
 	
+	
+	// http://stackoverflow.com/questions/15596900/jquerys-spinner-ui-value-not-logging-out-value
 	$(".spinner").spinner({
 		min : 0,
 		max : 99,
 		step : 1,
-		numberFormat: "n"
+		numberFormat: "n",
+		change: function(event, ui) {
+			//var spinValue = $(this).val();
+            //console.log(this.value);
+            $(this).attr("value",$(this).val());
+            console.log($(this).val());
+            	//$(this).attr("value",spinValue);
+         //console.log(spinValue);
+        }
 	}).width(30);
 	
 	$(".addToCart").click(function(){
 		var productId = $(this).children("span").text();
-		//var amount = $(this).prev().spinner("value");
-		var testValue = $(this).prev().text();
-		alert("productId=" + productId + testValue);
+		//var amount = $(this).prev().spinner("value").html();
+		//var testValue = $(this).prev(".spinner").val();
+		//var testValue = $("#test-spinner").spinner("value");		//working
+		var amount = $(this).closest(".spinner").spinner("value");
+		//var amount = $(this).closest("input.spinner.ui-spinner-input").val();
+		//alert("productId=" + productId + " amount=" + amount);
+		$("#productId").val(productId);
+		//$("#amount").val(amount);
+		$("#amount").val(5);
+		$("#cartForm").submit();
+		
 	});
 	
 });
@@ -88,7 +106,7 @@ $(function() {
  <header>header</header>
  <div id='main'>
     <article>
-   			
+   					<input id="test-spinner" class="spinner" name="value"/>
    			<c:if test="${not empty searchParams}">
    					<div class="yellow-box"><H3>搜尋關鍵字 [ ${ searchParams.searchArgValues[0]} ]</H3></div>
    					<form id="searchForm" action="${pageContext.request.contextPath}/product/find" method="GET">
@@ -125,8 +143,8 @@ $(function() {
 												<!-- product.category.id = ${product.category.id} --> 
 												<!-- product.category.name = ${product.category.name} --> 
 												<td>
-														數量 : <input class="spinner" name="value"/>
-														<span class="visible-span">test-h2-here</span>
+														數量 : <input class="spinner" type="text"/>
+														<span class="visible-span"></span>
 														<button class="addToCart" type="button"><span class="visible-span">${product.id}</span>放入購物車</button>
 														<sec:authorize access="hasRole('ROLE_ADMIN')">
 															|<button type="button"><span class="visible-span">${product.id}</span>修改</button>
@@ -156,6 +174,10 @@ $(function() {
     </nav>
     
     <aside>aside<br>
+    		<form id="cartForm" action="${pageContext.request.contextPath}/cart/add" method="GET">
+    				<input id="productId" type="hidden" name="productId"/>
+    					<input id="amount" type="hidden" name="amount"/>
+    		</form>
     <h2></h2>
     <c:url var="part" value="/part"></c:url>
     <h2>${part}</h2>
