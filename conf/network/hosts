@@ -1,0 +1,18 @@
+127.0.0.1	localhost
+127.0.1.1	anntony-Lenovo-B590
+127.0.1.1	www.kashu.com
+192.168.0.166   banana banana2.com
+192.168.0.162   cubie tonycha.com
+192.168.0.160   www.cubian.ann01.big
+#192.168.0.175   lemaker
+192.168.0.175   bananapi.ydns.eu
+10.1.1.160   www.pica-pica.com.tw
+10.1.1.160   www.janjan.com.tw
+10.1.1.160   www.simplest.com.tw
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters

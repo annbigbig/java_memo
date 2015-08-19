@@ -1,4 +1,13 @@
 cubietruck的網路設定
 
-設定檔位置
+網路參數設定檔位置
 /etc/network/interfaces
+
+本機的域名參照 (使用順序優於dns server)
+/etc/hosts
+
+本機防火牆
+/root/firewall.sh
+
+打開本機防火牆的設定檔
+/etc/rc.local
