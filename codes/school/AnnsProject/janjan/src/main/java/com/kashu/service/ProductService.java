@@ -18,11 +18,11 @@ public interface ProductService {
 	public Page<Product> getPage(ProductSearchParams searchParams);
 	//public Long countAll();
 	public Long count(ProductSearchParams searchParams);
+	public Product find(Long id);
 
 	/*
 	public List<Product> update(List<Product> products);
 	public Boolean isExisted(Long id);
-	public Product find(Long id);
 	public List<Product> find(Map<String,Object> searchParams, Map<String,Object> orderParams);
 	public List<Product> find(Map<String,Object> searchParams, Map<String,Object> orderParams, Map<String,Object> pageParams);
 	public Long countAll();

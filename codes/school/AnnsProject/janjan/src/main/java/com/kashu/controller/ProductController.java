@@ -72,7 +72,7 @@ public class ProductController {
 	@ModelAttribute("categoriesMap")
 	public Map initCategories(){
 		List<Category> categories = categoryService.findAll();
-		Map categoriesMap = new HashMap<String,String>();
+		Map categoriesMap = new HashMap<Long,String>();
 		for(Category c : categories){
 			System.out.println(c.getId() + " : " + c.getName());
 			categoriesMap.put(c.getId(), c.getName());
@@ -114,8 +114,28 @@ public class ProductController {
 	@RequestMapping(value="/admin/product/modify/{id}",method=RequestMethod.GET)
 	public String modify_form(@PathVariable Long id,Model model){
 		System.out.println("id=" + id);
+		Product product = productService.find(id);
 		model.addAttribute("id", id);
-		return "product/modify";
+		model.addAttribute("product", product);
+		return "product/modify_form";
+	}
+	
+	@RequestMapping(value="/admin/product/modify",method=RequestMethod.POST)
+	public String modify_process(@Valid @ModelAttribute Product product, BindingResult result, Model model){
+		String viewName = "product/modify_success";
+		if(result.hasErrors()){
+			viewName = "product/modify_form";
+		}else{
+			//準備寫入資料庫
+			if(productService.update(product)==null){
+				//更新失敗
+				viewName = "product/modify_failed";
+			}else{
+				//更新成功
+				model.addAttribute("product", product);
+			}
+		}
+		return viewName;
 	}
 	
 	//產生10筆隨機的產品資料，新增至資料庫

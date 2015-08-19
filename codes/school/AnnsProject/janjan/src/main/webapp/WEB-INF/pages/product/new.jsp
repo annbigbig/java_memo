@@ -81,6 +81,7 @@
     </div>
     </form:form>
 		 </div>
+		 		<a href="${pageContext.request.contextPath}/home">回首頁</a><br/>
     </article>
    
     <nav>

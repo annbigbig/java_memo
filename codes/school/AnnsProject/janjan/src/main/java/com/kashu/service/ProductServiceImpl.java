@@ -40,8 +40,13 @@ public class ProductServiceImpl implements ProductService {
 	
 	@Override
 	public Product update(Product product) {
-		
-		return null;
+		Product p = null;
+		try{
+			p = productRepository.update(product);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return p;
 	}
 
 	@Override
@@ -98,6 +103,17 @@ public class ProductServiceImpl implements ProductService {
 		page.setElements(products);
 		page.setTotalRows(totalRows);
 		return page;
+	}
+
+	@Override
+	public Product find(Long id) {
+		Product product = null;
+		try{
+			product = productRepository.find(id);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return product;
 	}
 	
 }

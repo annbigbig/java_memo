@@ -16,7 +16,8 @@ public class ProductValidator implements Validator {
 	@Override
 	public void validate(Object obj, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "title", "empty.product.title");
-		
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "unit", "empty.product.unit");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "price", "empty.product.price");
 	}
 
 }

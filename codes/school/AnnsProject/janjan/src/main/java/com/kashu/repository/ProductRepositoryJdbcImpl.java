@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -32,6 +33,9 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 	
 	private String sql_count_rows = "SELECT COUNT(p.id) FROM TB_PRODUCTS AS p";
 	private String sql_insert_a_row = "INSERT INTO TB_PRODUCTS(title,price,unit,enabled,category_id) VALUES(?,?,?,?,?)";
+	//private String sql_update_a_row = "UPDATE TB_PRODUCTS SET (title,price,unit,lastModified,enabled,category_id) = (?,?,?,?,?,?) WHERE id = ?";
+	private String sql_update_a_row = "UPDATE TB_PRODUCTS SET title=?,price=?,unit=?,lastModified=?,enabled=?,category_id=? WHERE id = ?";
+
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -75,8 +79,9 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 
 	@Override
 	public Product update(Product product) {
-		
-		return null;
+		Object[] args  = new Object[]{product.getTitle(),product.getPrice(),product.getUnit(),new Date(),product.getEnabled(),product.getCategory().getId(),product.getId()};
+		int count = jdbcTemplate.update(sql_update_a_row, args);
+		return (count==1) ? product : null;
 	}
 
 	@Override
@@ -228,6 +233,14 @@ public class ProductRepositoryJdbcImpl implements ProductRepository {
 			}
 		});
 		return counts.length;
+	}
+
+	@Override
+	public Product find(Long id) {
+		Product product = null;
+		String sql = sql_base + " WHERE p.id = ?";		
+		product = jdbcTemplate.queryForObject(sql, new Object[]{id}, new ProductRowMapper());
+		return product;
 	}
 	
 }

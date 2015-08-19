@@ -11,6 +11,7 @@ public interface ProductRepository {
 	public Integer insert(List<Product> products);
 	public Product update(Product product);
 	public Boolean delete(Long id);
+	public Product find(Long id);
 	public List<Product> find(ProductSearchParams searchParams);
 	public List<Product> findAll();
 	public Long countAll();
@@ -23,7 +24,6 @@ public interface ProductRepository {
 	/*
 	public List<Product> update(List<Product> products);
 	public Boolean isExisted(Long id);
-	public Product find(Long id);
 	public Long countAll();
 	public Long count(Map<String,Object> searchParams);
 	*/

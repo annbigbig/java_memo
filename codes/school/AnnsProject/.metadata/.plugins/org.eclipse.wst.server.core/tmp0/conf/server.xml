@@ -37,8 +37,9 @@
          UserDatabaseRealm to authenticate users
     -->
     <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
-    <Resource auth="Container" driverClassName="org.mariadb.jdbc.Driver" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" initialSize="10" jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;             org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer" jmxEnabled="true" logAbandoned="true" maxActive="100" maxWait="10000" minEvictableIdleTimeMillis="30000" minIdle="10" name="jdbc/DB_SPRING" password="spring" removeAbandoned="true" removeAbandonedTimeout="60" testOnBorrow="true" testOnReturn="false" testWhileIdle="true" timeBetweenEvictionRunsMillis="30000" type="javax.sql.DataSource" url="jdbc:mariadb://localhost:3306/db_spring" username="spring" validationInterval="30000" validationQuery="SELECT 1"/>
-    
+
+<Resource auth="Container" driverClassName="org.mariadb.jdbc.Driver" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" initialSize="10" jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;             org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer" jmxEnabled="true" logAbandoned="true" maxActive="100" maxWait="10000" minEvictableIdleTimeMillis="30000" minIdle="10" name="jdbc/DB_SPRING" password="spring" removeAbandoned="true" removeAbandonedTimeout="60" testOnBorrow="true" testOnReturn="false" testWhileIdle="true" timeBetweenEvictionRunsMillis="30000" type="javax.sql.DataSource" url="jdbc:mariadb://localhost:3306/db_spring" username="spring" validationInterval="30000" validationQuery="SELECT 1"/>
+
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
@@ -126,7 +127,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/home/anntony/java_memo/codes/school/AnnsProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context antiResourceLocking="true" docBase="/home/anntony/java_memo/codes/school/AnnsProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/janjan" path="/janjan" reloadable="true" source="org.eclipse.jst.j2ee.server:janjan">
+      <Context docBase="/home/anntony/java_memo/codes/school/AnnsProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/anntony/java_memo/codes/school/AnnsProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/janjan" path="/janjan" reloadable="true" source="org.eclipse.jst.j2ee.server:janjan">
 	<ResourceLink global="jdbc/DB_SPRING" name="jdbc/DB_SPRING" type="javax.sql.DataSource"/>
 </Context></Host>
     </Engine>

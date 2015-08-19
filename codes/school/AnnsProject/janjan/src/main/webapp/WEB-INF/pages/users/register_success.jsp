@@ -27,7 +27,7 @@
 		user.telephone=${user.mobile}<br/>
 		user.zipcode=${user.zipcode}<br/>
 		user.address=${user.address}<br/>
-	
+				<a href="${pageContext.request.contextPath}/home">回首頁</a><br/>
     </article>
     
     <nav>

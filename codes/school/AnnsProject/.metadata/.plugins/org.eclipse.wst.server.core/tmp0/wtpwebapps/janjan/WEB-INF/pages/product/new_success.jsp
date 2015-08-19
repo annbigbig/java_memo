@@ -26,7 +26,7 @@
     					product.category.id = ${product.category.id}<br/>
     					product.category.name = ${product.category.name}<br/>
     		</c:if>
-    
+    				<a href="${pageContext.request.contextPath}/home">回首頁</a><br/>
     </article>
     
     <nav>
