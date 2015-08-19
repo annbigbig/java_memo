@@ -1,0 +1,5 @@
+nginx安裝目錄在/usr/local/nginx
+
+重要設定檔案
+/usr/local/nginx/conf/nginx.conf
+/usr/local/nginx/conf/vhost/www.janjan.com.tw.conf

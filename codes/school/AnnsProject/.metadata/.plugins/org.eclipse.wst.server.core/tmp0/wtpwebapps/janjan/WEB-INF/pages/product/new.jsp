@@ -47,8 +47,8 @@
     		 <p></p>
     		 -->
     		 
-    		 <form:radiobutton path="enabled" value="true"/>上架
-    		 <form:radiobutton path="enabled" value="true"/>下架
+    		 <form:radiobutton path="enabled" value="true" checked="checked"/>上架
+    		 <form:radiobutton path="enabled" value="false"/>下架
     		 <br/>
     		 
     		 <!--  用spring form tag的寫法 -->

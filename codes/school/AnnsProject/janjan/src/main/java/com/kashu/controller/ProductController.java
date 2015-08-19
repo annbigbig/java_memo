@@ -111,6 +111,13 @@ public class ProductController {
 		return viewName;
 	}
 	
+	@RequestMapping(value="/admin/product/modify/{id}",method=RequestMethod.GET)
+	public String modify_form(@PathVariable Long id,Model model){
+		System.out.println("id=" + id);
+		model.addAttribute("id", id);
+		return "product/modify";
+	}
+	
 	//產生10筆隨機的產品資料，新增至資料庫
 	@RequestMapping(value="/admin/product/random")
 	public String random(Model model){

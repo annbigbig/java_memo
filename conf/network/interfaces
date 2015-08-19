@@ -1,0 +1,48 @@
+# --- loopback ---
+auto lo
+iface lo inet loopback
+
+
+# --- enable eth0 with static ip --- 
+#auto eth0 
+#allow-hotplug eth0 
+#iface eth0 inet static 
+#  address 10.1.1.161
+#  netmask 255.255.255.0 
+  #gateway 10.1.1.1
+#  dns-nameservers 8.8.8.8 8.8.4.4 168.95.1.1 168.95.192.1
+
+# --- enable eth0 with dhcp ---
+auto eth0
+allow-hotplug eth0
+  iface eth0 inet dhcp
+
+
+# --- enable eth0 without ip address --- 
+#auto eth0 
+#iface eth0 inet manual 
+
+
+# --- enable wlan0 with static ip 
+#auto wlan0 
+#allow-hotplug wlan0 
+#iface wlan0 inet static 
+#  address 10.2.3.161 
+#  netmask 255.255.255.0 
+#  gateway 10.2.3.1 
+#  dns-nameservers 8.8.8.8 8.8.4.4 168.95.1.1 168.95.192.1 
+#  wpa-ssid TPLINK_WR702
+#  wpa-psk 23b3c3cf4767e17cd6d775b328afc70afe710a8280867db660f5b5b93d1a1fc0
+
+
+# --- enable wlan0 with dhcp 
+#auto wlan0 
+#allow-hotplug wlan0 
+#iface wlan0 inet dhcp 
+#  wpa-ssid D-Link_DIR-600M 
+#  wpa-psk 03c75e9db9307b63823d672ec889ea66a70316ff9f2bae610f715d4edd10cc3f
+
+
+# --- enable wlan0 without ip address
+auto wlan0
+iface wlan0 inet manual

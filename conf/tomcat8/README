@@ -1,0 +1,16 @@
+Tomcat8安裝目錄/usr/local/apache-tomcat-8.0.23
+symbolic link是/usr/local/tomcat指向上面的安裝目錄
+
+重要設定檔如下
+
+(設定CATALINA_HOME環境變數)
+/etc/profile.d/jdk8_environments.sh 
+
+(有設定一個JNDI connection pool的資源及VirtualHost)
+/usr/local/tomcat/conf/server.xml
+
+(設定ResourceLink指向上面的GlobalNamingResources)
+/usr/local/tomcat/conf/context.xml
+
+(Tomcat application manager的用戶登入密碼設定)
+/usr/local/tomcat/conf/tomcat-users.xml

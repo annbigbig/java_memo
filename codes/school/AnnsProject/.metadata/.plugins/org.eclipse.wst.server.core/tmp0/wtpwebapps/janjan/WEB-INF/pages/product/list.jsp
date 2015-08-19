@@ -85,19 +85,23 @@ $(function() {
 	
 	//  http://stackoverflow.com/questions/16125913/javascript-returning-undefined
 	$(".addToCart").click(function(){
-		var productId = $(this).children("span").text();
+		//var productId = $(this).children("span").text();		//working
+		var productId = $(this).closest("td").children("span.visible-span").text();
 		//var amount = $(this).prev().spinner("value").html();
 		//var testValue = $(this).prev(".spinner").val();
 		//var testValue = $("#test-spinner").spinner("value");		//working
 		//var amount = $(this).closest("input.spinner").attr("value");
 		var amount = $(this).siblings("span.ui-spinner").children("input.spinner").spinner("value");
+		if(amount==null){
+			amount=0;
+		}
 		//var amount = $(this).closest("input.spinner.ui-spinner-input").val();
 		//alert("productId=" + productId + " amount=" + amount);
-		$("#productId").val(productId);
-		$("#amount").val(amount);
+		$("#productId").val(productId);		//working
+		$("#amount").val(amount);		//working
 		console.log("productId=" + productId + " amount=" + amount);
 		//$("#amount").val(5);
-		$("#cartForm").submit();
+		//$("#cartForm").submit();
 	});
 	
 });
@@ -108,7 +112,6 @@ $(function() {
  <header>header</header>
  <div id='main'>
     <article>
-   					<input id="test-spinner" class="spinner" name="value"/>
    			<c:if test="${not empty searchParams}">
    					<div class="yellow-box"><H3>搜尋關鍵字 [ ${ searchParams.searchArgValues[0]} ]</H3></div>
    					<form id="searchForm" action="${pageContext.request.contextPath}/product/find" method="GET">
@@ -145,12 +148,12 @@ $(function() {
 												<!-- product.category.id = ${product.category.id} --> 
 												<!-- product.category.name = ${product.category.name} --> 
 												<td>
+														<span class="visible-span">${product.id}</span>
 														數量 : <input class="spinner" type="text"/>
-														<span class="visible-span"></span>
-														<button class="addToCart" type="button"><span class="visible-span">${product.id}</span>放入購物車</button>
+														<button class="addToCart" type="button">放入購物車</button>
 														<sec:authorize access="hasRole('ROLE_ADMIN')">
-															|<button type="button"><span class="visible-span">${product.id}</span>修改</button>
-															|<button type="button"><span class="visible-span">${product.id}</span>刪除</button>
+															|<a class="admin-mod-product-button" href="${pageContext.request.contextPath}/admin/product/modify/${product.id}">修改</a>
+															|<button class="delete-product-btn" type="button">刪除</button>
 														</sec:authorize>
 												</td>
 											</tr>

@@ -1,0 +1,114 @@
+Host virt
+  HostName 192.168.0.11
+  User git
+  Port 3333
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /home/anntony/.ssh/id_rsa
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host mycubie
+  #HostName 192.168.0.161
+  HostName 192.168.0.162
+  User aruntu
+  Port 22
+  IdentityFile /home/anntony/.ssh/private_key_from_cubie
+
+# use for command --> git clone cubie02:site.git
+# and this command -> git clone cubie02:/home/testuser01/site.git
+Host cubie02
+  HostName 192.168.0.162
+  User testuser01
+  Port 22
+  IdentityFile /home/anntony/.ssh/others/testuser01_on_cubie_private_key
+
+Host bananapi
+  HostName 192.168.0.166
+  User bananapi
+  Port 22
+  IdentityFile /home/anntony/.ssh/others/bananapi_on_banana_private_key
+
+Host bana02
+  HostName 192.168.0.166
+  User testuser06
+  Port 22
+  IdentityFile /home/anntony/.ssh/others/testuser06_on_banana_private_key
+
+Host cubian
+  HostName 192.168.0.160
+  User cubie
+  Port 36000
+  IdentityFile /home/anntony/.ssh/cubian/cubie@cubian.private.key
+
+Host cubian001
+  HostName 192.168.0.160
+  User gituser01
+  Port 36000
+  IdentityFile /home/anntony/.ssh/cubian001/gituser01@cubian.private.key
+
+Host wr841n
+  HostName 10.1.1.1
+  User tonychacha
+  Port 35000
+  IdentityFile /home/anntony/.ssh/tonychacha@10.1.1.1
+
+Host luci-8000
+  HostName 10.1.1.1
+  User tonychacha
+  Port 35000
+  IdentityFile /home/anntony/.ssh/tonychacha@10.1.1.1
+  LocalForward 127.0.0.1:8000 127.0.0.1:80
+
+Host banana
+  HostName 192.168.0.175
+  User bananapi
+  Port 22
+  IdentityFile /home/anntony/.ssh/bananapi@192.168.0.175
+
+Host 175-tunnel
+  HostName 192.168.0.175
+  User bananapi
+  Port 22
+  LocalForward 5900 localhost:5900
+
+Host cubietruck
+  HostName 10.1.1.160
+  User labasky
+  Port 36000
+  IdentityFile /home/anntony/.ssh/labasky@192.168.0.161
+
+Host cubieU01git
+  HostName 10.1.1.96
+  User user01-git
+  Port 36000
+  IdentityFile /home/anntony/.ssh/user01-git@192.168.0.161
+
+Host mariadb-3306
+  HostName 10.1.1.160
+  User labasky
+  Port 36000
+  IdentityFile /home/anntony/.ssh/labasky@192.168.0.161
+  LocalForward 3306 localhost:3306
+
+Host mariadb-3307
+  HostName 10.1.1.160
+  User labasky
+  Port 36000
+  IdentityFile /home/anntony/.ssh/labasky@192.168.0.161
+  LocalForward 3307 127.0.0.1:3306
+
+Host phpmyadmin-8001
+  HostName 10.1.1.160
+  User labasky
+  Port 36000
+  IdentityFile /home/anntony/.ssh/labasky@192.168.0.161
+  LocalForward 8001 127.0.0.1:8001
+
+Host mw300rv6
+  HostName 10.1.1.1
+  User tonychacha
+  Port 35000
+  IdentityFile /home/anntony/.ssh/tonychacha@10.1.1.1
+

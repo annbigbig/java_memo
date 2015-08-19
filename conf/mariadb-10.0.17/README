@@ -1,0 +1,5 @@
+安裝目錄/usr/local/mariadb-10.0.17
+symbolic link在/usr/local/mairadb指向上面的安裝目錄
+
+重要設定檔
+/etc/my.cnf
